@@ -1,0 +1,23 @@
+ÖVNINGSMATERIAL – FIKTIV KURSADMINISTRATION
+============================================
+
+Allt i den här mappen är påhittat. Inga verkliga personer,
+studerande, organisationer eller uppgifter förekommer.
+"Yrkeshögskolan Exempelia" finns inte, och namnen i mejlen
+och mötesanteckningarna är hittepå.
+
+Materialet är till för övningarna i kursen "Samarbete i
+Microsoft 365 Copilot". Lägg mappen i din OneDrive så att
+Samarbete kommer åt den.
+
+Innehåll:
+  inkorg/                          Sju mejl som en påhittad lärarvecka
+  kursutvardering-webbteknik.csv   24 svar, varav två fritextkolumner
+  materialbudget-fiktiv.csv        Åtta budgetposter, några obeslutade
+  motesanteckningar-planering.md   Råa anteckningar med oklara ansvar
+  kursplan-webbteknik-2022.md      Föråldrad kursplan
+
+Flera filer innehåller med flit motstridigheter, oklara
+ansvar och föråldrade uppgifter. Det är meningen — övningarna
+går ut på att se om verktyget markerar det som oklart i
+stället för att gissa.
