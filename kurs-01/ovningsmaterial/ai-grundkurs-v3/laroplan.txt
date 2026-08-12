@@ -1,0 +1,31 @@
+AI-GRUNDKURS - LÄROPLAN
+Yrkeshögskolan Exempelia (fiktiv)
+Version 3, hösten 2022
+
+OMFATTNING: 3 sp
+
+LÄRANDEMÅL
+Efter avslutad kurs kan den studerande:
+- redogöra för vad artificiell intelligens är
+- beskriva skillnaden mellan övervakad och oövervakad inlärning
+- diskutera etiska frågeställningar kring AI
+- förklara GDPR:s betydelse för AI-system
+
+INNEHÅLL
+Modul 1: Vad är AI? (6 h)
+Modul 2: Maskininlärning (10 h)
+Modul 3: Etik och lagstiftning (6 h)
+Modul 4: Framtiden (4 h)  -- OBS: modulens sida saknas i paketet
+Sluttest (2 h)
+
+EXAMINATION
+Sluttest (60 %) och inlämningsuppgift (40 %). Deadline 15.12.2022.
+
+REGEL OM AI-VERKTYG
+All användning av AI-verktyg vid inlämningsuppgifter är förbjuden.
+
+ÖVRIGT
+Kursmaterialet finns som zip-paket i Moodle.
+Kontakt: kursansvarig [namn saknas]
+
+ALLT INNEHÅLL I DETTA PAKET ÄR FIKTIVT OCH AVSETT FÖR ÖVNING.

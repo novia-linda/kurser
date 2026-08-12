@@ -1,0 +1,1346 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kom igång med Cowork – interaktiv introduktionskurs för lärare</title>
+</head>
+<body style="margin:0;padding:0;background:#e8e0d4;">
+
+<!-- ============================================================
+     KOM IGÅNG MED COWORK – 3 timmars interaktiv introduktionskurs
+     Alla stilar är inline. För Moodle: kopiera allt från och med
+     nästa div till och med den avslutande </div>. Interaktiviteten
+     bygger på <details> och <input> – ingen JavaScript krävs.
+     ============================================================ -->
+
+<div style="font-family: Georgia, 'Times New Roman', serif; max-width: 900px; margin: 0 auto; color: #2c2c2c; background: #faf8f5;">
+
+<!-- HERO -->
+<div style="background: #f0ece4; padding: 48px 40px 40px 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: center;">
+  <div>
+    <p style="font-family: Georgia, serif; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #8a7e6e; margin: 0 0 16px 0;">Interaktiv introduktionskurs · 3 timmar</p>
+    <h1 style="font-family: Georgia, serif; font-size: 42px; font-weight: 400; color: #1e2a3a; margin: 0 0 16px 0; line-height: 1.15; letter-spacing: -0.01em; font-style: italic;">Kom igång med Cowork</h1>
+    <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 15px; color: #6b6157; margin: 0 0 16px 0; line-height: 1.7;">Från nybörjare till eget arbetsflöde &ndash; för dig som undervisar i IT och AI, arbetar under strikta dataskyddskrav och underhåller kursmaterial i HTML för Moodle.</p>
+    <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 13px; color: #8a7e6e; margin: 0; line-height: 1.6;">Åtta pass · 21 flervalsfrågor med facit · 9 praktiska övningar</p>
+  </div>
+  <div style="border-radius: 4px; height: 240px; overflow: hidden;">
+    <svg viewBox="0 0 400 240" role="img" aria-label="Åtta staplade kursmoduler som bildar en kurs" style="width: 100%; height: 100%; display: block; background: #1e2a3a;">
+      <rect x="0" y="0" width="400" height="240" fill="#1e2a3a"></rect>
+      <g stroke="#3a4e64" stroke-width="1">
+        <line x1="0" y1="60" x2="400" y2="60"></line>
+        <line x1="0" y1="120" x2="400" y2="120"></line>
+        <line x1="0" y1="180" x2="400" y2="180"></line>
+      </g>
+      <rect x="44" y="38" width="150" height="26" rx="3" fill="#2a3a4e" stroke="#3a4e64"></rect>
+      <rect x="44" y="72" width="196" height="26" rx="3" fill="#2a3a4e" stroke="#3a4e64"></rect>
+      <rect x="44" y="106" width="124" height="26" rx="3" fill="#2a3a4e" stroke="#3a4e64"></rect>
+      <rect x="44" y="140" width="220" height="26" rx="3" fill="#f0ece4"></rect>
+      <rect x="44" y="174" width="168" height="26" rx="3" fill="#2a3a4e" stroke="#3a4e64"></rect>
+      <circle cx="316" cy="85" r="34" fill="none" stroke="#8a9ab0" stroke-width="1.5"></circle>
+      <circle cx="316" cy="85" r="20" fill="none" stroke="#8a9ab0" stroke-width="1.5"></circle>
+      <circle cx="316" cy="85" r="6" fill="#f0ece4"></circle>
+      <path d="M300 168 L332 168 M316 152 L316 184" stroke="#8a9ab0" stroke-width="1.5"></path>
+    </svg>
+  </div>
+</div>
+
+<!-- NAVY TAGLINE -->
+<div style="background: #1e2a3a; padding: 22px 40px;">
+  <p style="font-family: Georgia, serif; font-size: 20px; font-weight: 400; color: #f0ece4; margin: 0; text-align: center; letter-spacing: 0.02em; font-style: italic;">Du kan redan prompta. Det här handlar om att lämna ifrån dig arbete &ndash; och få tillbaka färdiga filer.</p>
+</div>
+
+<!-- SÅ ANVÄNDER DU KURSEN -->
+<div style="background: #f0ece4; padding: 28px 40px; border-bottom: 1px solid #ddd5c8;">
+  <div style="display: flex; align-items: flex-start; gap: 20px;">
+    <div style="background: #1e2a3a; color: #f0ece4; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 6px 14px; border-radius: 2px; white-space: nowrap; margin-top: 2px;">Läs först</div>
+    <div>
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 15px; color: #2c2c2c; margin: 0 0 10px 0; line-height: 1.6;">Varje pass har samma struktur: <strong>läs</strong> &rarr; <strong>svara på flervalsfrågor</strong> &rarr; <strong>gör övningen</strong>. Facit ligger dolt bakom &rdquo;Visa facit&rdquo; &ndash; svara först, öppna sedan.</p>
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #6b6157; margin: 0 0 10px 0; line-height: 1.6;">Övningarna görs i en <strong>egen Cowork-session</strong> parallellt med att du läser. Ha den här sidan i ett fönster och Cowork i ett annat. Ladda ner övningspaketet <a href="filer/ai-grundkurs-v3.zip" download style="color: #1e2a3a; font-weight: 700; text-decoration: underline;">ai-grundkurs-v3.zip</a> innan du börjar &ndash; det används från och med pass 3.</p>
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #6b6157; margin: 0; line-height: 1.6;">Kryssrutorna och radioknapparna sparas inte någonstans. De finns för att du ska kunna bocka av medan du arbetar. Vill du spara dina svar, skriv ut sidan eller för anteckningar vid sidan om.</p>
+    </div>
+  </div>
+</div>
+
+<!-- NEDLADDNINGAR -->
+<div style="background: #1e2a3a; padding: 44px 40px;">
+  <p style="font-family: Georgia, serif; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #8a9ab0; margin: 0 0 12px 0; text-align: center;">Material</p>
+  <h2 style="font-family: Georgia, serif; font-size: 32px; font-weight: 400; color: #f0ece4; margin: 0 0 10px 0; line-height: 1.2; font-style: italic; text-align: center;">Ladda ner innan du börjar</h2>
+  <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 15px; color: #8a9ab0; margin: 0 0 32px 0; text-align: center; line-height: 1.7;">Allt material är fiktivt och fritt att använda. Inga verkliga personuppgifter förekommer.</p>
+
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px;">
+    <div style="background: #2a3a4e; border: 1px solid #3a4e64; border-radius: 6px; padding: 24px 26px;">
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #8a9ab0; margin: 0 0 10px 0;">Behövs från pass 3</p>
+      <p style="font-family: Georgia, serif; font-size: 19px; color: #f0ece4; margin: 0 0 10px 0; font-style: italic;">Övningspaketet</p>
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #cfd8e2; margin: 0 0 18px 0; line-height: 1.7;">Ett fiktivt kurspaket i HTML och CSS med ett tjugotal fel inlagda med flit: föråldrade faktapåståenden, två stilmallar som krockar, trasiga länkar, saknad bild och tillgänglighetsbrister. Det är materialet du övar hela pipelinen på.</p>
+      <a href="filer/ai-grundkurs-v3.zip" download style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; padding: 11px 20px; background: #f0ece4; color: #1e2a3a; border-radius: 3px; text-decoration: none; display: inline-block;">Ladda ner zip &middot; 8 kB</a>
+    </div>
+
+    <div style="background: #2a3a4e; border: 1px solid #3a4e64; border-radius: 6px; padding: 24px 26px;">
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #8a9ab0; margin: 0 0 10px 0;">Facit till pass 5</p>
+      <p style="font-family: Georgia, serif; font-size: 19px; color: #f0ece4; margin: 0 0 10px 0; font-style: italic;">Den färdiga skillen</p>
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #cfd8e2; margin: 0 0 18px 0; line-height: 1.7;">Hela pipelinen som en färdig skill: SKILL.md, ett designsystem i <em>references/</em> och ett Python-skript i <em>scripts/</em> som kontrollerar länkar, teckenkodning, alt-texter och tillgänglighet. Bygg din egen först &ndash; jämför sedan.</p>
+      <a href="filer/kurspaket-uppdatering.skill" download style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; padding: 11px 20px; background: #f0ece4; color: #1e2a3a; border-radius: 3px; text-decoration: none; display: inline-block;">Ladda ner skill &middot; 6 kB</a>
+    </div>
+  </div>
+
+  <div style="background: #2a3a4e; border: 1px solid #3a4e64; border-radius: 6px; padding: 24px 26px;">
+    <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #8a9ab0; margin: 0 0 10px 0;">Valfritt</p>
+    <p style="font-family: Georgia, serif; font-size: 19px; color: #f0ece4; margin: 0 0 10px 0; font-style: italic;">Se det trasiga materialet live</p>
+    <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #cfd8e2; margin: 0 0 18px 0; line-height: 1.7;">Övningspaketet ligger också uppackat här på sajten. Öppna det i en flik innan du börjar, så har du ett &rdquo;före&rdquo; att jämföra med när du är klar. Länkarna som ger 404 gör det med flit &ndash; de är en del av uppgiften.</p>
+    <a href="ovningsmaterial/ai-grundkurs-v3/index.html" style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; padding: 11px 20px; color: #f0ece4; border: 1px solid #8a9ab0; border-radius: 3px; text-decoration: none; display: inline-block;">Öppna materialet &rarr;</a>
+  </div>
+</div>
+
+<!-- TIDSPLAN -->
+<div style="background: #faf8f5; padding: 48px 40px;">
+  <p style="font-family: Georgia, serif; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #8a7e6e; margin: 0 0 12px 0; text-align: center;">Upplägg</p>
+  <h2 style="font-family: Georgia, serif; font-size: 32px; font-weight: 400; color: #1e2a3a; margin: 0 0 32px 0; line-height: 1.2; font-style: italic; text-align: center;">Tre timmar, åtta pass</h2>
+
+  <div style="background: #fff; border: 1px solid #ddd5c8; border-radius: 4px; overflow: hidden;">
+    <div style="display: grid; grid-template-columns: 60px 1fr 90px; background: #1e2a3a;">
+      <div style="padding: 12px 16px; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #8a9ab0;">Pass</div>
+      <div style="padding: 12px 16px; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #8a9ab0; border-left: 1px solid #2a3a4e;">Innehåll</div>
+      <div style="padding: 12px 16px; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #8a9ab0; border-left: 1px solid #2a3a4e;">Tid</div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 60px 1fr 90px; border-bottom: 1px solid #e8e0d4; background: #fff;">
+      <div style="padding: 14px 16px; font-family: Georgia, serif; font-size: 14px; font-style: italic; color: #1e2a3a; border-right: 1px solid #e8e0d4;">0</div>
+      <div style="padding: 14px 16px; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; border-right: 1px solid #e8e0d4;">Innan du börjar &ndash; konto, plattform, inställningar</div>
+      <div style="padding: 14px 16px; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #8a7e6e;">10 min</div>
+    </div>
+    <div style="display: grid; grid-template-columns: 60px 1fr 90px; border-bottom: 1px solid #e8e0d4; background: #faf8f5;">
+      <div style="padding: 14px 16px; font-family: Georgia, serif; font-size: 14px; font-style: italic; color: #1e2a3a; border-right: 1px solid #e8e0d4;">1</div>
+      <div style="padding: 14px 16px; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; border-right: 1px solid #e8e0d4;">Vad Cowork är &ndash; och när du ska välja det</div>
+      <div style="padding: 14px 16px; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #8a7e6e;">20 min</div>
+    </div>
+    <div style="display: grid; grid-template-columns: 60px 1fr 90px; border-bottom: 1px solid #e8e0d4; background: #fff;">
+      <div style="padding: 14px 16px; font-family: Georgia, serif; font-size: 14px; font-style: italic; color: #1e2a3a; border-right: 1px solid #e8e0d4;">2</div>
+      <div style="padding: 14px 16px; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; border-right: 1px solid #e8e0d4;">GDPR och datasäkerhet i praktiken</div>
+      <div style="padding: 14px 16px; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #8a7e6e;">25 min</div>
+    </div>
+    <div style="display: grid; grid-template-columns: 60px 1fr 90px; border-bottom: 1px solid #e8e0d4; background: #faf8f5;">
+      <div style="padding: 14px 16px; font-family: Georgia, serif; font-size: 14px; font-style: italic; color: #1e2a3a; border-right: 1px solid #e8e0d4;">3</div>
+      <div style="padding: 14px 16px; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; border-right: 1px solid #e8e0d4;">Filer in och filer ut &ndash; grunderna</div>
+      <div style="padding: 14px 16px; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #8a7e6e;">20 min</div>
+    </div>
+    <div style="display: grid; grid-template-columns: 60px 1fr 90px; border-bottom: 1px solid #e8e0d4; background: #f0ece4;">
+      <div style="padding: 14px 16px; font-family: Georgia, serif; font-size: 14px; font-style: italic; color: #8a7e6e; border-right: 1px solid #e8e0d4;">&mdash;</div>
+      <div style="padding: 14px 16px; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #8a7e6e; font-style: italic; border-right: 1px solid #e8e0d4;">Paus</div>
+      <div style="padding: 14px 16px; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #8a7e6e;">5 min</div>
+    </div>
+    <div style="display: grid; grid-template-columns: 60px 1fr 90px; border-bottom: 1px solid #e8e0d4; background: #fff;">
+      <div style="padding: 14px 16px; font-family: Georgia, serif; font-size: 14px; font-style: italic; color: #1e2a3a; border-right: 1px solid #e8e0d4;">4</div>
+      <div style="padding: 14px 16px; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; border-right: 1px solid #e8e0d4;"><strong>Ditt Moodle-arbetsflöde</strong> &ndash; uppdatera HTML/CSS-paket</div>
+      <div style="padding: 14px 16px; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #8a7e6e;">45 min</div>
+    </div>
+    <div style="display: grid; grid-template-columns: 60px 1fr 90px; border-bottom: 1px solid #e8e0d4; background: #faf8f5;">
+      <div style="padding: 14px 16px; font-family: Georgia, serif; font-size: 14px; font-style: italic; color: #1e2a3a; border-right: 1px solid #e8e0d4;">5</div>
+      <div style="padding: 14px 16px; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; border-right: 1px solid #e8e0d4;">Skills &ndash; gör arbetsflödet återanvändbart</div>
+      <div style="padding: 14px 16px; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #8a7e6e;">20 min</div>
+    </div>
+    <div style="display: grid; grid-template-columns: 60px 1fr 90px; border-bottom: 1px solid #e8e0d4; background: #fff;">
+      <div style="padding: 14px 16px; font-family: Georgia, serif; font-size: 14px; font-style: italic; color: #1e2a3a; border-right: 1px solid #e8e0d4;">6</div>
+      <div style="padding: 14px 16px; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; border-right: 1px solid #e8e0d4;">Lärarvardagen &ndash; quiz, matriser, lektionsplaner</div>
+      <div style="padding: 14px 16px; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #8a7e6e;">20 min</div>
+    </div>
+    <div style="display: grid; grid-template-columns: 60px 1fr 90px; background: #faf8f5;">
+      <div style="padding: 14px 16px; font-family: Georgia, serif; font-size: 14px; font-style: italic; color: #1e2a3a; border-right: 1px solid #e8e0d4;">7</div>
+      <div style="padding: 14px 16px; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; border-right: 1px solid #e8e0d4;">Automatisering, gränser och din 30-dagarsplan</div>
+      <div style="padding: 14px 16px; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #8a7e6e;">15 min</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== PASS 0 ===================== -->
+<div style="background: #1e2a3a; padding: 40px 40px 32px 40px;">
+  <p style="font-family: Georgia, serif; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #8a9ab0; margin: 0 0 10px 0;">Pass 0 · 10 minuter</p>
+  <h2 style="font-family: Georgia, serif; font-size: 32px; font-weight: 400; color: #f0ece4; margin: 0 0 12px 0; line-height: 1.2; font-style: italic;">Innan du börjar</h2>
+  <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 15px; color: #8a9ab0; margin: 0; line-height: 1.7; max-width: 620px;">Fem minuters förberedelse som gör resten av kursen mycket smidigare. Efter det här passet vet du var Cowork finns, vilket läge du arbetar i och vilka grundinställningar som gäller för dig.</p>
+</div>
+
+<div style="background: #faf8f5; padding: 40px;">
+
+  <h3 style="font-family: Georgia, serif; font-size: 22px; font-weight: 400; color: #1e2a3a; margin: 0 0 14px 0; font-style: italic;">Var finns Cowork?</h3>
+  <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 15px; color: #3c3228; line-height: 1.75; margin: 0 0 16px 0;">Cowork är ett läge inuti Claude-appen, inte ett separat program. Du hittar det i en väljare i meddelandefältet: du växlar mellan <strong>Chat</strong> och <strong>Cowork</strong> innan du skickar din första förfrågan. Det finns i skrivbordsappen för macOS och Windows, på webben på claude.ai och i mobilapparna.</p>
+  <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 15px; color: #3c3228; line-height: 1.75; margin: 0 0 16px 0;">För dig som inte får installera program på jobbdatorn är detta den viktigaste raden i hela kursen: <strong>webbversionen räcker för nästan allt i den här kursen.</strong> Du laddar upp filer via webbläsaren, arbetet sker i en sandlåda i molnet, och du laddar ner resultatet. Det du går miste om utan skrivbordsappen är den direkta kopplingen till mappar på din egen dator &ndash; och den vill du ändå inte ha, givet dina säkerhetsregler.</p>
+
+  <div style="background: #f0ece4; border: 1px solid #ddd5c8; border-radius: 4px; padding: 18px 22px; margin: 0 0 24px 0;">
+    <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #6b6157; margin: 0; line-height: 1.7;"><strong style="color:#1e2a3a;">Om tillgången.</strong> Cowork kräver ett betalt abonnemang (Pro, Max, Team eller Enterprise). Webb- och mobiltillgång har rullats ut stegvis, så om du inte ser Cowork-väljaren i webbläsaren: kontrollera att du är inloggad på rätt konto och att appen är uppdaterad. Ser du det fortfarande inte, prova skrivbordsappen på en privat dator eller be din IT-avdelning om claude.ai i webbläsaren.</p>
+  </div>
+
+  <h3 style="font-family: Georgia, serif; font-size: 22px; font-weight: 400; color: #1e2a3a; margin: 0 0 14px 0; font-style: italic;">De tre godkännandelägena</h3>
+  <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 15px; color: #3c3228; line-height: 1.75; margin: 0 0 16px 0;">Eftersom Cowork utför saker &ndash; skapar filer, kör kod, ändrar innehåll &ndash; finns det en inställning för hur mycket den får göra utan att fråga:</p>
+
+  <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin: 0 0 24px 0;">
+    <div style="background: #fff; border: 1px solid #ddd5c8; border-radius: 4px; padding: 18px 20px;">
+      <p style="font-family: Georgia, serif; font-size: 16px; color: #1e2a3a; margin: 0 0 8px 0; font-style: italic;">Manuellt</p>
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 13px; color: #6b6157; margin: 0; line-height: 1.65;">Frågar innan varje åtgärd. Långsamt men överblickbart. <strong>Börja här.</strong></p>
+    </div>
+    <div style="background: #fff; border: 1px solid #ddd5c8; border-radius: 4px; padding: 18px 20px;">
+      <p style="font-family: Georgia, serif; font-size: 16px; color: #1e2a3a; margin: 0 0 8px 0; font-style: italic;">Automatiskt</p>
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 13px; color: #6b6157; margin: 0; line-height: 1.65;">Granskar sig själv och stoppar osäkra åtgärder. Bra när du kan arbetsflödet.</p>
+    </div>
+    <div style="background: #fff; border: 1px solid #ddd5c8; border-radius: 4px; padding: 18px 20px;">
+      <p style="font-family: Georgia, serif; font-size: 16px; color: #1e2a3a; margin: 0 0 8px 0; font-style: italic;">Hoppa över</p>
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 13px; color: #6b6157; margin: 0; line-height: 1.65;">Inga frågor alls. Högst risk. Använd inte medan du lär dig.</p>
+    </div>
+  </div>
+
+  <!-- ÖVNING 0 -->
+  <div style="background: #fff; border: 1px solid #ddd5c8; border-left: 4px solid #1e2a3a; border-radius: 4px; padding: 24px 28px;">
+    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 14px;">
+      <span style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 5px 12px; background: #1e2a3a; color: #f0ece4; border-radius: 2px;">Övning 0</span>
+      <span style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 12px; color: #8a7e6e; letter-spacing: 0.04em;">5 minuter</span>
+    </div>
+    <h3 style="font-family: Georgia, serif; font-size: 19px; font-weight: 400; color: #1e2a3a; margin: 0 0 12px 0; font-style: italic;">Ställ in din arbetsplats</h3>
+    <div style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; line-height: 1.9;">
+      <label style="display: block; cursor: pointer;"><input type="checkbox" style="margin-right: 10px;">Öppna Claude, hitta lägesväljaren i meddelandefältet och byt till <strong>Cowork</strong>.</label>
+      <label style="display: block; cursor: pointer;"><input type="checkbox" style="margin-right: 10px;">Sätt godkännandeläget till <strong>Manuellt</strong> för den här kursen.</label>
+      <label style="display: block; cursor: pointer;"><input type="checkbox" style="margin-right: 10px;">Gå till Inställningar &rarr; Cowork och lägg in dina <strong>globala instruktioner</strong> (se rutan nedan).</label>
+      <label style="display: block; cursor: pointer;"><input type="checkbox" style="margin-right: 10px;">Kontrollera under sekretessinställningarna om modellförbättring är på eller av, och bestäm aktivt vad du vill.</label>
+      <label style="display: block; cursor: pointer;"><input type="checkbox" style="margin-right: 10px;">Ladda ner <a href="filer/ai-grundkurs-v3.zip" download style="color: #1e2a3a; font-weight: 700; text-decoration: underline;">ai-grundkurs-v3.zip</a> till en mapp du hittar igen.</label>
+    </div>
+    <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 13px; color: #8a7e6e; margin: 16px 0 8px 0; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600;">Klistra in som globala instruktioner</p>
+    <div style="background: #1e2a3a; border-radius: 4px; padding: 18px 22px;">
+      <p style="font-family: 'SF Mono', Menlo, Consolas, monospace; font-size: 13px; color: #e8e0d4; margin: 0; line-height: 1.8; white-space: pre-wrap;">Jag är lärare och undervisar i IT och artificiell intelligens på yrkeshögskolenivå. Undervisningsspråket är svenska.
+
+Om mitt arbete:
+- Kursmaterialet består av HTML- och CSS-filer som packas som zip och laddas upp i Moodle.
+- All CSS ska vara inline. Moodle tar bort style-taggar och externa stilmallar.
+- Jag arbetar under strikta dataskyddskrav.
+
+Datareglerna gäller alltid:
+- Jag laddar aldrig upp riktiga personuppgifter om studerande eller kollegor.
+- Allt exempelmaterial i mina kurser är fiktivt.
+- Fråga mig innan du använder något som ser ut som en riktig personuppgift.
+
+Så vill jag att du arbetar:
+- Upprepa min uppgift med egna ord och ställ frågor innan du börjar på något större.
+- Ändra aldrig originalfiler. Arbeta på kopior och redovisa vad du ändrat.
+- Var konkret. Hellre en färdig fil än en beskrivning av en fil.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== PASS 1 ===================== -->
+<div style="background: #1e2a3a; padding: 40px 40px 32px 40px;">
+  <p style="font-family: Georgia, serif; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #8a9ab0; margin: 0 0 10px 0;">Pass 1 · 20 minuter</p>
+  <h2 style="font-family: Georgia, serif; font-size: 32px; font-weight: 400; color: #f0ece4; margin: 0 0 12px 0; line-height: 1.2; font-style: italic;">Vad Cowork är &ndash; och när du ska välja det</h2>
+  <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 15px; color: #8a9ab0; margin: 0; line-height: 1.7; max-width: 620px;">Du har använt Claude i chatten, byggt custom GPT:er och kört Claude Code mot GitHub. Det är en utmärkt utgångspunkt &ndash; Cowork ligger mitt emellan de två sistnämnda. Det här passet placerar in verktyget bland dem du redan kan.</p>
+</div>
+
+<div style="background: #faf8f5; padding: 40px;">
+
+  <h3 style="font-family: Georgia, serif; font-size: 22px; font-weight: 400; color: #1e2a3a; margin: 0 0 14px 0; font-style: italic;">Skillnaden mot chatten</h3>
+  <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 15px; color: #3c3228; line-height: 1.75; margin: 0 0 16px 0;">I chatten ställer du en fråga och får ett svar som du sedan själv omvandlar till något användbart. Du kopierar, klistrar in, formaterar, sparar. I Cowork beskriver du ett <em>utfall</em> &ndash; och får tillbaka filen. Cowork bryter ner uppgiften i deluppgifter, kör dem, och kan arbeta vidare medan du gör annat.</p>
+  <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 15px; color: #3c3228; line-height: 1.75; margin: 0 0 24px 0;">Tekniskt sett har Cowork en <strong>sandlåda</strong>: en isolerad Linux-miljö i molnet med filsystem, terminal, Python och Node. När du laddar upp din zip hamnar den där. Cowork kan packa upp den, läsa varje fil, skriva om dem, köra ett skript som kontrollerar alla länkar, packa ihop igen och lämna tillbaka resultatet. Det är därför Cowork passar just ditt Moodle-material så bra &ndash; det är inte textgenerering, det är filbehandling.</p>
+
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 0 0 28px 0;">
+    <div style="background: #fff; border: 1px solid #ddd5c8; border-radius: 4px; padding: 20px 24px;">
+      <p style="font-family: Georgia, serif; font-size: 17px; color: #1e2a3a; margin: 0 0 10px 0; font-style: italic;">Välj Chat när&hellip;</p>
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; margin: 0; line-height: 1.75;">du vill tänka högt, brainstorma en kursidé, få en förklaring, eller snabbt kontrollera något. Ingen fil ska ut i andra änden.</p>
+    </div>
+    <div style="background: #1e2a3a; border: 1px solid #3a4e64; border-radius: 4px; padding: 20px 24px;">
+      <p style="font-family: Georgia, serif; font-size: 17px; color: #f0ece4; margin: 0 0 10px 0; font-style: italic;">Välj Cowork när&hellip;</p>
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #cfd8e2; margin: 0; line-height: 1.75;">det finns flera indatafiler, en fil ska ut, arbetet har flera steg, eller det är något du gör om och om igen varje termin.</p>
+    </div>
+  </div>
+
+  <h3 style="font-family: Georgia, serif; font-size: 22px; font-weight: 400; color: #1e2a3a; margin: 0 0 14px 0; font-style: italic;">Din karta över verktygen</h3>
+  <div style="background: #fff; border: 1px solid #ddd5c8; border-radius: 4px; overflow: hidden; margin: 0 0 28px 0;">
+    <div style="display: grid; grid-template-columns: 180px 1fr; background: #1e2a3a;">
+      <div style="padding: 12px 20px; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #8a9ab0;">Du kan redan</div>
+      <div style="padding: 12px 20px; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #8a9ab0; border-left: 1px solid #2a3a4e;">Så förhåller sig Cowork till det</div>
+    </div>
+    <div style="display: grid; grid-template-columns: 180px 1fr; border-bottom: 1px solid #e8e0d4; background: #fff;">
+      <div style="padding: 14px 20px; font-family: Georgia, serif; font-size: 14px; font-style: italic; color: #1e2a3a; border-right: 1px solid #e8e0d4;">Claude i chatten</div>
+      <div style="padding: 14px 20px; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; line-height: 1.6;">Samma modell, men Cowork får verktyg: filsystem, terminal, kodkörning, webbsökning. Minnet följer däremot inte med från chatten.</div>
+    </div>
+    <div style="display: grid; grid-template-columns: 180px 1fr; border-bottom: 1px solid #e8e0d4; background: #faf8f5;">
+      <div style="padding: 14px 20px; font-family: Georgia, serif; font-size: 14px; font-style: italic; color: #1e2a3a; border-right: 1px solid #e8e0d4;">Custom GPT:er</div>
+      <div style="padding: 14px 20px; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; line-height: 1.6;">Motsvarigheten heter <strong>skills</strong>: en mapp med en SKILL.md som beskriver när och hur något ska göras. Skillnaden är att skills laddas automatiskt när de behövs och kan innehålla körbara skript.</div>
+    </div>
+    <div style="display: grid; grid-template-columns: 180px 1fr; border-bottom: 1px solid #e8e0d4; background: #fff;">
+      <div style="padding: 14px 20px; font-family: Georgia, serif; font-size: 14px; font-style: italic; color: #1e2a3a; border-right: 1px solid #e8e0d4;">Projekt i ChatGPT</div>
+      <div style="padding: 14px 20px; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; line-height: 1.6;">Liknar en Cowork-session med globala instruktioner plus uppladdade filer &ndash; men Cowork kan producera och ändra filer, inte bara läsa dem.</div>
+    </div>
+    <div style="display: grid; grid-template-columns: 180px 1fr; background: #faf8f5;">
+      <div style="padding: 14px 20px; font-family: Georgia, serif; font-size: 14px; font-style: italic; color: #1e2a3a; border-right: 1px solid #e8e0d4;">Claude Code</div>
+      <div style="padding: 14px 20px; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; line-height: 1.6;">Nästan samma maskineri. Claude Code är byggt för kodbaser och terminalen; Cowork är byggt för dokument, filer och tvärverktygsarbete &ndash; med ett gränssnitt som inte kräver terminal.</div>
+    </div>
+  </div>
+
+  <div style="background: #f0ece4; border: 1px solid #ddd5c8; border-radius: 4px; padding: 20px 24px; margin: 0 0 28px 0;">
+    <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #6b6157; margin: 0; line-height: 1.75;"><strong style="color:#1e2a3a;">Bra att veta.</strong> Cowork förbrukar mer av din användningskvot än vanlig chatt, eftersom varje steg i den agentiska loopen är ett anrop. Det är sällan ett problem i praktiken, men det är förklaringen om du märker att kvoten tar slut snabbare än du är van vid. Kör enkla frågor i chatten, spara Cowork till det som ska bli filer.</p>
+  </div>
+
+  <!-- QUIZ 1 -->
+  <p style="font-family: Georgia, serif; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #8a7e6e; margin: 0 0 16px 0;">Kontrollfrågor · Pass 1</p>
+
+  <div style="background: #fff; border: 1px solid #ddd5c8; border-radius: 4px; padding: 20px 24px; margin-bottom: 12px;">
+    <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 15px; font-weight: 600; color: #1e2a3a; margin: 0 0 12px 0; line-height: 1.6;">1. Du vill snabbt förstå skillnaden mellan transformers och rekurrenta nätverk inför en föreläsning. Vilket läge passar bäst?</p>
+    <label style="display: block; padding: 5px 0; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; cursor: pointer;"><input type="radio" name="q1" style="margin-right: 10px;">A. Cowork, eftersom det är ett undervisningsrelaterat arbete</label>
+    <label style="display: block; padding: 5px 0; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; cursor: pointer;"><input type="radio" name="q1" style="margin-right: 10px;">B. Chat, eftersom ingen fil ska produceras</label>
+    <label style="display: block; padding: 5px 0; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; cursor: pointer;"><input type="radio" name="q1" style="margin-right: 10px;">C. Claude Code, eftersom det handlar om teknik</label>
+    <details style="margin-top: 14px; border-top: 1px solid #e8e0d4; padding-top: 12px;">
+      <summary style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: #8a7e6e; cursor: pointer;">Visa facit</summary>
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; margin: 10px 0 0 0; line-height: 1.7;"><strong>Rätt: B.</strong> Gränsen går vid om något ska ut som en fil eller ett flerstegsarbete &ndash; inte vid ämnesområdet. En förklaring du ska läsa och förstå hör hemma i chatten, som är snabbare och billigare i kvot.</p>
+    </details>
+  </div>
+
+  <div style="background: #fff; border: 1px solid #ddd5c8; border-radius: 4px; padding: 20px 24px; margin-bottom: 12px;">
+    <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 15px; font-weight: 600; color: #1e2a3a; margin: 0 0 12px 0; line-height: 1.6;">2. Var utförs arbetet när du ber Cowork packa upp en zip och skriva om filerna?</p>
+    <label style="display: block; padding: 5px 0; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; cursor: pointer;"><input type="radio" name="q2" style="margin-right: 10px;">A. På din egen dator, i webbläsarens minne</label>
+    <label style="display: block; padding: 5px 0; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; cursor: pointer;"><input type="radio" name="q2" style="margin-right: 10px;">B. Direkt i Moodle via ett tillägg</label>
+    <label style="display: block; padding: 5px 0; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; cursor: pointer;"><input type="radio" name="q2" style="margin-right: 10px;">C. I en isolerad sandlåda i molnet</label>
+    <details style="margin-top: 14px; border-top: 1px solid #e8e0d4; padding-top: 12px;">
+      <summary style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: #8a7e6e; cursor: pointer;">Visa facit</summary>
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; margin: 10px 0 0 0; line-height: 1.7;"><strong>Rätt: C.</strong> Sandlådan är en egen Linux-miljö som bara din session har tillgång till, och som töms när sessionen avslutas. Det är också svaret du ger IT-avdelningen när de frågar var materialet hamnar &ndash; men se pass 2 för den fullständiga bilden.</p>
+    </details>
+  </div>
+
+  <div style="background: #fff; border: 1px solid #ddd5c8; border-radius: 4px; padding: 20px 24px; margin-bottom: 12px;">
+    <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 15px; font-weight: 600; color: #1e2a3a; margin: 0 0 12px 0; line-height: 1.6;">3. Vilket av följande är <em>inte</em> ett tecken på att en uppgift hör hemma i Cowork?</p>
+    <label style="display: block; padding: 5px 0; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; cursor: pointer;"><input type="radio" name="q3" style="margin-right: 10px;">A. Uppgiften har flera indatafiler</label>
+    <label style="display: block; padding: 5px 0; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; cursor: pointer;"><input type="radio" name="q3" style="margin-right: 10px;">B. Du gör samma sak varje termin</label>
+    <label style="display: block; padding: 5px 0; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; cursor: pointer;"><input type="radio" name="q3" style="margin-right: 10px;">C. Frågan är komplicerad och kräver eftertanke</label>
+    <details style="margin-top: 14px; border-top: 1px solid #e8e0d4; padding-top: 12px;">
+      <summary style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: #8a7e6e; cursor: pointer;">Visa facit</summary>
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; margin: 10px 0 0 0; line-height: 1.7;"><strong>Rätt: C.</strong> Svårighetsgrad avgör ingenting &ndash; samma modell svarar i båda lägena. Det som avgör är <em>antalet steg</em> och <em>om något ska produceras</em>. En knivig begreppsfråga är fortfarande en chattfråga.</p>
+    </details>
+  </div>
+
+  <!-- ÖVNING 1 -->
+  <div style="background: #fff; border: 1px solid #ddd5c8; border-left: 4px solid #1e2a3a; border-radius: 4px; padding: 24px 28px; margin-top: 24px;">
+    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 14px;">
+      <span style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 5px 12px; background: #1e2a3a; color: #f0ece4; border-radius: 2px;">Övning 1</span>
+      <span style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 12px; color: #8a7e6e; letter-spacing: 0.04em;">8 minuter</span>
+    </div>
+    <h3 style="font-family: Georgia, serif; font-size: 19px; font-weight: 400; color: #1e2a3a; margin: 0 0 10px 0; font-style: italic;">Låt Cowork förhöra dig först</h3>
+    <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #6b6157; margin: 0 0 14px 0; line-height: 1.7;">Den enskilt mest verkningsfulla vanan i Cowork är att be om att uppgiften upprepas och att få frågor tillbaka <em>innan</em> arbetet startar. Du märker direkt vad du glömt beskriva. Prova det på något litet.</p>
+    <div style="background: #1e2a3a; border-radius: 4px; padding: 18px 22px; margin-bottom: 14px;">
+      <p style="font-family: 'SF Mono', Menlo, Consolas, monospace; font-size: 13px; color: #e8e0d4; margin: 0; line-height: 1.8; white-space: pre-wrap;">Innan vi börjar: upprepa min uppgift med dina egna ord och
+ställ alla frågor du har.
+
+Uppgiften: jag vill ha ett faktablad på en A4 om skillnaden
+mellan smal AI och generell AI, för studerande på andra året
+på en yrkeshögskola. Det ska bli en HTML-fil som jag kan
+lägga in i Moodle.</p>
+    </div>
+    <div style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; line-height: 1.9;">
+      <label style="display: block; cursor: pointer;"><input type="checkbox" style="margin-right: 10px;">Skicka prompten och <strong>svara på frågorna</strong> i stället för att säga &rdquo;kör bara&rdquo;.</label>
+      <label style="display: block; cursor: pointer;"><input type="checkbox" style="margin-right: 10px;">Notera vilka frågor du fick. Det är precis den information du behöver ge oombedd nästa gång.</label>
+      <label style="display: block; cursor: pointer;"><input type="checkbox" style="margin-right: 10px;">Låt Cowork bygga filen och ladda ner den.</label>
+      <label style="display: block; cursor: pointer;"><input type="checkbox" style="margin-right: 10px;">Öppna filen i webbläsaren. Bedöm på 15 sekunder: rätt, fel eller delvis?</label>
+    </div>
+    <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 13px; color: #8a7e6e; margin: 16px 0 0 0; line-height: 1.7; font-style: italic;">Klart när: du har en HTML-fil på disken och kan namnge minst tre saker Cowork frågade om som du inte hade tänkt på.</p>
+  </div>
+</div>
+
+<!-- ===================== PASS 2 ===================== -->
+<div style="background: #1e2a3a; padding: 40px 40px 32px 40px;">
+  <p style="font-family: Georgia, serif; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #8a9ab0; margin: 0 0 10px 0;">Pass 2 · 25 minuter</p>
+  <h2 style="font-family: Georgia, serif; font-size: 32px; font-weight: 400; color: #f0ece4; margin: 0 0 12px 0; line-height: 1.2; font-style: italic;">GDPR och datasäkerhet i praktiken</h2>
+  <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 15px; color: #8a9ab0; margin: 0; line-height: 1.7; max-width: 620px;">Det här passet finns för att du ska kunna arbeta lugnt resten av terminen. Målet är inte att du ska bli jurist, utan att du ska ha en regel du kan tillämpa på tre sekunder varje gång du är på väg att ladda upp något.</p>
+</div>
+
+<div style="background: #faf8f5; padding: 40px;">
+
+  <div style="background: #f0ece4; border: 1px solid #ddd5c8; border-radius: 4px; padding: 20px 24px; margin: 0 0 26px 0;">
+    <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #6b6157; margin: 0; line-height: 1.75;"><strong style="color:#1e2a3a;">Ansvarsfriskrivning.</strong> Det här är en praktisk orientering, inte juridisk rådgivning. Vilken rättslig grund din arbetsgivare har, om det finns ett personuppgiftsbiträdesavtal på plats och vad er egen AI-policy säger &ndash; det avgörs av din organisation, inte av den här kursen. Slutet av passet innehåller en checklista du kan ta med till dataskyddsombudet.</p>
+  </div>
+
+  <h3 style="font-family: Georgia, serif; font-size: 22px; font-weight: 400; color: #1e2a3a; margin: 0 0 14px 0; font-style: italic;">Vad som faktiskt händer med det du laddar upp</h3>
+  <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 15px; color: #3c3228; line-height: 1.75; margin: 0 0 14px 0;">Fyra saker är värda att hålla isär, eftersom de ofta blandas ihop i diskussioner på lärarrummet:</p>
+
+  <div style="display: grid; gap: 12px; margin: 0 0 26px 0;">
+    <div style="background: #fff; border: 1px solid #ddd5c8; border-radius: 4px; padding: 18px 22px;">
+      <p style="font-family: Georgia, serif; font-size: 16px; color: #1e2a3a; margin: 0 0 6px 0; font-style: italic;">1. Träning på ditt innehåll</p>
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; margin: 0; line-height: 1.7;">På privatkonton (Free, Pro, Max) används dina konversationer för modellförbättring <strong>bara om du själv slår på det</strong> i sekretessinställningarna. För Team och Enterprise gäller andra villkor. Kontrollera din egen inställning &ndash; gissa inte.</p>
+    </div>
+    <div style="background: #fff; border: 1px solid #ddd5c8; border-radius: 4px; padding: 18px 22px;">
+      <p style="font-family: Georgia, serif; font-size: 16px; color: #1e2a3a; margin: 0 0 6px 0; font-style: italic;">2. Lagring</p>
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; margin: 0; line-height: 1.7;">Konversationer ligger kvar i din historik så länge kontot är aktivt. Raderar du en konversation försvinner den ur historiken direkt och ur bakomliggande lagring inom 30 dagar. Har du slagit på modellförbättring kan avidentifierad data ligga kvar i träningsflödet i upp till fem år.</p>
+    </div>
+    <div style="background: #fff; border: 1px solid #ddd5c8; border-radius: 4px; padding: 18px 22px;">
+      <p style="font-family: Georgia, serif; font-size: 16px; color: #1e2a3a; margin: 0 0 6px 0; font-style: italic;">3. Sandlådan</p>
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; margin: 0; line-height: 1.7;">Själva arbetsmiljön är tillfällig och isolerad till din session. Den återvinns när sessionen tar slut. Men <em>filerna du laddade upp och det som skrevs i konversationen</em> följer konversationens lagringsregler, inte sandlådans.</p>
+    </div>
+    <div style="background: #fff; border: 1px solid #ddd5c8; border-radius: 4px; padding: 18px 22px;">
+      <p style="font-family: Georgia, serif; font-size: 16px; color: #1e2a3a; margin: 0 0 6px 0; font-style: italic;">4. Överföring till tredje land</p>
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; margin: 0; line-height: 1.7;">Behandlingen sker till stor del utanför EU/EES. Det är hanterbart med rätt avtal och skyddsåtgärder, men det är just en sådan fråga din organisation ska ha svarat på &ndash; inte du, ensam, en tisdagkväll.</p>
+    </div>
+  </div>
+
+  <h3 style="font-family: Georgia, serif; font-size: 22px; font-weight: 400; color: #1e2a3a; margin: 0 0 14px 0; font-style: italic;">Trezonsregeln</h3>
+  <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 15px; color: #3c3228; line-height: 1.75; margin: 0 0 18px 0;">Den praktiska regeln du kan tillämpa på tre sekunder. Fråga dig: <em>kan en enskild människa identifieras ur det här, direkt eller i kombination med något annat?</em></p>
+
+  <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin: 0 0 26px 0;">
+    <div style="background: #fff; border: 1px solid #ddd5c8; border-top: 4px solid #4a7c59; border-radius: 4px; padding: 20px 22px;">
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #4a7c59; margin: 0 0 10px 0;">Grön zon</p>
+      <p style="font-family: Georgia, serif; font-size: 16px; color: #1e2a3a; margin: 0 0 10px 0; font-style: italic;">Ladda upp fritt</p>
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 13px; color: #3c3228; margin: 0; line-height: 1.7;">Ditt eget kursmaterial. Fiktiva exempel. Läroplaner. HTML och CSS. Uppgiftsbeskrivningar. Bedömningsmatriser utan namn. Offentliga dokument.</p>
+    </div>
+    <div style="background: #fff; border: 1px solid #ddd5c8; border-top: 4px solid #b8860b; border-radius: 4px; padding: 20px 22px;">
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #b8860b; margin: 0 0 10px 0;">Gul zon</p>
+      <p style="font-family: Georgia, serif; font-size: 16px; color: #1e2a3a; margin: 0 0 10px 0; font-style: italic;">Avidentifiera först</p>
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 13px; color: #3c3228; margin: 0; line-height: 1.7;">Resultatlistor, kursutvärderingar i fritext, en studerandes inlämning du vill ha hjälp att strukturera återkoppling kring. Ersätt namn med Studerande&nbsp;A, B, C.</p>
+    </div>
+    <div style="background: #fff; border: 1px solid #ddd5c8; border-top: 4px solid #8b3a3a; border-radius: 4px; padding: 20px 22px;">
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #8b3a3a; margin: 0 0 10px 0;">Röd zon</p>
+      <p style="font-family: Georgia, serif; font-size: 16px; color: #1e2a3a; margin: 0 0 10px 0; font-style: italic;">Aldrig</p>
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 13px; color: #3c3228; margin: 0; line-height: 1.7;">Personnummer. Hälsouppgifter och stödbehov. Disciplinärenden. Studerandes kontaktuppgifter. Allt om minderåriga. Inloggningsuppgifter till skolans system.</p>
+    </div>
+  </div>
+
+  <div style="background: #f0ece4; padding: 24px 28px; border-top: 1px solid #ddd5c8; border-bottom: 1px solid #ddd5c8; margin: 0 0 26px 0;">
+    <div style="display: flex; align-items: flex-start; gap: 18px;">
+      <div style="background: #8b3a3a; color: #fff; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 6px 14px; border-radius: 2px; white-space: nowrap; margin-top: 2px;">Fällan</div>
+      <div>
+        <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 15px; color: #2c2c2c; margin: 0 0 8px 0; line-height: 1.7;">Gula zonen är farligare än den röda, för den röda ser man. Det som slinker igenom är sådant du inte tänker på som personuppgifter: <strong>metadata i filer</strong> (Word-dokument bär författarnamn), <strong>filnamn</strong> (<em>bedomning_anna_k.docx</em>), <strong>e-postadresser i sidfötter</strong>, <strong>skärmklipp</strong> med en deltagarlista i kanten, och <strong>fritextsvar i kursutvärderingar</strong> där någon skriver &rdquo;jag har dyslexi och behövde extra tid&rdquo;.</p>
+        <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #6b6157; margin: 0; line-height: 1.7;">Vanan som fångar allt det här: öppna filen själv och titta igenom den innan du laddar upp. Tio sekunder.</p>
+      </div>
+    </div>
+  </div>
+
+  <h3 style="font-family: Georgia, serif; font-size: 22px; font-weight: 400; color: #1e2a3a; margin: 0 0 14px 0; font-style: italic;">Varför du inte ska koppla OneDrive &ndash; och varför det inte spelar någon roll</h3>
+  <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 15px; color: #3c3228; line-height: 1.75; margin: 0 0 14px 0;">Cowork kan kopplas till andra tjänster via <em>connectors</em>. En koppling ger stående läsbehörighet till ett helt konto &ndash; inte till de filer du valt ut. Din arbetsgivare har förbjudit det, och det förbudet är rimligt: skillnaden mellan &rdquo;jag delar den här filen&rdquo; och &rdquo;jag ger tillgång till hela molnlagret&rdquo; är precis den skillnad dataskyddsregleringen bryr sig om.</p>
+  <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 15px; color: #3c3228; line-height: 1.75; margin: 0 0 14px 0;">Den goda nyheten: <strong>för ditt Moodle-arbete behöver du inga connectors alls.</strong> Uppladdning av en zip är inte ett sämre alternativ &ndash; det är ett bättre. Du ser exakt vad som går in, du bestämmer när, och det finns ingen stående behörighet kvar när du är klar. Hela pass 4 bygger på uppladdning och nedladdning.</p>
+  <div style="background: #fff; border: 1px solid #ddd5c8; border-radius: 4px; padding: 18px 22px; margin: 0 0 26px 0;">
+    <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; margin: 0; line-height: 1.75;"><strong>Formuleringen till IT-avdelningen:</strong> &rdquo;Jag använder ingen integration mot skolans system. Jag laddar upp enskilda filer manuellt, arbetar med dem, och laddar ner resultatet. Ingen tjänst har stående behörighet till någon av våra lagringsplatser.&rdquo;</p>
+  </div>
+
+  <!-- QUIZ 2 -->
+  <p style="font-family: Georgia, serif; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #8a7e6e; margin: 0 0 16px 0;">Kontrollfrågor · Pass 2</p>
+
+  <div style="background: #fff; border: 1px solid #ddd5c8; border-radius: 4px; padding: 20px 24px; margin-bottom: 12px;">
+    <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 15px; font-weight: 600; color: #1e2a3a; margin: 0 0 12px 0; line-height: 1.6;">4. Du har en Excel-fil med anonymiserade provresultat &ndash; namnen är utbytta mot löpnummer. Filen heter <em>resultat_IT21A_hostterminen.xlsx</em> och skapades av dig i Excel. Vilken zon?</p>
+    <label style="display: block; padding: 5px 0; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; cursor: pointer;"><input type="radio" name="q4" style="margin-right: 10px;">A. Grön &ndash; namnen är borta, alltså är det inte personuppgifter längre</label>
+    <label style="display: block; padding: 5px 0; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; cursor: pointer;"><input type="radio" name="q4" style="margin-right: 10px;">B. Gul &ndash; kontrollera gruppstorlek, filnamn och metadata innan du laddar upp</label>
+    <label style="display: block; padding: 5px 0; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; cursor: pointer;"><input type="radio" name="q4" style="margin-right: 10px;">C. Röd &ndash; provresultat får aldrig lämna skolans system</label>
+    <details style="margin-top: 14px; border-top: 1px solid #e8e0d4; padding-top: 12px;">
+      <summary style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: #8a7e6e; cursor: pointer;">Visa facit</summary>
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; margin: 10px 0 0 0; line-height: 1.7;"><strong>Rätt: B.</strong> Tre saker återstår efter att namnen tagits bort. Filnamnet pekar ut en specifik grupp och termin. Excel-filer bär författarnamn i metadata. Och i en grupp på tolv personer kan &rdquo;löpnummer 7, den enda med full poäng&rdquo; vara identifierbar för den som känner gruppen. Pseudonymisering är inte samma sak som anonymisering &ndash; pseudonymiserade uppgifter är fortfarande personuppgifter enligt GDPR.</p>
+    </details>
+  </div>
+
+  <div style="background: #fff; border: 1px solid #ddd5c8; border-radius: 4px; padding: 20px 24px; margin-bottom: 12px;">
+    <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 15px; font-weight: 600; color: #1e2a3a; margin: 0 0 12px 0; line-height: 1.6;">5. Du raderar en Cowork-konversation som innehöll en uppladdad fil. Vad gäller?</p>
+    <label style="display: block; padding: 5px 0; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; cursor: pointer;"><input type="radio" name="q5" style="margin-right: 10px;">A. Allt är borta ur alla system omedelbart</label>
+    <label style="display: block; padding: 5px 0; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; cursor: pointer;"><input type="radio" name="q5" style="margin-right: 10px;">B. Borta ur historiken direkt, ur bakomliggande lagring inom 30 dagar</label>
+    <label style="display: block; padding: 5px 0; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; cursor: pointer;"><input type="radio" name="q5" style="margin-right: 10px;">C. Konversationen ligger kvar i fem år oavsett</label>
+    <details style="margin-top: 14px; border-top: 1px solid #e8e0d4; padding-top: 12px;">
+      <summary style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: #8a7e6e; cursor: pointer;">Visa facit</summary>
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; margin: 10px 0 0 0; line-height: 1.7;"><strong>Rätt: B.</strong> Radering är inte omedelbar i backend-lagringen, men den sker. Femårsgränsen i alternativ C gäller något annat: avidentifierad data i träningsflödet, och bara om du själv slagit på modellförbättring. Poängen för dig: radering är en riktig åtgärd, men den är inte en ångerknapp för något du inte borde ha laddat upp.</p>
+    </details>
+  </div>
+
+  <div style="background: #fff; border: 1px solid #ddd5c8; border-radius: 4px; padding: 20px 24px; margin-bottom: 12px;">
+    <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 15px; font-weight: 600; color: #1e2a3a; margin: 0 0 12px 0; line-height: 1.6;">6. Varför är uppladdning av en zip bättre än en connector, ur dataskyddssynpunkt?</p>
+    <label style="display: block; padding: 5px 0; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; cursor: pointer;"><input type="radio" name="q6" style="margin-right: 10px;">A. Uppladdade filer lagras aldrig någonstans</label>
+    <label style="display: block; padding: 5px 0; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; cursor: pointer;"><input type="radio" name="q6" style="margin-right: 10px;">B. Du kontrollerar exakt vad som delas och när, utan stående behörighet</label>
+    <label style="display: block; padding: 5px 0; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; cursor: pointer;"><input type="radio" name="q6" style="margin-right: 10px;">C. Zip-filer är krypterade</label>
+    <details style="margin-top: 14px; border-top: 1px solid #e8e0d4; padding-top: 12px;">
+      <summary style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: #8a7e6e; cursor: pointer;">Visa facit</summary>
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; margin: 10px 0 0 0; line-height: 1.7;"><strong>Rätt: B.</strong> Nyckelordet är <em>uppgiftsminimering</em>. En connector ger tillgång till ett konto; en uppladdning ger tillgång till en fil. A är fel &ndash; uppladdade filer följer konversationens lagringsregler. C är fel &ndash; en vanlig zip är komprimerad, inte krypterad.</p>
+    </details>
+  </div>
+
+  <div style="background: #fff; border: 1px solid #ddd5c8; border-radius: 4px; padding: 20px 24px; margin-bottom: 12px;">
+    <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 15px; font-weight: 600; color: #1e2a3a; margin: 0 0 12px 0; line-height: 1.6;">7. En kollega säger: &rdquo;Det är lugnt, jag har stängt av modellträning, så då är GDPR uppfyllt.&rdquo; Vad är fel i resonemanget?</p>
+    <label style="display: block; padding: 5px 0; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; cursor: pointer;"><input type="radio" name="q7" style="margin-right: 10px;">A. Ingenting, det stämmer</label>
+    <label style="display: block; padding: 5px 0; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; cursor: pointer;"><input type="radio" name="q7" style="margin-right: 10px;">B. Träning är bara en av flera behandlingar &ndash; lagring, överföring och rättslig grund kvarstår</label>
+    <label style="display: block; padding: 5px 0; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; cursor: pointer;"><input type="radio" name="q7" style="margin-right: 10px;">C. Man kan inte stänga av modellträning</label>
+    <details style="margin-top: 14px; border-top: 1px solid #e8e0d4; padding-top: 12px;">
+      <summary style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: #8a7e6e; cursor: pointer;">Visa facit</summary>
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; margin: 10px 0 0 0; line-height: 1.7;"><strong>Rätt: B.</strong> Att data inte används för träning är bra, men GDPR reglerar all behandling av personuppgifter. Frågorna om rättslig grund, personuppgiftsbiträdesavtal, informationsplikt gentemot de registrerade och överföring till tredje land finns kvar. Det är därför regeln &rdquo;ladda inte upp personuppgifter alls&rdquo; är så bekväm &ndash; då slipper du hela diskussionen.</p>
+    </details>
+  </div>
+
+  <!-- ÖVNING 2 -->
+  <div style="background: #fff; border: 1px solid #ddd5c8; border-left: 4px solid #1e2a3a; border-radius: 4px; padding: 24px 28px; margin-top: 24px;">
+    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 14px;">
+      <span style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 5px 12px; background: #1e2a3a; color: #f0ece4; border-radius: 2px;">Övning 2</span>
+      <span style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 12px; color: #8a7e6e; letter-spacing: 0.04em;">10 minuter</span>
+    </div>
+    <h3 style="font-family: Georgia, serif; font-size: 19px; font-weight: 400; color: #1e2a3a; margin: 0 0 10px 0; font-style: italic;">Bygg din egen dataskyddsrutin</h3>
+    <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #6b6157; margin: 0 0 14px 0; line-height: 1.7;">Du producerar två saker: en avidentifieringsrutin du kan återanvända, och ett underlag att visa för din chef eller ditt dataskyddsombud.</p>
+    <div style="background: #1e2a3a; border-radius: 4px; padding: 18px 22px; margin-bottom: 14px;">
+      <p style="font-family: 'SF Mono', Menlo, Consolas, monospace; font-size: 13px; color: #e8e0d4; margin: 0; line-height: 1.8; white-space: pre-wrap;">Jag är lärare på en yrkeshögskola och vill använda dig
+regelbundet i mitt arbete med kursmaterial. Min arbetsgivare
+har strikta dataskyddskrav och jag får inte koppla ihop
+molnlagring med externa tjänster.
+
+Gör två saker:
+
+1. Skriv en checklista på en A4 som jag kan ta med till vårt
+   dataskyddsombud. Den ska visa vad jag gör, vilka uppgifter
+   som behandlas, och vilka frågor organisationen behöver
+   svara på. Ärlig ton, inga överdrivna löften.
+
+2. Skriv en kort rutin för hur jag avidentifierar material
+   innan uppladdning. Ta med det som är lätt att glömma:
+   metadata, filnamn, sidfötter, små grupper.
+
+Leverera båda som en HTML-fil med all CSS inline, så att jag
+kan lägga in den i Moodle.</p>
+    </div>
+    <div style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; line-height: 1.9;">
+      <label style="display: block; cursor: pointer;"><input type="checkbox" style="margin-right: 10px;">Kör prompten och läs igenom resultatet <strong>kritiskt</strong> &ndash; stämmer det med hur din skola faktiskt fungerar?</label>
+      <label style="display: block; cursor: pointer;"><input type="checkbox" style="margin-right: 10px;">Be om ändringar: &rdquo;stryk punkt 3, den gäller inte oss&rdquo;, &rdquo;lägg till att vi använder Moodle&rdquo;.</label>
+      <label style="display: block; cursor: pointer;"><input type="checkbox" style="margin-right: 10px;">Spara avidentifieringsrutinen någonstans du hittar den. Du ska återanvända den.</label>
+      <label style="display: block; cursor: pointer;"><input type="checkbox" style="margin-right: 10px;">Bestäm en egen personlig regel i en mening. Skriv ner den.</label>
+    </div>
+    <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 13px; color: #8a7e6e; margin: 16px 0 0 0; line-height: 1.7; font-style: italic;">Klart när: du kan svara på frågan &rdquo;vad laddar du upp?&rdquo; utan att tveka.</p>
+  </div>
+
+  <!-- CHECKLISTA -->
+  <div style="background: #f0ece4; border: 1px solid #ddd5c8; border-radius: 4px; padding: 26px 30px; margin-top: 20px;">
+    <p style="font-family: Georgia, serif; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #8a7e6e; margin: 0 0 8px 0;">Att skriva ut och sätta upp</p>
+    <h3 style="font-family: Georgia, serif; font-size: 21px; font-weight: 400; color: #1e2a3a; margin: 0 0 16px 0; font-style: italic;">Tio sekunder före varje uppladdning</h3>
+    <div style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; line-height: 2;">
+      <label style="display: block; cursor: pointer;"><input type="checkbox" style="margin-right: 10px;">Har jag öppnat filen och tittat igenom den med egna ögon?</label>
+      <label style="display: block; cursor: pointer;"><input type="checkbox" style="margin-right: 10px;">Finns det namn, e-postadresser eller telefonnummer någonstans &ndash; också i sidfötter och kommentarer?</label>
+      <label style="display: block; cursor: pointer;"><input type="checkbox" style="margin-right: 10px;">Avslöjar filnamnet en grupp, en termin eller en person?</label>
+      <label style="display: block; cursor: pointer;"><input type="checkbox" style="margin-right: 10px;">Kan någon identifieras genom kombination &ndash; liten grupp, ovanligt resultat, unik formulering?</label>
+      <label style="display: block; cursor: pointer;"><input type="checkbox" style="margin-right: 10px;">Är metadata rensad? (Word och Excel bär författarnamn.)</label>
+      <label style="display: block; cursor: pointer;"><input type="checkbox" style="margin-right: 10px;">Är allt exempelmaterial fiktivt &ndash; på riktigt, inte &rdquo;lätt omskrivet&rdquo;?</label>
+      <label style="display: block; cursor: pointer;"><input type="checkbox" style="margin-right: 10px;">Skulle jag vara bekväm om den här filen dök upp i en granskning?</label>
+    </div>
+    <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 13px; color: #6b6157; margin: 16px 0 0 0; line-height: 1.7; font-style: italic;">Är svaret nej på den sista frågan är svaret nej på hela uppladdningen. Det finns nästan alltid en fiktiv version av samma uppgift som fungerar lika bra.</p>
+  </div>
+</div>
+
+<!-- ===================== PASS 3 ===================== -->
+<div style="background: #1e2a3a; padding: 40px 40px 32px 40px;">
+  <p style="font-family: Georgia, serif; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #8a9ab0; margin: 0 0 10px 0;">Pass 3 · 20 minuter</p>
+  <h2 style="font-family: Georgia, serif; font-size: 32px; font-weight: 400; color: #f0ece4; margin: 0 0 12px 0; line-height: 1.2; font-style: italic;">Filer in och filer ut</h2>
+  <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 15px; color: #8a9ab0; margin: 0; line-height: 1.7; max-width: 620px;">Nu blir det praktiskt. Ta fram <a href="filer/ai-grundkurs-v3.zip" download style="color: #1e2a3a; font-weight: 700; text-decoration: underline;">ai-grundkurs-v3.zip</a>. Efter det här passet vet du hur en fil rör sig genom Cowork &ndash; in, genom sandlådan, ut igen.</p>
+</div>
+
+<div style="background: #faf8f5; padding: 40px;">
+
+  <h3 style="font-family: Georgia, serif; font-size: 22px; font-weight: 400; color: #1e2a3a; margin: 0 0 14px 0; font-style: italic;">Filens resa</h3>
+  <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 15px; color: #3c3228; line-height: 1.75; margin: 0 0 22px 0;">Det finns tre platser en fil kan befinna sig på, och nästan all förvirring i början kommer av att blanda ihop dem.</p>
+
+  <div style="background: #fff; border: 1px solid #ddd5c8; border-radius: 4px; padding: 24px 28px; margin: 0 0 26px 0;">
+    <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 0;">
+      <div style="text-align: center; padding: 14px 6px;">
+        <div style="width: 40px; height: 40px; background: #1e2a3a; border-radius: 50%; margin: 0 auto 10px auto; display: flex; align-items: center; justify-content: center;">
+          <span style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 15px; font-weight: 700; color: #f0ece4;">1</span>
+        </div>
+        <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 12px; color: #1e2a3a; font-weight: 600; margin: 0 0 4px 0;">Din dator</p>
+        <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; color: #8a7e6e; margin: 0; line-height: 1.5;">Originalet ligger kvar, orört</p>
+      </div>
+      <div style="display: flex; align-items: center; justify-content: center; padding-top: 6px;"><span style="font-size: 20px; color: #ddd5c8;">&rarr;</span></div>
+      <div style="text-align: center; padding: 14px 6px;">
+        <div style="width: 40px; height: 40px; background: #1e2a3a; border-radius: 50%; margin: 0 auto 10px auto; display: flex; align-items: center; justify-content: center;">
+          <span style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 15px; font-weight: 700; color: #f0ece4;">2</span>
+        </div>
+        <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 12px; color: #1e2a3a; font-weight: 600; margin: 0 0 4px 0;">Sandlådan</p>
+        <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; color: #8a7e6e; margin: 0; line-height: 1.5;">Packas upp, läses, ändras, packas ihop</p>
+      </div>
+      <div style="display: flex; align-items: center; justify-content: center; padding-top: 6px;"><span style="font-size: 20px; color: #ddd5c8;">&rarr;</span></div>
+      <div style="text-align: center; padding: 14px 6px;">
+        <div style="width: 40px; height: 40px; background: #1e2a3a; border-radius: 50%; margin: 0 auto 10px auto; display: flex; align-items: center; justify-content: center;">
+          <span style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 15px; font-weight: 700; color: #f0ece4;">3</span>
+        </div>
+        <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 12px; color: #1e2a3a; font-weight: 600; margin: 0 0 4px 0;">Tillbaka till dig</p>
+        <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; color: #8a7e6e; margin: 0; line-height: 1.5;">Levereras som nedladdningsbar fil i chatten</p>
+      </div>
+    </div>
+    <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 13px; color: #6b6157; margin: 18px 0 0 0; padding-top: 16px; border-top: 1px solid #e8e0d4; line-height: 1.7;"><strong>Det som förvirrar mest:</strong> när Cowork säger &rdquo;jag har sparat filen&rdquo; menar den i sandlådan &ndash; inte hos dig. Filen finns hos dig först när den dyker upp som en nedladdningsbar fil i konversationen. Säg &rdquo;skicka den till mig&rdquo; om du inte ser den.</p>
+  </div>
+
+  <h3 style="font-family: Georgia, serif; font-size: 22px; font-weight: 400; color: #1e2a3a; margin: 0 0 14px 0; font-style: italic;">Fyra vanor som gör hela skillnaden</h3>
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 0 0 26px 0;">
+    <div style="background: #fff; border: 1px solid #ddd5c8; border-radius: 4px; padding: 18px 22px;">
+      <p style="font-family: Georgia, serif; font-size: 16px; color: #1e2a3a; margin: 0 0 8px 0; font-style: italic;">Inventera före du ändrar</p>
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 13px; color: #3c3228; margin: 0; line-height: 1.7;">Be alltid om en genomgång av vad som finns i paketet innan du ber om ändringar. Du upptäcker saker du glömt att du hade.</p>
+    </div>
+    <div style="background: #fff; border: 1px solid #ddd5c8; border-radius: 4px; padding: 18px 22px;">
+      <p style="font-family: Georgia, serif; font-size: 16px; color: #1e2a3a; margin: 0 0 8px 0; font-style: italic;">Aldrig på originalet</p>
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 13px; color: #3c3228; margin: 0; line-height: 1.7;">Säg uttryckligen: arbeta på en kopia, behåll originalet. Det ligger redan i dina globala instruktioner, men upprepa det vid stora ändringar.</p>
+    </div>
+    <div style="background: #fff; border: 1px solid #ddd5c8; border-radius: 4px; padding: 18px 22px;">
+      <p style="font-family: Georgia, serif; font-size: 16px; color: #1e2a3a; margin: 0 0 8px 0; font-style: italic;">Be om ändringsloggen</p>
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 13px; color: #3c3228; margin: 0; line-height: 1.7;">&rdquo;Lista varje ändring du gjorde, fil för fil.&rdquo; Det är din enda insyn i vad som faktiskt hände, och det tar tio sekunder att läsa.</p>
+    </div>
+    <div style="background: #fff; border: 1px solid #ddd5c8; border-radius: 4px; padding: 18px 22px;">
+      <p style="font-family: Georgia, serif; font-size: 16px; color: #1e2a3a; margin: 0 0 8px 0; font-style: italic;">Granska på 15 sekunder</p>
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 13px; color: #3c3228; margin: 0; line-height: 1.7;">Öppna filen. Rätt, fel eller delvis? Du är ämnesexperten &ndash; det är den bedömningen som ingen annan kan göra åt dig.</p>
+    </div>
+  </div>
+
+  <!-- QUIZ 3 -->
+  <p style="font-family: Georgia, serif; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #8a7e6e; margin: 0 0 16px 0;">Kontrollfrågor · Pass 3</p>
+
+  <div style="background: #fff; border: 1px solid #ddd5c8; border-radius: 4px; padding: 20px 24px; margin-bottom: 12px;">
+    <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 15px; font-weight: 600; color: #1e2a3a; margin: 0 0 12px 0; line-height: 1.6;">8. Cowork skriver &rdquo;Klart! Jag har uppdaterat alla fem filerna.&rdquo; Vad har hänt med filerna på din dator?</p>
+    <label style="display: block; padding: 5px 0; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; cursor: pointer;"><input type="radio" name="q8" style="margin-right: 10px;">A. De har uppdaterats automatiskt</label>
+    <label style="display: block; padding: 5px 0; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; cursor: pointer;"><input type="radio" name="q8" style="margin-right: 10px;">B. Ingenting &ndash; ändringarna finns i sandlådan tills du fått filen levererad</label>
+    <label style="display: block; padding: 5px 0; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; cursor: pointer;"><input type="radio" name="q8" style="margin-right: 10px;">C. De har raderats och ersatts</label>
+    <details style="margin-top: 14px; border-top: 1px solid #e8e0d4; padding-top: 12px;">
+      <summary style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: #8a7e6e; cursor: pointer;">Visa facit</summary>
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; margin: 10px 0 0 0; line-height: 1.7;"><strong>Rätt: B.</strong> Uppladdning är en kopia. Ditt original är orört &ndash; vilket också är din säkerhetsmarginal: går något fel har du alltid kvar utgångsläget. Be om leverans av den färdiga filen och jämför själv.</p>
+    </details>
+  </div>
+
+  <div style="background: #fff; border: 1px solid #ddd5c8; border-radius: 4px; padding: 20px 24px; margin-bottom: 12px;">
+    <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 15px; font-weight: 600; color: #1e2a3a; margin: 0 0 12px 0; line-height: 1.6;">9. Vad ska vara ditt <em>första</em> meddelande efter att du laddat upp ett zip-paket du inte rört på ett år?</p>
+    <label style="display: block; padding: 5px 0; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; cursor: pointer;"><input type="radio" name="q9" style="margin-right: 10px;">A. &rdquo;Modernisera allt.&rdquo;</label>
+    <label style="display: block; padding: 5px 0; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; cursor: pointer;"><input type="radio" name="q9" style="margin-right: 10px;">B. &rdquo;Packa upp och gå igenom vad som finns, utan att ändra något.&rdquo;</label>
+    <label style="display: block; padding: 5px 0; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; cursor: pointer;"><input type="radio" name="q9" style="margin-right: 10px;">C. &rdquo;Skriv om all CSS.&rdquo;</label>
+    <details style="margin-top: 14px; border-top: 1px solid #e8e0d4; padding-top: 12px;">
+      <summary style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: #8a7e6e; cursor: pointer;">Visa facit</summary>
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; margin: 10px 0 0 0; line-height: 1.7;"><strong>Rätt: B.</strong> Inventering är gratis, går snabbt och ger dig ett beslutsunderlag. Går du direkt på &rdquo;modernisera allt&rdquo; får du ändringar du inte bad om i filer du glömt bort. Separera alltid <em>diagnos</em> från <em>behandling</em>.</p>
+    </details>
+  </div>
+
+  <!-- ÖVNING 3 -->
+  <div style="background: #fff; border: 1px solid #ddd5c8; border-left: 4px solid #1e2a3a; border-radius: 4px; padding: 24px 28px; margin-top: 24px;">
+    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 14px;">
+      <span style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 5px 12px; background: #1e2a3a; color: #f0ece4; border-radius: 2px;">Övning 3</span>
+      <span style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 12px; color: #8a7e6e; letter-spacing: 0.04em;">10 minuter</span>
+    </div>
+    <h3 style="font-family: Georgia, serif; font-size: 19px; font-weight: 400; color: #1e2a3a; margin: 0 0 10px 0; font-style: italic;">Inventera övningspaketet</h3>
+    <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #6b6157; margin: 0 0 14px 0; line-height: 1.7;">Ladda upp <a href="filer/ai-grundkurs-v3.zip" download style="color: #1e2a3a; font-weight: 700; text-decoration: underline;">ai-grundkurs-v3.zip</a> i din Cowork-session och kör prompten nedan. Paketet innehåller ett antal fel som lagts in med flit &ndash; se hur många Cowork hittar.</p>
+    <div style="background: #1e2a3a; border-radius: 4px; padding: 18px 22px; margin-bottom: 14px;">
+      <p style="font-family: 'SF Mono', Menlo, Consolas, monospace; font-size: 13px; color: #e8e0d4; margin: 0; line-height: 1.8; white-space: pre-wrap;">Packa upp den bifogade zip-filen. Ändra ingenting ännu.
+
+Ge mig en inventering med fyra rubriker:
+
+1. Struktur – vilka filer finns, hur hänger de ihop,
+   saknas något som refereras?
+2. Innehåll som har åldrats – påståenden som var korrekta
+   när materialet skrevs men inte längre är det. Sök på
+   webben där du behöver kontrollera fakta.
+3. Teknik – trasiga länkar, saknade bilder, motstridiga
+   stilmallar, kod som inte fungerar i moderna webbläsare.
+4. Tillgänglighet – rubrikstruktur, alt-texter, kontrast,
+   sådant som inte fungerar på mobil.
+
+Sortera fynden efter hur allvarliga de är. Var kortfattad:
+en rad per fynd, med filnamn.</p>
+    </div>
+    <div style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; line-height: 1.9;">
+      <label style="display: block; cursor: pointer;"><input type="checkbox" style="margin-right: 10px;">Kör inventeringen och läs igenom listan.</label>
+      <label style="display: block; cursor: pointer;"><input type="checkbox" style="margin-right: 10px;">Jämför med facit nedan. Hittade Cowork allt? Hittade den något som facit missar?</label>
+      <label style="display: block; cursor: pointer;"><input type="checkbox" style="margin-right: 10px;">Fråga vidare om något du inte förstår: &rdquo;förklara varför gammal.css är ett problem&rdquo;.</label>
+      <label style="display: block; cursor: pointer;"><input type="checkbox" style="margin-right: 10px;">Behåll sessionen öppen &ndash; du arbetar vidare i den i pass 4.</label>
+    </div>
+    <details style="margin-top: 18px; border-top: 1px solid #e8e0d4; padding-top: 14px;">
+      <summary style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: #8a7e6e; cursor: pointer;">Visa facit &ndash; de inlagda felen</summary>
+      <div style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; margin-top: 12px; line-height: 1.8;">
+        <p style="margin: 0 0 10px 0;"><strong>Struktur.</strong> <em>index.html</em> länkar till <em>04-framtiden.html</em> som inte finns. <em>02-maskininlarning.html</em> länkar till <em>03-djupinlarning.html</em> som inte finns. <em>laroplan.txt</em> nämner modul 4 och noterar själv att sidan saknas. Bilden <em>bilder/ml-diagram.png</em> refereras men finns inte.</p>
+        <p style="margin: 0 0 10px 0;"><strong>Innehåll som åldrats.</strong> GPT-3 beskrivs som den mest avancerade tillgängliga språkmodellen och det påstås att ingen chattprodukt bygger på den. Bildgenerering beskrivs som ett forskningsområde utan konsumentprodukter. EU:s AI-förordning beskrivs som ett förslag under behandling &ndash; den antogs 2024 och tillämpas stegvis. Riskkategorin heter &rdquo;oacceptabel risk&rdquo;, inte &rdquo;oändlig risk&rdquo;. Python 3.7 och TensorFlow 1.x är föråldrade. Adobe Flash Player lades ner 2020 och Internet Explorer 11 pensionerades 2022. Alla datum och deadlines pekar på hösten 2022.</p>
+        <p style="margin: 0 0 10px 0;"><strong>Teknik.</strong> Två stilmallar laddas samtidigt i <em>index.html</em> och <em>quiz.html</em>, och <em>gammal.css</em> skriver över <em>stil.css</em>. Föråldrade taggar och attribut: <em>font</em>, <em>bgcolor</em>, <em>align=&quot;center&quot;</em>, tabellayout för sidstruktur. Extern länk till <em>exempelia.fi</em> som inte leder någonstans. Teckenkodning saknas, vilket kan ge trasiga å, ä och ö.</p>
+        <p style="margin: 0;"><strong>Tillgänglighet.</strong> <em>lang</em>-attribut saknas på alla sidor. <em>viewport</em>-metatagg saknas &ndash; sidorna fungerar dåligt på mobil. Bilden saknar <em>alt</em>-text. Fast bredd på 800 pixlar. Rubriknivåer hoppas över. Grå text på ljus bakgrund i sidfötterna har svag kontrast.</p>
+        <p style="margin: 12px 0 0 0; font-style: italic; color: #6b6157;">Bonus, och den viktigaste pedagogiskt: <em>laroplan.txt</em> och modul 3 slår fast att all användning av AI-verktyg är förbjuden vid inlämningsuppgifter. Det är en policy från 2022 som knappast är din i dag &ndash; men om Cowork inte påpekade det, notera att fakta som inte är tekniskt felaktiga behöver <em>din</em> blick.</p>
+      </div>
+    </details>
+    <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 13px; color: #8a7e6e; margin: 16px 0 0 0; line-height: 1.7; font-style: italic;">Klart när: du har en fyndlista och en känsla för vad Cowork ser direkt och vad du måste peka på.</p>
+  </div>
+</div>
+
+<!-- PAUS -->
+<div style="background: #1e2a3a; padding: 28px 40px; text-align: center;">
+  <p style="font-family: Georgia, serif; font-size: 20px; font-weight: 400; color: #f0ece4; margin: 0 0 6px 0; font-style: italic;">Paus &ndash; fem minuter</p>
+  <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #8a9ab0; margin: 0; line-height: 1.6;">Halva kursen är avklarad. Resten är det du kom för.</p>
+</div>
+
+<!-- ===================== PASS 4 ===================== -->
+<div style="background: #f0ece4; padding: 44px 40px 36px 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: center; border-bottom: 1px solid #ddd5c8;">
+  <div>
+    <p style="font-family: Georgia, serif; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #8a7e6e; margin: 0 0 12px 0;">Pass 4 · 45 minuter · Kursens kärna</p>
+    <h2 style="font-family: Georgia, serif; font-size: 34px; font-weight: 400; color: #1e2a3a; margin: 0 0 14px 0; line-height: 1.15; font-style: italic;">Ditt Moodle-arbetsflöde</h2>
+    <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 15px; color: #6b6157; margin: 0; line-height: 1.7;">Det här är arbetet du lägger mest tid på: zip in, zip ut, terminen börjar om. Efter passet har du en pipeline i sex steg som du kan köra varje gång &ndash; och som du i pass 5 gör om till en skill.</p>
+  </div>
+  <div style="border-radius: 4px; height: 230px; overflow: hidden;">
+    <svg viewBox="0 0 400 230" role="img" aria-label="Ett zip-paket går in i en pipeline och kommer ut som ett uppdaterat paket" style="width: 100%; height: 100%; display: block; background: #1e2a3a;">
+      <rect x="0" y="0" width="400" height="230" fill="#1e2a3a"></rect>
+      <rect x="24" y="80" width="76" height="70" rx="4" fill="#2a3a4e" stroke="#3a4e64"></rect>
+      <path d="M58 80 L58 150 M52 92 h12 M52 104 h12 M52 116 h12" stroke="#8a9ab0" stroke-width="1.5"></path>
+      <text x="62" y="170" fill="#8a9ab0" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle">v3</text>
+      <path d="M110 115 h30 M134 110 l6 5 -6 5" stroke="#8a9ab0" stroke-width="1.5" fill="none"></path>
+      <rect x="150" y="60" width="100" height="110" rx="4" fill="none" stroke="#3a4e64"></rect>
+      <circle cx="172" cy="86" r="7" fill="none" stroke="#8a9ab0" stroke-width="1.5"></circle>
+      <circle cx="172" cy="115" r="7" fill="none" stroke="#8a9ab0" stroke-width="1.5"></circle>
+      <circle cx="172" cy="144" r="7" fill="none" stroke="#8a9ab0" stroke-width="1.5"></circle>
+      <path d="M186 86 h44 M186 115 h32 M186 144 h40" stroke="#3a4e64" stroke-width="4"></path>
+      <path d="M260 115 h30 M284 110 l6 5 -6 5" stroke="#8a9ab0" stroke-width="1.5" fill="none"></path>
+      <rect x="300" y="80" width="76" height="70" rx="4" fill="#f0ece4"></rect>
+      <path d="M334 80 L334 150 M328 92 h12 M328 104 h12 M328 116 h12" stroke="#1e2a3a" stroke-width="1.5"></path>
+      <text x="338" y="170" fill="#f0ece4" font-family="Helvetica, Arial, sans-serif" font-size="11" text-anchor="middle">v4</text>
+    </svg>
+  </div>
+</div>
+
+<div style="background: #faf8f5; padding: 40px;">
+
+  <h3 style="font-family: Georgia, serif; font-size: 22px; font-weight: 400; color: #1e2a3a; margin: 0 0 16px 0; font-style: italic;">Pipelinen i sex steg</h3>
+
+  <div style="background: #fff; border: 1px solid #ddd5c8; border-radius: 4px; padding: 24px 28px; margin: 0 0 28px 0;">
+    <div style="display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; margin-bottom: 10px;">
+      <div style="text-align: center; padding: 14px 6px;">
+        <div style="width: 36px; height: 36px; background: #1e2a3a; border-radius: 50%; margin: 0 auto 8px auto; display: flex; align-items: center; justify-content: center;"><span style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; font-weight: 700; color: #f0ece4;">1</span></div>
+        <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 12px; color: #1e2a3a; font-weight: 600; margin: 0 0 4px 0;">Inventera</p>
+        <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; color: #8a7e6e; margin: 0; line-height: 1.5;">Vad finns och vad är trasigt?</p>
+      </div>
+      <div style="display: flex; align-items: center; justify-content: center; padding-top: 6px;"><span style="font-size: 18px; color: #ddd5c8;">&rarr;</span></div>
+      <div style="text-align: center; padding: 14px 6px;">
+        <div style="width: 36px; height: 36px; background: #1e2a3a; border-radius: 50%; margin: 0 auto 8px auto; display: flex; align-items: center; justify-content: center;"><span style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; font-weight: 700; color: #f0ece4;">2</span></div>
+        <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 12px; color: #1e2a3a; font-weight: 600; margin: 0 0 4px 0;">Bestäm mallen</p>
+        <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; color: #8a7e6e; margin: 0; line-height: 1.5;">En gång, sedan aldrig igen</p>
+      </div>
+      <div style="display: flex; align-items: center; justify-content: center; padding-top: 6px;"><span style="font-size: 18px; color: #ddd5c8;">&rarr;</span></div>
+      <div style="text-align: center; padding: 14px 6px;">
+        <div style="width: 36px; height: 36px; background: #1e2a3a; border-radius: 50%; margin: 0 auto 8px auto; display: flex; align-items: center; justify-content: center;"><span style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; font-weight: 700; color: #f0ece4;">3</span></div>
+        <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 12px; color: #1e2a3a; font-weight: 600; margin: 0 0 4px 0;">Uppdatera sakinnehåll</p>
+        <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; color: #8a7e6e; margin: 0; line-height: 1.5;">Med källor, en sida i taget</p>
+      </div>
+    </div>
+    <div style="border-top: 1px solid #e8e0d4; padding-top: 10px; display: grid; grid-template-columns: repeat(5, 1fr); gap: 0;">
+      <div style="text-align: center; padding: 14px 6px;">
+        <div style="width: 36px; height: 36px; background: #1e2a3a; border-radius: 50%; margin: 0 auto 8px auto; display: flex; align-items: center; justify-content: center;"><span style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; font-weight: 700; color: #f0ece4;">4</span></div>
+        <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 12px; color: #1e2a3a; font-weight: 600; margin: 0 0 4px 0;">Applicera mallen</p>
+        <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; color: #8a7e6e; margin: 0; line-height: 1.5;">Alla sidor, samma utseende</p>
+      </div>
+      <div style="display: flex; align-items: center; justify-content: center; padding-top: 6px;"><span style="font-size: 18px; color: #ddd5c8;">&rarr;</span></div>
+      <div style="text-align: center; padding: 14px 6px;">
+        <div style="width: 36px; height: 36px; background: #1e2a3a; border-radius: 50%; margin: 0 auto 8px auto; display: flex; align-items: center; justify-content: center;"><span style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; font-weight: 700; color: #f0ece4;">5</span></div>
+        <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 12px; color: #1e2a3a; font-weight: 600; margin: 0 0 4px 0;">Kvalitetskontroll</p>
+        <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; color: #8a7e6e; margin: 0; line-height: 1.5;">Länkar, kodning, tillgänglighet</p>
+      </div>
+      <div style="display: flex; align-items: center; justify-content: center; padding-top: 6px;"><span style="font-size: 18px; color: #ddd5c8;">&rarr;</span></div>
+      <div style="text-align: center; padding: 14px 6px;">
+        <div style="width: 36px; height: 36px; background: #1e2a3a; border-radius: 50%; margin: 0 auto 8px auto; display: flex; align-items: center; justify-content: center;"><span style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; font-weight: 700; color: #f0ece4;">6</span></div>
+        <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 12px; color: #1e2a3a; font-weight: 600; margin: 0 0 4px 0;">Paketera och logga</p>
+        <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; color: #8a7e6e; margin: 0; line-height: 1.5;">Ny zip + ändringslogg</p>
+      </div>
+    </div>
+  </div>
+
+  <h3 style="font-family: Georgia, serif; font-size: 22px; font-weight: 400; color: #1e2a3a; margin: 0 0 14px 0; font-style: italic;">Steg 2 i detalj: bestäm mallen en gång</h3>
+  <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 15px; color: #3c3228; line-height: 1.75; margin: 0 0 16px 0;">Det här är det steg som betalar sig mest, och det som är lättast att hoppa över. Om du inte bestämmer hur materialet ska se ut kommer varje uppdatering att se lite annorlunda ut &ndash; och efter tre terminer har du samma röra som i övningspaketet, fast nyare.</p>
+  <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 15px; color: #3c3228; line-height: 1.75; margin: 0 0 16px 0;">En mall för Moodle måste ta hänsyn till tre begränsningar. Moodle rensar bort <code style="font-family:'SF Mono',Menlo,Consolas,monospace;font-size:13px;background:#f0ece4;padding:1px 5px;border-radius:2px;">&lt;style&gt;</code>-taggar och externa stilmallar när innehållet sparas via redigeraren, så all CSS måste ligga inline på varje element. Externa typsnitt laddas inte, så du är hänvisad till systemtypsnitt. Och JavaScript filtreras oftast bort &ndash; vill du ha interaktivitet får du bygga den med ren HTML, precis som den här sidan gör med <code style="font-family:'SF Mono',Menlo,Consolas,monospace;font-size:13px;background:#f0ece4;padding:1px 5px;border-radius:2px;">&lt;details&gt;</code> och kryssrutor.</p>
+
+  <div style="background: #f0ece4; border: 1px solid #ddd5c8; border-radius: 4px; padding: 20px 24px; margin: 0 0 26px 0;">
+    <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #6b6157; margin: 0; line-height: 1.75;"><strong style="color:#1e2a3a;">Om du laddar upp zip som filresurs i stället för att klistra in i redigeraren</strong> gäller inte begränsningarna på samma sätt &ndash; då serveras filerna som de är, med sina stilmallar. Bestäm vilken väg du går <em>innan</em> du bygger mallen, och säg det till Cowork. Det är den enskilt vanligaste källan till &rdquo;varför ser det inte ut som det ska i Moodle?&rdquo;.</p>
+  </div>
+
+  <!-- QUIZ 4 -->
+  <p style="font-family: Georgia, serif; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #8a7e6e; margin: 0 0 16px 0;">Kontrollfrågor · Pass 4</p>
+
+  <div style="background: #fff; border: 1px solid #ddd5c8; border-radius: 4px; padding: 20px 24px; margin-bottom: 12px;">
+    <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 15px; font-weight: 600; color: #1e2a3a; margin: 0 0 12px 0; line-height: 1.6;">10. Varför måste CSS vara inline när du klistrar in HTML i Moodles redigerare?</p>
+    <label style="display: block; padding: 5px 0; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; cursor: pointer;"><input type="radio" name="q10" style="margin-right: 10px;">A. Inline CSS laddar snabbare</label>
+    <label style="display: block; padding: 5px 0; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; cursor: pointer;"><input type="radio" name="q10" style="margin-right: 10px;">B. Moodle rensar bort style-taggar och externa stilmallar när innehållet sparas</label>
+    <label style="display: block; padding: 5px 0; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; cursor: pointer;"><input type="radio" name="q10" style="margin-right: 10px;">C. CSS-klasser fungerar inte i HTML5</label>
+    <details style="margin-top: 14px; border-top: 1px solid #e8e0d4; padding-top: 12px;">
+      <summary style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: #8a7e6e; cursor: pointer;">Visa facit</summary>
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; margin: 10px 0 0 0; line-height: 1.7;"><strong>Rätt: B.</strong> Det är en säkerhetsåtgärd i Moodle mot inklistrat innehåll. Konsekvensen för dig: en fil som ser perfekt ut i webbläsaren kan bli helt oformaterad i Moodle. Testa alltid en sida innan du gör om hela paketet.</p>
+    </details>
+  </div>
+
+  <div style="background: #fff; border: 1px solid #ddd5c8; border-radius: 4px; padding: 20px 24px; margin-bottom: 12px;">
+    <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 15px; font-weight: 600; color: #1e2a3a; margin: 0 0 12px 0; line-height: 1.6;">11. Du ber Cowork uppdatera avsnittet om EU:s AI-förordning. Vad bör du lägga till i prompten för att kunna lita på resultatet?</p>
+    <label style="display: block; padding: 5px 0; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; cursor: pointer;"><input type="radio" name="q11" style="margin-right: 10px;">A. &rdquo;Var noggrann.&rdquo;</label>
+    <label style="display: block; padding: 5px 0; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; cursor: pointer;"><input type="radio" name="q11" style="margin-right: 10px;">B. &rdquo;Sök på webben och ange källa och datum för varje faktapåstående du ändrar.&rdquo;</label>
+    <label style="display: block; padding: 5px 0; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; cursor: pointer;"><input type="radio" name="q11" style="margin-right: 10px;">C. &rdquo;Använd bara information du är säker på.&rdquo;</label>
+    <details style="margin-top: 14px; border-top: 1px solid #e8e0d4; padding-top: 12px;">
+      <summary style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: #8a7e6e; cursor: pointer;">Visa facit</summary>
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; margin: 10px 0 0 0; line-height: 1.7;"><strong>Rätt: B.</strong> Lagstiftning och teknikläge är precis det som ändras mellan terminerna, och det är också där en språkmodell är minst pålitlig ur minnet. Krav på webbsökning och källhänvisning ger dig något att granska. A och C låter bra men förändrar ingenting &ndash; de ger dig inget att kontrollera mot.</p>
+    </details>
+  </div>
+
+  <div style="background: #fff; border: 1px solid #ddd5c8; border-radius: 4px; padding: 20px 24px; margin-bottom: 12px;">
+    <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 15px; font-weight: 600; color: #1e2a3a; margin: 0 0 12px 0; line-height: 1.6;">12. Vad är den största fördelen med att låta Cowork skriva ett litet skript för att kontrollera alla länkar, i stället för att läsa igenom filerna?</p>
+    <label style="display: block; padding: 5px 0; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; cursor: pointer;"><input type="radio" name="q12" style="margin-right: 10px;">A. Det går snabbare</label>
+    <label style="display: block; padding: 5px 0; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; cursor: pointer;"><input type="radio" name="q12" style="margin-right: 10px;">B. Ett skript ger samma svar varje gång och missar inget &ndash; till skillnad från en bedömning</label>
+    <label style="display: block; padding: 5px 0; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; cursor: pointer;"><input type="radio" name="q12" style="margin-right: 10px;">C. Skript förbrukar mindre av kvoten</label>
+    <details style="margin-top: 14px; border-top: 1px solid #e8e0d4; padding-top: 12px;">
+      <summary style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: #8a7e6e; cursor: pointer;">Visa facit</summary>
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; margin: 10px 0 0 0; line-height: 1.7;"><strong>Rätt: B.</strong> Det här är en princip värd att ta med sig: <em>mekaniska kontroller ska göras mekaniskt</em>. Länkar, teckenkodning, saknade alt-texter, filer som refereras men inte finns &ndash; allt sådant hör hemma i ett skript. Spara bedömningen till det som kräver omdöme: är innehållet pedagogiskt rätt, är nivån rimlig, stämmer fakta.</p>
+    </details>
+  </div>
+
+  <div style="background: #fff; border: 1px solid #ddd5c8; border-radius: 4px; padding: 20px 24px; margin-bottom: 12px;">
+    <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 15px; font-weight: 600; color: #1e2a3a; margin: 0 0 12px 0; line-height: 1.6;">13. Du har uppdaterat ett paket med 40 sidor. Vad bör alltid ingå i leveransen förutom den nya zip-filen?</p>
+    <label style="display: block; padding: 5px 0; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; cursor: pointer;"><input type="radio" name="q13" style="margin-right: 10px;">A. En ändringslogg som säger vad som ändrats i varje fil och varför</label>
+    <label style="display: block; padding: 5px 0; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; cursor: pointer;"><input type="radio" name="q13" style="margin-right: 10px;">B. En sammanfattning av kursens innehåll</label>
+    <label style="display: block; padding: 5px 0; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; cursor: pointer;"><input type="radio" name="q13" style="margin-right: 10px;">C. Ingenting, zip-filen räcker</label>
+    <details style="margin-top: 14px; border-top: 1px solid #e8e0d4; padding-top: 12px;">
+      <summary style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: #8a7e6e; cursor: pointer;">Visa facit</summary>
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; margin: 10px 0 0 0; line-height: 1.7;"><strong>Rätt: A.</strong> Med 40 sidor kan du inte granska allt. Ändringsloggen är din urvalsmekanism: du läser loggen, väljer ut de fem ändringar som ser mest riskabla ut, och granskar dem noga. Den är dessutom ovärderlig nästa termin när du undrar varför något står som det står.</p>
+    </details>
+  </div>
+
+  <!-- ÖVNING 4A -->
+  <div style="background: #fff; border: 1px solid #ddd5c8; border-left: 4px solid #1e2a3a; border-radius: 4px; padding: 24px 28px; margin-top: 24px; margin-bottom: 14px;">
+    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 14px;">
+      <span style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 5px 12px; background: #1e2a3a; color: #f0ece4; border-radius: 2px;">Övning 4A</span>
+      <span style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 12px; color: #8a7e6e; letter-spacing: 0.04em;">12 minuter</span>
+    </div>
+    <h3 style="font-family: Georgia, serif; font-size: 19px; font-weight: 400; color: #1e2a3a; margin: 0 0 10px 0; font-style: italic;">Definiera mallen och modernisera en sida</h3>
+    <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #6b6157; margin: 0 0 14px 0; line-height: 1.7;">Fortsätt i samma session. Du gör två saker: bestämmer hur ditt material ska se ut, och testar mallen på en enda sida innan du släpper loss den på hela paketet.</p>
+    <div style="background: #1e2a3a; border-radius: 4px; padding: 18px 22px; margin-bottom: 14px;">
+      <p style="font-family: 'SF Mono', Menlo, Consolas, monospace; font-size: 13px; color: #e8e0d4; margin: 0; line-height: 1.8; white-space: pre-wrap;">Nu ska vi bestämma ett designsystem för mitt kursmaterial.
+Materialet klistras in i Moodles redigerare, så:
+all CSS inline, inga klasser, inga externa typsnitt,
+ingen JavaScript.
+
+Föreslå ett designsystem med:
+- färgpalett (max fem färger, tillräcklig kontrast enligt
+  WCAG AA)
+- typografiskala för h1, h2, h3 och brödtext
+- ett standardblock för faktarutor och ett för varningar
+- responsiv layout som fungerar på mobil
+
+Visa det som en enda demosida jag kan titta på. Bygg inte
+om något i paketet ännu.</p>
+    </div>
+    <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 13px; color: #8a7e6e; margin: 0 0 8px 0; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 600;">Sedan, när du är nöjd med mallen</p>
+    <div style="background: #1e2a3a; border-radius: 4px; padding: 18px 22px; margin-bottom: 14px;">
+      <p style="font-family: 'SF Mono', Menlo, Consolas, monospace; font-size: 13px; color: #e8e0d4; margin: 0; line-height: 1.8; white-space: pre-wrap;">Bra. Applicera designsystemet på 01-vad-ar-ai.html.
+
+Samtidigt:
+- Uppdatera faktapåståendena om språkmodeller och
+  bildgenerering till hur läget faktiskt ser ut i dag.
+  Sök på webben och ange källa för varje ändring.
+- Lägg till lang-attribut, teckenkodning och viewport.
+- Behåll originalfilen. Spara den nya som
+  01-vad-ar-ai-NY.html.
+- Lista alla ändringar du gjort, en rad per ändring.
+
+Skicka den nya filen till mig så jag kan titta på den.</p>
+    </div>
+    <div style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; line-height: 1.9;">
+      <label style="display: block; cursor: pointer;"><input type="checkbox" style="margin-right: 10px;">Titta på demosidan. Be om ändringar tills du faktiskt gillar den &ndash; det här är mallen du ska leva med.</label>
+      <label style="display: block; cursor: pointer;"><input type="checkbox" style="margin-right: 10px;">Öppna den nya filen i webbläsaren och jämför sida vid sida med originalet.</label>
+      <label style="display: block; cursor: pointer;"><input type="checkbox" style="margin-right: 10px;">Granska faktaändringarna som ämnesexpert. Håller du med? Är källorna rimliga?</label>
+      <label style="display: block; cursor: pointer;"><input type="checkbox" style="margin-right: 10px;">Testa i Moodle om du kan: klistra in i redigeraren och se om formateringen överlever.</label>
+    </div>
+    <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 13px; color: #8a7e6e; margin: 16px 0 0 0; line-height: 1.7; font-style: italic;">Klart när: du har en mall du gillar och en moderniserad sida som bevisar att den fungerar.</p>
+  </div>
+
+  <!-- ÖVNING 4B -->
+  <div style="background: #fff; border: 1px solid #ddd5c8; border-left: 4px solid #1e2a3a; border-radius: 4px; padding: 24px 28px; margin-bottom: 14px;">
+    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 14px;">
+      <span style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 5px 12px; background: #1e2a3a; color: #f0ece4; border-radius: 2px;">Övning 4B</span>
+      <span style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 12px; color: #8a7e6e; letter-spacing: 0.04em;">12 minuter</span>
+    </div>
+    <h3 style="font-family: Georgia, serif; font-size: 19px; font-weight: 400; color: #1e2a3a; margin: 0 0 10px 0; font-style: italic;">Skala upp &ndash; hela paketet på en gång</h3>
+    <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #6b6157; margin: 0 0 14px 0; line-height: 1.7;">Nu kommer poängen med hela övningen. Det som tar en eftermiddag manuellt tar några minuter här &ndash; men bara om du är specifik om vad som ska ändras och vad som inte ska röras.</p>
+    <div style="background: #1e2a3a; border-radius: 4px; padding: 18px 22px; margin-bottom: 14px;">
+      <p style="font-family: 'SF Mono', Menlo, Consolas, monospace; font-size: 13px; color: #e8e0d4; margin: 0; line-height: 1.8; white-space: pre-wrap;">Applicera nu samma behandling på hela paketet.
+
+Gör så här:
+1. Applicera designsystemet på alla HTML-sidor.
+2. Uppdatera alla faktapåståenden som har åldrats. Sök på
+   webben. Rör inte pedagogiken eller uppgifterna – bara
+   sakuppgifter.
+3. Ersätt alla årtal och deadlines från 2022 med
+   platshållaren [DATUM] så att jag fyller i dem själv.
+4. Ta bort gammal.css helt och konsolidera till en stilmall.
+5. Skapa den saknade sidan 04-framtiden.html i samma stil,
+   med samma struktur som övriga moduler. Markera tydligt
+   överst att innehållet är ett utkast som jag ska granska.
+6. Fixa alla trasiga länkar. Om målet inte finns, säg det
+   i loggen i stället för att hitta på.
+7. Uppdatera regeln om AI-verktyg i laroplan.txt och modul 3
+   till en nyanserad formulering som tillåter användning med
+   redovisningskrav. Föreslå två varianter.
+
+Skriv ett litet skript som kontrollerar att inga interna
+länkar är trasiga när du är klar, och visa resultatet.
+
+Behåll originalen. Lista alla ändringar per fil.</p>
+    </div>
+    <div style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; line-height: 1.9;">
+      <label style="display: block; cursor: pointer;"><input type="checkbox" style="margin-right: 10px;">Följ arbetet medan det pågår &ndash; det är lärorikt att se vilka steg som tas.</label>
+      <label style="display: block; cursor: pointer;"><input type="checkbox" style="margin-right: 10px;">Läs ändringsloggen och välj ut de <strong>tre mest riskabla</strong> ändringarna. Granska dem noga.</label>
+      <label style="display: block; cursor: pointer;"><input type="checkbox" style="margin-right: 10px;">Kontrollera särskilt den nyskapade sidan 04-framtiden.html. Det är den som är mest påhittad.</label>
+      <label style="display: block; cursor: pointer;"><input type="checkbox" style="margin-right: 10px;">Fråga: &rdquo;Vad valde du att <em>inte</em> ändra, och varför?&rdquo; Svaret brukar avslöja missförstånd.</label>
+    </div>
+    <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 13px; color: #8a7e6e; margin: 16px 0 0 0; line-height: 1.7; font-style: italic;">Klart när: alla sidor ser likadana ut, länkkontrollen är grön och du har läst loggen.</p>
+  </div>
+
+  <!-- ÖVNING 4C -->
+  <div style="background: #fff; border: 1px solid #ddd5c8; border-left: 4px solid #1e2a3a; border-radius: 4px; padding: 24px 28px;">
+    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 14px;">
+      <span style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 5px 12px; background: #1e2a3a; color: #f0ece4; border-radius: 2px;">Övning 4C</span>
+      <span style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 12px; color: #8a7e6e; letter-spacing: 0.04em;">8 minuter</span>
+    </div>
+    <h3 style="font-family: Georgia, serif; font-size: 19px; font-weight: 400; color: #1e2a3a; margin: 0 0 10px 0; font-style: italic;">Paketera för Moodle</h3>
+    <div style="background: #1e2a3a; border-radius: 4px; padding: 18px 22px; margin-bottom: 14px;">
+      <p style="font-family: 'SF Mono', Menlo, Consolas, monospace; font-size: 13px; color: #e8e0d4; margin: 0; line-height: 1.8; white-space: pre-wrap;">Paketera det uppdaterade materialet som ai-grundkurs-v4.zip
+med samma mappstruktur som originalet.
+
+Lägg till i paketet:
+- ANDRINGSLOGG.md med datum, vad som ändrats per fil och
+  vilka källor som använts för faktauppdateringarna
+- ATT-GRANSKA.md med det du är osäker på och som jag
+  behöver besluta om
+
+Kontrollera före paketering:
+- att alla filer har korrekt teckenkodning (å, ä, ö)
+- att inga interna länkar är trasiga
+- att varje bild har alt-text
+- att inga platshållare av misstag lämnats kvar utom [DATUM]
+
+Skicka zip-filen och de två markdown-filerna till mig.</p>
+    </div>
+    <div style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; line-height: 1.9;">
+      <label style="display: block; cursor: pointer;"><input type="checkbox" style="margin-right: 10px;">Ladda ner zip-filen och packa upp den lokalt.</label>
+      <label style="display: block; cursor: pointer;"><input type="checkbox" style="margin-right: 10px;">Öppna index.html i webbläsaren och klicka dig igenom alla sidor.</label>
+      <label style="display: block; cursor: pointer;"><input type="checkbox" style="margin-right: 10px;">Läs ATT-GRANSKA.md &ndash; det är där de verkliga besluten ligger.</label>
+      <label style="display: block; cursor: pointer;"><input type="checkbox" style="margin-right: 10px;">Ladda upp i en testkurs i Moodle om du har tillgång till en.</label>
+    </div>
+    <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 13px; color: #8a7e6e; margin: 16px 0 0 0; line-height: 1.7; font-style: italic;">Klart när: du har ett komplett paket du skulle våga publicera efter att ha läst igenom det.</p>
+  </div>
+
+  <div style="background: #f0ece4; border: 1px solid #ddd5c8; border-radius: 4px; padding: 22px 26px; margin-top: 24px;">
+    <p style="font-family: Georgia, serif; font-size: 18px; color: #1e2a3a; margin: 0 0 10px 0; font-style: italic;">Om din dröm om en plattform</p>
+    <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; margin: 0 0 10px 0; line-height: 1.75;">Du beskrev att du vill ha en plattform för att uppdatera ditt material. Det du just gjorde <em>är</em> den plattformen &ndash; den ser bara inte ut som du föreställde dig. Den består av tre delar: ett paket som går in, en pipeline som körs, ett paket som kommer ut. Ingen server, ingen inloggning, inget som behöver installeras eller underhållas.</p>
+    <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; margin: 0; line-height: 1.75;">Det som återstår för att göra det till en riktig plattform är att du slipper skriva om instruktionerna varje gång. Det är exakt vad nästa pass handlar om.</p>
+  </div>
+</div>
+
+<!-- ===================== PASS 5 ===================== -->
+<div style="background: #1e2a3a; padding: 40px 40px 32px 40px;">
+  <p style="font-family: Georgia, serif; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #8a9ab0; margin: 0 0 10px 0;">Pass 5 · 20 minuter</p>
+  <h2 style="font-family: Georgia, serif; font-size: 32px; font-weight: 400; color: #f0ece4; margin: 0 0 12px 0; line-height: 1.2; font-style: italic;">Skills &ndash; gör arbetsflödet återanvändbart</h2>
+  <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 15px; color: #8a9ab0; margin: 0; line-height: 1.7; max-width: 620px;">Du har byggt custom GPT:er, så konceptet är bekant. En skill är samma idé men mer verkningsfull: en mapp med instruktioner som laddas <em>automatiskt</em> när uppgiften passar, och som kan innehålla körbara skript.</p>
+</div>
+
+<div style="background: #faf8f5; padding: 40px;">
+
+  <h3 style="font-family: Georgia, serif; font-size: 22px; font-weight: 400; color: #1e2a3a; margin: 0 0 14px 0; font-style: italic;">Anatomin</h3>
+  <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 15px; color: #3c3228; line-height: 1.75; margin: 0 0 16px 0;">En skill är en mapp med en fil som heter <code style="font-family:'SF Mono',Menlo,Consolas,monospace;font-size:13px;background:#f0ece4;padding:1px 5px;border-radius:2px;">SKILL.md</code>. Den inleds med ett litet metadatablock och fortsätter med vanlig markdown. Vill du kan mappen också innehålla referensdokument och skript.</p>
+
+  <div style="background: #1e2a3a; border-radius: 4px; padding: 20px 24px; margin: 0 0 20px 0;">
+    <p style="font-family: 'SF Mono', Menlo, Consolas, monospace; font-size: 13px; color: #e8e0d4; margin: 0; line-height: 1.8; white-space: pre-wrap;">kurspaket-uppdatering/
+├── SKILL.md          ← instruktionerna
+├── references/       ← designsystem, mallar, ordlistor
+└── scripts/          ← t.ex. länkkontroll.py</p>
+  </div>
+
+  <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 15px; color: #3c3228; line-height: 1.75; margin: 0 0 16px 0;">Metadatablocket har två fält som spelar roll. <strong>name</strong> är namnet, högst 64 tecken. <strong>description</strong> är högst 200 tecken och är det viktigaste du skriver &ndash; det är enbart utifrån beskrivningen som skillen väljs ut när du ställer en fråga. Skriv den som en trigger, inte som en presentation: räkna upp orden du faktiskt använder när uppgiften dyker upp.</p>
+
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 0 0 26px 0;">
+    <div style="background: #fff; border: 1px solid #ddd5c8; border-radius: 4px; padding: 18px 22px;">
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #8b3a3a; margin: 0 0 10px 0;">Svag beskrivning</p>
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; margin: 0; line-height: 1.7; font-style: italic;">&rdquo;Hjälper till med kursmaterial.&rdquo;</p>
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 13px; color: #8a7e6e; margin: 10px 0 0 0; line-height: 1.6;">Triggar sällan, eftersom den inte innehåller några av de ord du faktiskt skriver.</p>
+    </div>
+    <div style="background: #fff; border: 1px solid #ddd5c8; border-radius: 4px; padding: 18px 22px;">
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #4a7c59; margin: 0 0 10px 0;">Stark beskrivning</p>
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; margin: 0; line-height: 1.7; font-style: italic;">&rdquo;Uppdaterar kurspaket i HTML och CSS för Moodle. Använd vid zip med kursmaterial, uppdatera kursmodul, modernisera kursmaterial, fixa trasiga länkar i kursmaterial.&rdquo;</p>
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 13px; color: #8a7e6e; margin: 10px 0 0 0; line-height: 1.6;">Innehåller de faktiska formuleringarna. Triggar när den ska.</p>
+    </div>
+  </div>
+
+  <h3 style="font-family: Georgia, serif; font-size: 22px; font-weight: 400; color: #1e2a3a; margin: 0 0 14px 0; font-style: italic;">Tre sätt att skapa en</h3>
+  <div style="background: #fff; border: 1px solid #ddd5c8; border-radius: 4px; overflow: hidden; margin: 0 0 24px 0;">
+    <div style="display: grid; grid-template-columns: 200px 1fr; border-bottom: 1px solid #e8e0d4; background: #fff;">
+      <div style="padding: 16px 20px; font-family: Georgia, serif; font-size: 15px; font-style: italic; color: #1e2a3a; border-right: 1px solid #e8e0d4;">Be Claude skriva den</div>
+      <div style="padding: 16px 20px; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; line-height: 1.7;">Enklast. Beskriv arbetsflödet i ord och be om en färdig skill-fil. Du får en zip du kan lägga till under Anpassa &rarr; Skills.</div>
+    </div>
+    <div style="display: grid; grid-template-columns: 200px 1fr; border-bottom: 1px solid #e8e0d4; background: #faf8f5;">
+      <div style="padding: 16px 20px; font-family: Georgia, serif; font-size: 15px; font-style: italic; color: #1e2a3a; border-right: 1px solid #e8e0d4;">Spela in den</div>
+      <div style="padding: 16px 20px; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; line-height: 1.7;">I skrivbordsappen på Mac kan du spela in medan du utför uppgiften &ndash; upp till tio minuter &ndash; och få en skill föreslagen utifrån det du gjorde. Kräver Pro, Max eller Team.</div>
+    </div>
+    <div style="display: grid; grid-template-columns: 200px 1fr; background: #fff;">
+      <div style="padding: 16px 20px; font-family: Georgia, serif; font-size: 15px; font-style: italic; color: #1e2a3a; border-right: 1px solid #e8e0d4;">Skriv den för hand</div>
+      <div style="padding: 16px 20px; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; line-height: 1.7;">Skapa mappen lokalt, zippa den så att <em>mappen</em> ligger i zipens rot &ndash; inte filerna direkt &ndash; och ladda upp. Vanligaste felet är just zip-strukturen.</div>
+    </div>
+  </div>
+
+  <div style="background: #f0ece4; border: 1px solid #ddd5c8; border-radius: 4px; padding: 20px 24px; margin: 0 0 26px 0;">
+    <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #6b6157; margin: 0; line-height: 1.75;"><strong style="color:#1e2a3a;">Lägg aldrig in hemligheter i en skill.</strong> Inga lösenord, inga API-nycklar, inga personuppgifter &ndash; inte heller som exempel. En skill är en textfil som följer med i varje session där den triggas.</p>
+  </div>
+
+  <!-- QUIZ 5 -->
+  <p style="font-family: Georgia, serif; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #8a7e6e; margin: 0 0 16px 0;">Kontrollfrågor · Pass 5</p>
+
+  <div style="background: #fff; border: 1px solid #ddd5c8; border-radius: 4px; padding: 20px 24px; margin-bottom: 12px;">
+    <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 15px; font-weight: 600; color: #1e2a3a; margin: 0 0 12px 0; line-height: 1.6;">14. Din skill triggar aldrig. Vad tittar du på först?</p>
+    <label style="display: block; padding: 5px 0; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; cursor: pointer;"><input type="radio" name="q14" style="margin-right: 10px;">A. Instruktionerna i brödtexten &ndash; de är nog för vaga</label>
+    <label style="display: block; padding: 5px 0; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; cursor: pointer;"><input type="radio" name="q14" style="margin-right: 10px;">B. description-fältet &ndash; det är det enda som avgör urvalet</label>
+    <label style="display: block; padding: 5px 0; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; cursor: pointer;"><input type="radio" name="q14" style="margin-right: 10px;">C. Filstorleken</label>
+    <details style="margin-top: 14px; border-top: 1px solid #e8e0d4; padding-top: 12px;">
+      <summary style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: #8a7e6e; cursor: pointer;">Visa facit</summary>
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; margin: 10px 0 0 0; line-height: 1.7;"><strong>Rätt: B.</strong> Brödtexten läses först <em>efter</em> att skillen valts ut. Fungerar den inte, skriv om beskrivningen så att den innehåller dina egna formuleringar. Du kan också alltid välja en skill manuellt för att kontrollera att själva innehållet fungerar.</p>
+    </details>
+  </div>
+
+  <div style="background: #fff; border: 1px solid #ddd5c8; border-radius: 4px; padding: 20px 24px; margin-bottom: 12px;">
+    <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 15px; font-weight: 600; color: #1e2a3a; margin: 0 0 12px 0; line-height: 1.6;">15. Vad hör hemma i en skill snarare än i en enskild prompt?</p>
+    <label style="display: block; padding: 5px 0; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; cursor: pointer;"><input type="radio" name="q15" style="margin-right: 10px;">A. Ditt designsystem och de kvalitetskrav som gäller varje gång</label>
+    <label style="display: block; padding: 5px 0; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; cursor: pointer;"><input type="radio" name="q15" style="margin-right: 10px;">B. Vilken specifik modul du uppdaterar just i dag</label>
+    <label style="display: block; padding: 5px 0; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; cursor: pointer;"><input type="radio" name="q15" style="margin-right: 10px;">C. Deadline för terminens inlämning</label>
+    <details style="margin-top: 14px; border-top: 1px solid #e8e0d4; padding-top: 12px;">
+      <summary style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: #8a7e6e; cursor: pointer;">Visa facit</summary>
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; margin: 10px 0 0 0; line-height: 1.7;"><strong>Rätt: A.</strong> Tumregeln: det som är sant varje gång hör hemma i skillen, det som är sant i dag hör hemma i prompten. Skriver du in dagens detaljer i skillen blir den fel nästa gång, och du märker det inte.</p>
+    </details>
+  </div>
+
+  <!-- ÖVNING 5 -->
+  <div style="background: #fff; border: 1px solid #ddd5c8; border-left: 4px solid #1e2a3a; border-radius: 4px; padding: 24px 28px; margin-top: 24px;">
+    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 14px;">
+      <span style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 5px 12px; background: #1e2a3a; color: #f0ece4; border-radius: 2px;">Övning 5</span>
+      <span style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 12px; color: #8a7e6e; letter-spacing: 0.04em;">10 minuter</span>
+    </div>
+    <h3 style="font-family: Georgia, serif; font-size: 19px; font-weight: 400; color: #1e2a3a; margin: 0 0 10px 0; font-style: italic;">Frys ner pipelinen till en skill</h3>
+    <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #6b6157; margin: 0 0 14px 0; line-height: 1.7;">Kör i samma session, medan sammanhanget från pass 4 finns kvar. Cowork har just gjort arbetet &ndash; nu ska den skriva ner hur.</p>
+    <div style="background: #1e2a3a; border-radius: 4px; padding: 18px 22px; margin-bottom: 14px;">
+      <p style="font-family: 'SF Mono', Menlo, Consolas, monospace; font-size: 13px; color: #e8e0d4; margin: 0; line-height: 1.8; white-space: pre-wrap;">Gör om det vi just gjorde till en återanvändbar skill.
+
+Den ska heta kurspaket-uppdatering och beskrivningen ska
+trigga på hur jag faktiskt uttrycker mig: "uppdatera
+kurspaket", "zip med kursmaterial", "modernisera
+kursmaterial för Moodle", "fixa länkar i kursmaterial".
+
+SKILL.md ska innehålla:
+- pipelinen i sex steg
+- Moodle-begränsningarna (inline CSS, inga externa typsnitt,
+  ingen JavaScript)
+- mitt designsystem, så konkret att resultatet blir likadant
+  varje gång
+- mina dataregler: aldrig riktiga personuppgifter, allt
+  exempelmaterial fiktivt
+- kvalitetskontrollen som ska köras före paketering
+- kravet på ändringslogg och en fil med sådant jag ska
+  besluta om
+
+Lägg designsystemet i references/ som ett eget dokument, och
+länkkontrollen i scripts/ som ett litet Python-skript.
+
+Paketera som en skill-fil jag kan lägga till under
+Anpassa → Skills, och skicka den till mig.</p>
+    </div>
+    <div style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; line-height: 1.9;">
+      <label style="display: block; cursor: pointer;"><input type="checkbox" style="margin-right: 10px;">Läs igenom SKILL.md innan du lägger till den. Känner du igen ditt eget arbetssätt?</label>
+      <label style="display: block; cursor: pointer;"><input type="checkbox" style="margin-right: 10px;">Lägg till skillen under Anpassa &rarr; Skills.</label>
+      <label style="display: block; cursor: pointer;"><input type="checkbox" style="margin-right: 10px;">Öppna en <strong>ny</strong> session, ladda upp originalpaketet och skriv bara: &rdquo;uppdatera det här kurspaketet&rdquo;.</label>
+      <label style="display: block; cursor: pointer;"><input type="checkbox" style="margin-right: 10px;">Triggade skillen? Om inte &ndash; skriv om beskrivningen och prova igen.</label>
+    </div>
+    <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 13px; color: #8a7e6e; margin: 16px 0 0 0; line-height: 1.7; font-style: italic;">Klart när: fyra ord räcker för att få igång ett arbete som tog en halv sida instruktioner nyss.</p>
+  </div>
+</div>
+
+<!-- ===================== PASS 6 ===================== -->
+<div style="background: #1e2a3a; padding: 40px 40px 32px 40px;">
+  <p style="font-family: Georgia, serif; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #8a9ab0; margin: 0 0 10px 0;">Pass 6 · 20 minuter</p>
+  <h2 style="font-family: Georgia, serif; font-size: 32px; font-weight: 400; color: #f0ece4; margin: 0 0 12px 0; line-height: 1.2; font-style: italic;">Lärarvardagen</h2>
+  <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 15px; color: #8a9ab0; margin: 0; line-height: 1.7; max-width: 620px;">Materialunderhåll är din största tidstjuv, men inte den enda. Här är de användningar som brukar ge mest tillbaka för en lärare &ndash; och en ärlig anteckning om var gränsen går.</p>
+</div>
+
+<div style="background: #faf8f5; padding: 40px;">
+
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin: 0 0 26px 0;">
+    <div style="background: #fff; border: 1px solid #ddd5c8; border-radius: 4px; padding: 20px 24px;">
+      <p style="font-family: Georgia, serif; font-size: 17px; color: #1e2a3a; margin: 0 0 8px 0; font-style: italic;">Uppgifter i tre svårighetsgrader</p>
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; margin: 0; line-height: 1.7;">Ge en befintlig uppgift och be om en lättare och en svårare variant med samma lärandemål. Differentiering är tidskrävande att göra för hand och tacksamt att delegera.</p>
+    </div>
+    <div style="background: #fff; border: 1px solid #ddd5c8; border-radius: 4px; padding: 20px 24px;">
+      <p style="font-family: Georgia, serif; font-size: 17px; color: #1e2a3a; margin: 0 0 8px 0; font-style: italic;">Bedömningsmatriser</p>
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; margin: 0; line-height: 1.7;">Från lärandemål till matris med nivåbeskrivningar. Be uttryckligen om observerbara formuleringar &ndash; annars blir nivåerna &rdquo;bra&rdquo;, &rdquo;mycket bra&rdquo;, &rdquo;utmärkt&rdquo;, vilket inte hjälper någon.</p>
+    </div>
+    <div style="background: #fff; border: 1px solid #ddd5c8; border-radius: 4px; padding: 20px 24px;">
+      <p style="font-family: Georgia, serif; font-size: 17px; color: #1e2a3a; margin: 0 0 8px 0; font-style: italic;">Frågebanker till Moodle</p>
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; margin: 0; line-height: 1.7;">Moodle importerar GIFT- och XML-format. Be om frågor direkt i GIFT-format med felsvar som representerar <em>verkliga</em> missuppfattningar &ndash; det är där kvaliteten avgörs.</p>
+    </div>
+    <div style="background: #fff; border: 1px solid #ddd5c8; border-radius: 4px; padding: 20px 24px;">
+      <p style="font-family: Georgia, serif; font-size: 17px; color: #1e2a3a; margin: 0 0 8px 0; font-style: italic;">Tillgänglighetsgranskning</p>
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; margin: 0; line-height: 1.7;">Ladda upp materialet och be om en genomgång mot WCAG 2.1 AA med konkreta rättelser. Mycket av det är mekaniskt och därför perfekt att delegera.</p>
+    </div>
+    <div style="background: #fff; border: 1px solid #ddd5c8; border-radius: 4px; padding: 20px 24px;">
+      <p style="font-family: Georgia, serif; font-size: 17px; color: #1e2a3a; margin: 0 0 8px 0; font-style: italic;">Kodövningar med facit</p>
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; margin: 0; line-height: 1.7;">Cowork kan köra koden i sandlådan. Be om övningar <em>och</em> lösningar <em>och</em> testkörning &ndash; då vet du att facit stämmer innan studerandena ser det.</p>
+    </div>
+    <div style="background: #fff; border: 1px solid #ddd5c8; border-radius: 4px; padding: 20px 24px;">
+      <p style="font-family: Georgia, serif; font-size: 17px; color: #1e2a3a; margin: 0 0 8px 0; font-style: italic;">Årlig faktagranskning</p>
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; margin: 0; line-height: 1.7;">I ett fält som AI åldras materialet snabbare än någon annanstans. En genomsökning per termin efter påståenden som inte längre stämmer &ndash; med källor &ndash; är kanske den mest värdefulla rutinen du kan skaffa dig.</p>
+    </div>
+  </div>
+
+  <div style="background: #f0ece4; padding: 24px 28px; border-top: 1px solid #ddd5c8; border-bottom: 1px solid #ddd5c8; margin: 0 0 26px 0;">
+    <div style="display: flex; align-items: flex-start; gap: 18px;">
+      <div style="background: #1e2a3a; color: #f0ece4; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 6px 14px; border-radius: 2px; white-space: nowrap; margin-top: 2px;">Gränsen</div>
+      <div>
+        <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 15px; color: #2c2c2c; margin: 0 0 8px 0; line-height: 1.7;">Rättning av studerandes arbeten är den användning som ser mest lockande ut och som är svårast att göra rätt. Det handlar inte bara om GDPR &ndash; det handlar om att betygsättning är myndighetsutövning och att ansvaret är ditt, personligen.</p>
+        <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #6b6157; margin: 0; line-height: 1.7;">Det som fungerar väl: låta Cowork hjälpa dig bygga <em>matrisen</em>, formulera <em>generella</em> återkopplingsfraser för vanliga fel, eller strukturera återkoppling du redan skrivit. Det som inte fungerar: ladda upp inlämningar och be om betyg.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- QUIZ 6 -->
+  <p style="font-family: Georgia, serif; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #8a7e6e; margin: 0 0 16px 0;">Kontrollfrågor · Pass 6</p>
+
+  <div style="background: #fff; border: 1px solid #ddd5c8; border-radius: 4px; padding: 20px 24px; margin-bottom: 12px;">
+    <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 15px; font-weight: 600; color: #1e2a3a; margin: 0 0 12px 0; line-height: 1.6;">16. Vad gör skillnaden mellan en medioker och en bra flervalsfråga som Cowork genererar?</p>
+    <label style="display: block; padding: 5px 0; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; cursor: pointer;"><input type="radio" name="q16" style="margin-right: 10px;">A. Antalet svarsalternativ</label>
+    <label style="display: block; padding: 5px 0; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; cursor: pointer;"><input type="radio" name="q16" style="margin-right: 10px;">B. Att felsvaren motsvarar verkliga missuppfattningar hos studerande</label>
+    <label style="display: block; padding: 5px 0; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; cursor: pointer;"><input type="radio" name="q16" style="margin-right: 10px;">C. Att frågorna är svåra</label>
+    <details style="margin-top: 14px; border-top: 1px solid #e8e0d4; padding-top: 12px;">
+      <summary style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: #8a7e6e; cursor: pointer;">Visa facit</summary>
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; margin: 10px 0 0 0; line-height: 1.7;"><strong>Rätt: B.</strong> Uppenbart felaktiga alternativ mäter ingenting. Be uttryckligen: &rdquo;varje felsvar ska motsvara ett misstag studerande faktiskt gör, och förklara i facit varför det är fel&rdquo;. Då blir provet ett diagnosverktyg i stället för en poängräknare. Just den formuleringen är för övrigt hur frågorna i den här kursen är skrivna.</p>
+    </details>
+  </div>
+
+  <div style="background: #fff; border: 1px solid #ddd5c8; border-radius: 4px; padding: 20px 24px; margin-bottom: 12px;">
+    <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 15px; font-weight: 600; color: #1e2a3a; margin: 0 0 12px 0; line-height: 1.6;">17. Vilken av dessa användningar är säkrast ur dataskyddssynpunkt?</p>
+    <label style="display: block; padding: 5px 0; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; cursor: pointer;"><input type="radio" name="q17" style="margin-right: 10px;">A. Ladda upp tio inlämningar och be om utkast till återkoppling</label>
+    <label style="display: block; padding: 5px 0; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; cursor: pointer;"><input type="radio" name="q17" style="margin-right: 10px;">B. Bygga en bedömningsmatris utifrån lärandemålen, före rättningen</label>
+    <label style="display: block; padding: 5px 0; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; cursor: pointer;"><input type="radio" name="q17" style="margin-right: 10px;">C. Ladda upp kursutvärderingens fritextsvar och be om en sammanfattning</label>
+    <details style="margin-top: 14px; border-top: 1px solid #e8e0d4; padding-top: 12px;">
+      <summary style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: #8a7e6e; cursor: pointer;">Visa facit</summary>
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; margin: 10px 0 0 0; line-height: 1.7;"><strong>Rätt: B.</strong> Matrisen innehåller inga personuppgifter alls &ndash; den är ett rent kursdokument &ndash; och den ger dessutom bäst effekt, eftersom den förbättrar rättningen av <em>alla</em> arbeten. C är gul zon: fritextsvar innehåller ofta självutlämnande detaljer. A är röd zon.</p>
+    </details>
+  </div>
+
+  <!-- ÖVNING 6 -->
+  <div style="background: #fff; border: 1px solid #ddd5c8; border-left: 4px solid #1e2a3a; border-radius: 4px; padding: 24px 28px; margin-top: 24px;">
+    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 14px;">
+      <span style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; padding: 5px 12px; background: #1e2a3a; color: #f0ece4; border-radius: 2px;">Övning 6</span>
+      <span style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 12px; color: #8a7e6e; letter-spacing: 0.04em;">10 minuter</span>
+    </div>
+    <h3 style="font-family: Georgia, serif; font-size: 19px; font-weight: 400; color: #1e2a3a; margin: 0 0 10px 0; font-style: italic;">Bygg en frågebank som går rakt in i Moodle</h3>
+    <div style="background: #1e2a3a; border-radius: 4px; padding: 18px 22px; margin-bottom: 14px;">
+      <p style="font-family: 'SF Mono', Menlo, Consolas, monospace; font-size: 13px; color: #e8e0d4; margin: 0; line-height: 1.8; white-space: pre-wrap;">Utgå från det uppdaterade kursmaterialet och bygg en
+frågebank i GIFT-format som jag kan importera till Moodle.
+
+15 frågor, fördelade över modulerna. För varje fråga:
+- ett rätt svar och tre felsvar
+- varje felsvar ska motsvara en missuppfattning studerande
+  faktiskt har, inte något uppenbart tokigt
+- återkoppling på varje alternativ som förklarar varför det
+  är rätt eller fel
+- märk varje fråga med vilket lärandemål den prövar
+
+Blanda nivåer: fem som prövar minne, sju som prövar
+förståelse, tre som prövar tillämpning.
+
+Kontrollera att GIFT-syntaxen är giltig innan du levererar.
+Leverera som .txt.</p>
+    </div>
+    <div style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; line-height: 1.9;">
+      <label style="display: block; cursor: pointer;"><input type="checkbox" style="margin-right: 10px;">Läs igenom felsvaren. Känner du igen missuppfattningarna från din undervisning?</label>
+      <label style="display: block; cursor: pointer;"><input type="checkbox" style="margin-right: 10px;">Peka ut de svagaste frågorna och be om nya: &rdquo;fråga 4 och 9 är för lätta, gör om dem&rdquo;.</label>
+      <label style="display: block; cursor: pointer;"><input type="checkbox" style="margin-right: 10px;">Importera till Moodle och kontrollera att formatet gick igenom.</label>
+    </div>
+    <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 13px; color: #8a7e6e; margin: 16px 0 0 0; line-height: 1.7; font-style: italic;">Klart när: du har en importerbar fil och har kastat minst en fråga som inte höll måttet.</p>
+  </div>
+</div>
+
+<!-- ===================== PASS 7 ===================== -->
+<div style="background: #1e2a3a; padding: 40px 40px 32px 40px;">
+  <p style="font-family: Georgia, serif; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #8a9ab0; margin: 0 0 10px 0;">Pass 7 · 15 minuter</p>
+  <h2 style="font-family: Georgia, serif; font-size: 32px; font-weight: 400; color: #f0ece4; margin: 0 0 12px 0; line-height: 1.2; font-style: italic;">Automatisering, gränser och vägen vidare</h2>
+  <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 15px; color: #8a9ab0; margin: 0; line-height: 1.7; max-width: 620px;">Sista passet. Vi tittar på det som kan köras utan att du är närvarande, är ärliga om vad verktyget inte klarar, och gör en plan för de närmaste trettio dagarna.</p>
+</div>
+
+<div style="background: #faf8f5; padding: 40px;">
+
+  <h3 style="font-family: Georgia, serif; font-size: 22px; font-weight: 400; color: #1e2a3a; margin: 0 0 14px 0; font-style: italic;">Schemalagda uppgifter</h3>
+  <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 15px; color: #3c3228; line-height: 1.75; margin: 0 0 16px 0;">Du kan be Cowork att köra ett uppdrag på schema &ndash; kommandot <code style="font-family:'SF Mono',Menlo,Consolas,monospace;font-size:13px;background:#f0ece4;padding:1px 5px;border-radius:2px;">/schedule</code> sätter upp det, och du hanterar dina schemalagda uppgifter under <em>Schemalagt</em> i sidopanelen. De körs i molnet, så din dator behöver inte vara på. Varje körning startar en ny session utan minne av de tidigare, vilket betyder att instruktionen måste stå på egna ben.</p>
+
+  <div style="background: #fff; border: 1px solid #ddd5c8; border-radius: 4px; padding: 20px 24px; margin: 0 0 16px 0;">
+    <p style="font-family: Georgia, serif; font-size: 16px; color: #1e2a3a; margin: 0 0 10px 0; font-style: italic;">Två som faktiskt lönar sig för dig</p>
+    <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; margin: 0 0 10px 0; line-height: 1.75;"><strong>Månadsvis omvärldsbevakning.</strong> &rdquo;Sök på webben efter det viktigaste som hänt inom AI den senaste månaden som påverkar undervisning på yrkeshögskolenivå: nya modeller, ändrad lagstiftning, nya verktyg. Max en sida. Ange källor och datum. Bara sådant som skulle få mig att ändra i mitt kursmaterial.&rdquo;</p>
+    <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; margin: 0; line-height: 1.75;"><strong>Terminsvis faktakontroll.</strong> En påminnelse i augusti och januari om att köra faktagranskningen på materialet innan kursen startar. Den kan inte nå dina filer &ndash; men den kan påminna dig, och den kan ha förberett en sökning på vad som ändrats i lagstiftningen.</p>
+  </div>
+
+  <div style="background: #f0ece4; border: 1px solid #ddd5c8; border-radius: 4px; padding: 20px 24px; margin: 0 0 26px 0;">
+    <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #6b6157; margin: 0; line-height: 1.75;"><strong style="color:#1e2a3a;">Notera begränsningen.</strong> Eftersom du inte kopplar molnlagring kan en schemalagd uppgift inte hämta dina filer själv. Den kan söka, sammanställa och påminna &ndash; men själva materialarbetet startar du. Det är en rimlig gräns att leva med, och den är en direkt följd av ett dataskyddsval du gjort medvetet.</p>
+  </div>
+
+  <h3 style="font-family: Georgia, serif; font-size: 22px; font-weight: 400; color: #1e2a3a; margin: 0 0 14px 0; font-style: italic;">Vad du bör veta om gränserna</h3>
+  <div style="display: grid; gap: 10px; margin: 0 0 26px 0;">
+    <div style="background: #fff; border: 1px solid #ddd5c8; border-radius: 4px; padding: 16px 20px;">
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; margin: 0; line-height: 1.7;"><strong>Minnet följer inte med.</strong> Det Claude vet om dig från chatten finns inte i Cowork. Därför är globala instruktioner så viktiga &ndash; de är ditt minne.</p>
+    </div>
+    <div style="background: #fff; border: 1px solid #ddd5c8; border-radius: 4px; padding: 16px 20px;">
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; margin: 0; line-height: 1.7;"><strong>Sessioner kan inte delas med kollegor.</strong> Vill du dela ett arbetssätt delar du skill-filen, inte sessionen.</p>
+    </div>
+    <div style="background: #fff; border: 1px solid #ddd5c8; border-radius: 4px; padding: 16px 20px;">
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; margin: 0; line-height: 1.7;"><strong>Kvoten går åt snabbare</strong> än i chatten, eftersom varje steg i arbetet är ett anrop. Kör enkla frågor i chatten.</p>
+    </div>
+    <div style="background: #fff; border: 1px solid #ddd5c8; border-radius: 4px; padding: 16px 20px;">
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; margin: 0; line-height: 1.7;"><strong>Faktafel ser övertygande ut.</strong> Ett uppdaterat påstående med källhänvisning kan fortfarande vara fel. Din ämneskunskap är kvalitetskontrollen &ndash; den går inte att delegera.</p>
+    </div>
+    <div style="background: #fff; border: 1px solid #ddd5c8; border-radius: 4px; padding: 16px 20px;">
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; margin: 0; line-height: 1.7;"><strong>Webbhämtning är begränsad</strong> till sökresultat och adresser du själv delat. Sitter något bakom inloggning måste du ladda upp det.</p>
+    </div>
+  </div>
+
+  <!-- SLUTQUIZ -->
+  <p style="font-family: Georgia, serif; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #8a7e6e; margin: 0 0 16px 0;">Slutkontroll</p>
+
+  <div style="background: #fff; border: 1px solid #ddd5c8; border-radius: 4px; padding: 20px 24px; margin-bottom: 12px;">
+    <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 15px; font-weight: 600; color: #1e2a3a; margin: 0 0 12px 0; line-height: 1.6;">18. Du sätter upp en schemalagd uppgift som ska köra varje månad. Vad måste du tänka på i formuleringen?</p>
+    <label style="display: block; padding: 5px 0; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; cursor: pointer;"><input type="radio" name="q18" style="margin-right: 10px;">A. Att den är kort</label>
+    <label style="display: block; padding: 5px 0; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; cursor: pointer;"><input type="radio" name="q18" style="margin-right: 10px;">B. Att den fungerar utan minne av tidigare körningar &ndash; varje körning startar från noll</label>
+    <label style="display: block; padding: 5px 0; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; cursor: pointer;"><input type="radio" name="q18" style="margin-right: 10px;">C. Att din dator är påslagen vid den tidpunkten</label>
+    <details style="margin-top: 14px; border-top: 1px solid #e8e0d4; padding-top: 12px;">
+      <summary style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: #8a7e6e; cursor: pointer;">Visa facit</summary>
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; margin: 10px 0 0 0; line-height: 1.7;"><strong>Rätt: B.</strong> Skriv instruktionen som om den gick till någon som aldrig träffat dig: ange ämnesområde, målgrupp, format och längd. C är fel &ndash; körningen sker i molnet, oberoende av din dator.</p>
+    </details>
+  </div>
+
+  <div style="background: #fff; border: 1px solid #ddd5c8; border-radius: 4px; padding: 20px 24px; margin-bottom: 12px;">
+    <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 15px; font-weight: 600; color: #1e2a3a; margin: 0 0 12px 0; line-height: 1.6;">19. Vilken av dessa uppgifter passar <em>sämst</em> för Cowork?</p>
+    <label style="display: block; padding: 5px 0; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; cursor: pointer;"><input type="radio" name="q19" style="margin-right: 10px;">A. Konvertera 30 HTML-sidor till ett nytt designsystem</label>
+    <label style="display: block; padding: 5px 0; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; cursor: pointer;"><input type="radio" name="q19" style="margin-right: 10px;">B. Avgöra om en studerandes lösning förtjänar nivå 3 eller 4</label>
+    <label style="display: block; padding: 5px 0; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; cursor: pointer;"><input type="radio" name="q19" style="margin-right: 10px;">C. Hitta alla trasiga länkar i ett kurspaket</label>
+    <details style="margin-top: 14px; border-top: 1px solid #e8e0d4; padding-top: 12px;">
+      <summary style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: #8a7e6e; cursor: pointer;">Visa facit</summary>
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; margin: 10px 0 0 0; line-height: 1.7;"><strong>Rätt: B.</strong> Av två skäl som båda gäller: det kräver personuppgifter, och det är myndighetsutövning där ansvaret är ditt. A och C är mekaniska uppgifter på ditt eget material &ndash; precis vad verktyget är bra på.</p>
+    </details>
+  </div>
+
+  <div style="background: #fff; border: 1px solid #ddd5c8; border-radius: 4px; padding: 20px 24px; margin-bottom: 12px;">
+    <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 15px; font-weight: 600; color: #1e2a3a; margin: 0 0 12px 0; line-height: 1.6;">20. Din kollega vill använda ditt arbetssätt. Vad delar du?</p>
+    <label style="display: block; padding: 5px 0; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; cursor: pointer;"><input type="radio" name="q20" style="margin-right: 10px;">A. En länk till din session</label>
+    <label style="display: block; padding: 5px 0; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; cursor: pointer;"><input type="radio" name="q20" style="margin-right: 10px;">B. Din skill-fil</label>
+    <label style="display: block; padding: 5px 0; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; cursor: pointer;"><input type="radio" name="q20" style="margin-right: 10px;">C. Dina globala instruktioner via skärmdump</label>
+    <details style="margin-top: 14px; border-top: 1px solid #e8e0d4; padding-top: 12px;">
+      <summary style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: #8a7e6e; cursor: pointer;">Visa facit</summary>
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; margin: 10px 0 0 0; line-height: 1.7;"><strong>Rätt: B.</strong> Sessioner kan inte delas mellan användare. Skill-filen är däremot precis avsedd för det &ndash; den innehåller hela arbetssättet i en fil, och din kollega lägger till den på en minut. Det är också så du kan bygga en gemensam standard i kollegiet.</p>
+    </details>
+  </div>
+
+  <div style="background: #fff; border: 1px solid #ddd5c8; border-radius: 4px; padding: 20px 24px; margin-bottom: 12px;">
+    <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 15px; font-weight: 600; color: #1e2a3a; margin: 0 0 12px 0; line-height: 1.6;">21. Vilken av dessa vanor har störst effekt på kvaliteten i det du får tillbaka?</p>
+    <label style="display: block; padding: 5px 0; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; cursor: pointer;"><input type="radio" name="q21" style="margin-right: 10px;">A. Att skriva längre prompter</label>
+    <label style="display: block; padding: 5px 0; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; cursor: pointer;"><input type="radio" name="q21" style="margin-right: 10px;">B. Att börja med uppgifter du redan kan bedöma, och faktiskt bedöma dem</label>
+    <label style="display: block; padding: 5px 0; font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; cursor: pointer;"><input type="radio" name="q21" style="margin-right: 10px;">C. Att använda avancerade formuleringar</label>
+    <details style="margin-top: 14px; border-top: 1px solid #e8e0d4; padding-top: 12px;">
+      <summary style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: #8a7e6e; cursor: pointer;">Visa facit</summary>
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; margin: 10px 0 0 0; line-height: 1.7;"><strong>Rätt: B.</strong> Skillnaden mellan medelmåttiga och utmärkta resultat ligger i sammanhanget du ger &ndash; inte i promptteknikens finess. Och sammanhang lär du dig ge genom att se vad som blev fel i något du kunde bedöma. Därför började den här kursen med ett övningspaket vars fel du kunde kontrollera mot ett facit.</p>
+    </details>
+  </div>
+</div>
+
+<!-- 30 DAGAR -->
+<div style="background: #1e2a3a; padding: 48px 40px;">
+  <p style="font-family: Georgia, serif; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #8a9ab0; margin: 0 0 12px 0; text-align: center;">Efter kursen</p>
+  <h2 style="font-family: Georgia, serif; font-size: 32px; font-weight: 400; color: #f0ece4; margin: 0 0 10px 0; line-height: 1.2; font-style: italic; text-align: center;">Din plan för trettio dagar</h2>
+  <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 15px; color: #8a9ab0; margin: 0 0 36px 0; text-align: center; line-height: 1.7;">Fyra veckor, en sak i taget. Inget av det tar mer än en timme.</p>
+
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+    <div style="background: #2a3a4e; border: 1px solid #3a4e64; border-radius: 6px; padding: 22px 26px;">
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #8a9ab0; margin: 0 0 10px 0;">Vecka 1</p>
+      <p style="font-family: Georgia, serif; font-size: 18px; color: #f0ece4; margin: 0 0 10px 0; font-style: italic;">Ett riktigt paket</p>
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #cfd8e2; margin: 0; line-height: 1.7;">Ta ditt <em>minsta</em> verkliga kurspaket och kör hela pipelinen på det. Litet, så att du orkar granska allt. Publicera inte ännu.</p>
+    </div>
+    <div style="background: #2a3a4e; border: 1px solid #3a4e64; border-radius: 6px; padding: 22px 26px;">
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #8a9ab0; margin: 0 0 10px 0;">Vecka 2</p>
+      <p style="font-family: Georgia, serif; font-size: 18px; color: #f0ece4; margin: 0 0 10px 0; font-style: italic;">Skärp skillen</p>
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #cfd8e2; margin: 0; line-height: 1.7;">Nu vet du vad som gick fel i vecka 1. Skriv in det i skillen &ndash; varje irritation blir en rad. Kör om samma paket och se skillnaden.</p>
+    </div>
+    <div style="background: #2a3a4e; border: 1px solid #3a4e64; border-radius: 6px; padding: 22px 26px;">
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #8a9ab0; margin: 0 0 10px 0;">Vecka 3</p>
+      <p style="font-family: Georgia, serif; font-size: 18px; color: #f0ece4; margin: 0 0 10px 0; font-style: italic;">Skala upp och publicera</p>
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #cfd8e2; margin: 0; line-height: 1.7;">Kör den på din största kurs. Läs ändringsloggen, granska urvalet, publicera i Moodle. Det här är veckan du får tillbaka tiden.</p>
+    </div>
+    <div style="background: #2a3a4e; border: 1px solid #3a4e64; border-radius: 6px; padding: 22px 26px;">
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #8a9ab0; margin: 0 0 10px 0;">Vecka 4</p>
+      <p style="font-family: Georgia, serif; font-size: 18px; color: #f0ece4; margin: 0 0 10px 0; font-style: italic;">Gör det till en rutin</p>
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #cfd8e2; margin: 0; line-height: 1.7;">Sätt upp omvärldsbevakningen på schema. Dela skillen med en kollega. Bestäm vilken månad varje kurs granskas &ndash; och skriv in det i kalendern.</p>
+    </div>
+  </div>
+</div>
+
+<!-- PROMPTBANK -->
+<div style="background: #faf8f5; padding: 48px 40px;">
+  <p style="font-family: Georgia, serif; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #8a7e6e; margin: 0 0 12px 0; text-align: center;">Bilaga</p>
+  <h2 style="font-family: Georgia, serif; font-size: 32px; font-weight: 400; color: #1e2a3a; margin: 0 0 10px 0; line-height: 1.2; font-style: italic; text-align: center;">Promptbank</h2>
+  <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 15px; color: #6b6157; margin: 0 0 36px 0; text-align: center; line-height: 1.7;">Åtta formuleringar som är värda att spara. Anpassa dem till ditt material.</p>
+
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
+    <div style="background: #fff; border: 1px solid #e0d8cc; border-radius: 4px; padding: 20px 24px;">
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: #8a7e6e; margin: 0 0 8px 0;">Alltid först</p>
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #2c2c2c; margin: 0; line-height: 1.7; font-style: italic;">&rdquo;Upprepa min uppgift med dina egna ord och ställ alla frågor du har innan du börjar.&rdquo;</p>
+    </div>
+    <div style="background: #fff; border: 1px solid #e0d8cc; border-radius: 4px; padding: 20px 24px;">
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: #8a7e6e; margin: 0 0 8px 0;">Diagnos före behandling</p>
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #2c2c2c; margin: 0; line-height: 1.7; font-style: italic;">&rdquo;Gå igenom paketet och rapportera vad du hittar. Ändra ingenting ännu.&rdquo;</p>
+    </div>
+    <div style="background: #fff; border: 1px solid #e0d8cc; border-radius: 4px; padding: 20px 24px;">
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: #8a7e6e; margin: 0 0 8px 0;">Faktauppdatering</p>
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #2c2c2c; margin: 0; line-height: 1.7; font-style: italic;">&rdquo;Sök på webben och ange källa och datum för varje faktapåstående du ändrar. Är du osäker, skriv det i stället för att gissa.&rdquo;</p>
+    </div>
+    <div style="background: #fff; border: 1px solid #e0d8cc; border-radius: 4px; padding: 20px 24px;">
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: #8a7e6e; margin: 0 0 8px 0;">Skyddsnät</p>
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #2c2c2c; margin: 0; line-height: 1.7; font-style: italic;">&rdquo;Behåll originalfilerna. Spara det nya under nya namn och lista varje ändring per fil.&rdquo;</p>
+    </div>
+    <div style="background: #fff; border: 1px solid #e0d8cc; border-radius: 4px; padding: 20px 24px;">
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: #8a7e6e; margin: 0 0 8px 0;">Mekaniskt ska vara mekaniskt</p>
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #2c2c2c; margin: 0; line-height: 1.7; font-style: italic;">&rdquo;Skriv ett litet skript som kontrollerar det här i stället för att bedöma det, och visa mig resultatet.&rdquo;</p>
+    </div>
+    <div style="background: #fff; border: 1px solid #e0d8cc; border-radius: 4px; padding: 20px 24px;">
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: #8a7e6e; margin: 0 0 8px 0;">Avslöjar missförstånd</p>
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #2c2c2c; margin: 0; line-height: 1.7; font-style: italic;">&rdquo;Vad valde du att inte ändra, och varför?&rdquo;</p>
+    </div>
+    <div style="background: #fff; border: 1px solid #e0d8cc; border-radius: 4px; padding: 20px 24px;">
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: #8a7e6e; margin: 0 0 8px 0;">Moodle varje gång</p>
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #2c2c2c; margin: 0; line-height: 1.7; font-style: italic;">&rdquo;All CSS inline, inga klasser, inga externa typsnitt, ingen JavaScript. Det ska klistras in i Moodles redigerare.&rdquo;</p>
+    </div>
+    <div style="background: #fff; border: 1px solid #e0d8cc; border-radius: 4px; padding: 20px 24px;">
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: #8a7e6e; margin: 0 0 8px 0;">Innan du publicerar</p>
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #2c2c2c; margin: 0; line-height: 1.7; font-style: italic;">&rdquo;Vad i det här är du minst säker på, och vad behöver jag besluta om?&rdquo;</p>
+    </div>
+  </div>
+</div>
+
+<!-- KLAR-BAND -->
+<div style="background: #1e2a3a; padding: 48px 40px; text-align: center;">
+  <p style="font-family: Georgia, serif; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #8a9ab0; margin: 0 0 20px 0;">Kursen är klar när</p>
+  <div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 14px; max-width: 780px; margin: 0 auto;">
+    <div style="background: #2a3a4e; border: 1px solid #3a4e64; border-radius: 4px; padding: 22px 16px;">
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 30px; font-weight: 700; color: #f0ece4; margin: 0 0 6px 0;">1</p>
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 12px; color: #8a9ab0; margin: 0; line-height: 1.5;">uppdaterat kurspaket som du vågar publicera</p>
+    </div>
+    <div style="background: #2a3a4e; border: 1px solid #3a4e64; border-radius: 4px; padding: 22px 16px;">
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 30px; font-weight: 700; color: #f0ece4; margin: 0 0 6px 0;">1</p>
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 12px; color: #8a9ab0; margin: 0; line-height: 1.5;">egen skill som triggar på dina ord</p>
+    </div>
+    <div style="background: #2a3a4e; border: 1px solid #3a4e64; border-radius: 4px; padding: 22px 16px;">
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 30px; font-weight: 700; color: #f0ece4; margin: 0 0 6px 0;">1</p>
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 12px; color: #8a9ab0; margin: 0; line-height: 1.5;">dataregel du kan säga högt utan att tveka</p>
+    </div>
+    <div style="background: #2a3a4e; border: 1px solid #3a4e64; border-radius: 4px; padding: 22px 16px;">
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 30px; font-weight: 700; color: #f0ece4; margin: 0 0 6px 0;">15</p>
+      <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 12px; color: #8a9ab0; margin: 0; line-height: 1.5;">frågor redo att importeras i Moodle</p>
+    </div>
+  </div>
+</div>
+
+<!-- KÄLLOR -->
+<div style="background: #f0ece4; padding: 40px;">
+  <p style="font-family: Georgia, serif; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: #8a7e6e; margin: 0 0 12px 0;">Källor</p>
+  <h3 style="font-family: Georgia, serif; font-size: 22px; font-weight: 400; color: #1e2a3a; margin: 0 0 16px 0; font-style: italic;">Var uppgifterna kommer ifrån</h3>
+  <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #3c3228; line-height: 1.9; margin: 0 0 16px 0;">
+    Anthropic: <a href="https://support.claude.com/en/articles/13345190-get-started-with-claude-cowork" style="color:#1e2a3a;">Get started with Claude Cowork</a><br>
+    Anthropic: <a href="https://claude.com/blog/the-claude-cowork-product-guide" style="color:#1e2a3a;">The Claude Cowork product guide</a><br>
+    Anthropic: <a href="https://claude.com/blog/best-practices-for-getting-started-with-claude-cowork" style="color:#1e2a3a;">Best practices for getting started with Claude Cowork</a><br>
+    Anthropic: <a href="https://support.claude.com/en/articles/12512198-how-to-create-custom-skills" style="color:#1e2a3a;">How to create custom skills</a><br>
+    Anthropic: <a href="https://privacy.claude.com/en/articles/10023580-is-my-data-used-for-model-training" style="color:#1e2a3a;">Is my data used for model training?</a><br>
+    Anthropic: <a href="https://privacy.claude.com/en/articles/10023548-how-long-do-you-store-my-data" style="color:#1e2a3a;">How long do you store my data?</a>
+  </p>
+  <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 13px; color: #8a7e6e; margin: 0; line-height: 1.7; font-style: italic;">Uppgifterna kontrollerades i augusti 2026. Produktdetaljer och villkor ändras &ndash; kontrollera dem själv innan du bygger en rutin på dem, och särskilt innan du citerar dem för din arbetsgivare.</p>
+</div>
+
+<!-- FOOTER -->
+<div style="background: #1e2a3a; padding: 28px 40px; text-align: center;">
+  <p style="font-family: Georgia, serif; font-size: 15px; color: #8a9ab0; margin: 0 0 6px 0; font-style: italic;">Kom igång med Cowork &ndash; interaktiv introduktionskurs</p>
+  <p style="font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 12px; color: #6b7d94; margin: 0; line-height: 1.6;">Allt övningsmaterial är fiktivt. Inga verkliga personuppgifter förekommer i kursen.</p>
+</div>
+
+</div>
+</body>
+</html>

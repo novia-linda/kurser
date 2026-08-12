@@ -1,0 +1,26 @@
+ÖVNINGSMATERIAL – AI-GRUNDKURS v3
+==================================
+
+Detta paket är HELT FIKTIVT och skapat enbart som övningsmaterial
+för introduktionskursen "Kom igång med Cowork".
+
+Inga verkliga personer, organisationer, elever eller personuppgifter
+förekommer. "Yrkeshögskolan Exempelia" och "Nordkraft Ab" är påhittade.
+
+Paketet innehåller med flit ett antal fel och brister – föråldrat
+innehåll, trasiga länkar, inkonsekvent formatering och
+tillgänglighetsproblem. Det är själva poängen: du ska öva på att
+hitta och åtgärda dem med hjälp av Cowork.
+
+Innehåll:
+  index.html               Kursstartsida
+  01-vad-ar-ai.html        Modul 1
+  02-maskininlarning.html  Modul 2
+  03-etik-och-lagar.html   Modul 3
+  quiz.html                Sluttest
+  css/stil.css             Huvudstilmall
+  css/gammal.css           Äldre stilmall
+  laroplan.txt             Läroplan
+  bilder/                  (tom – en bild saknas med flit)
+
+Lycka till!
