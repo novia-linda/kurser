@@ -1,0 +1,22 @@
+SKILLVERKSTADEN – ÖVNINGSMATERIAL
+=================================
+
+Allt i den här mappen är påhittat. Inga verkliga personer, kurser,
+system eller inloggningsuppgifter förekommer.
+
+Fyra mappar:
+
+  01-bra-exempel/    En välskriven skill. Härma strukturen.
+
+  02-triggar-aldrig/ Innehållet är bra men den kommer aldrig till
+                     användning. Två fel gör det – hittar du båda?
+
+  03-overlastad/     32 regler där ungefär åtta bär värdet. Innehåller
+                     dessutom fyra sorters saker som aldrig ska stå i
+                     en skill. Ett av felen är ett påhittat lösenord –
+                     det står där för att visa hur illa det ser ut.
+
+  mall/              Tom mall att utgå från, med checklista.
+
+Facit finns i pass 4 i kursen. Läs filerna och skriv ner vad du tror
+är fel innan du öppnar det.
