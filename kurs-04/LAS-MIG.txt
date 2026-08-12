@@ -1,0 +1,15 @@
+KURS 04 — TOM PLATS
+====================
+
+Den här mappen är reserverad för kurs 04.
+
+Så här fyller du den:
+  1. Lägg kursens index.html direkt i den här mappen.
+  2. Lägg eventuellt material i undermappar, t.ex. filer/ och ovningsmaterial/.
+  3. Öppna portalens index.html i repots rot och redigera raden för KURS 04:
+     titel, beskrivning och status.
+
+Länken från portalen pekar redan hit:  kurs-04/index.html
+Så länge filen saknas ger länken 404. Det är meningen.
+
+Den här filen kan raderas när mappen tagits i bruk.
