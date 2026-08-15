@@ -1,0 +1,478 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f4f6f8">
+<title>XPENG G6 AWD Performance – finansieringsräknare</title>
+<style>
+:root{
+  --bg:#f2f4f6;--card:#fff;--ink:#15181c;--muted:#66717b;--line:#d9dfe4;
+  --accent:#263f51;--accent2:#eaf0f3;--good:#2f6a50;--goodbg:#e8f3ed;
+  --warn:#93642d;--warnbg:#f7efe4;--shadow:0 18px 50px rgba(21,30,38,.09);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  background:radial-gradient(circle at 15% -8%,#fff 0,transparent 28rem),linear-gradient(180deg,#fafbfc,var(--bg));
+  color:var(--ink);line-height:1.5
+}
+.wrap{width:min(980px,calc(100% - 24px));margin:auto}
+.hero{padding:38px 0 20px}
+.kicker{text-transform:uppercase;letter-spacing:.14em;font-size:.73rem;font-weight:850;color:#6d7e89}
+h1{font-size:clamp(2.4rem,8vw,4.8rem);line-height:1.01;letter-spacing:-.055em;margin:.18em 0 .28em}
+h2{font-size:1.42rem;letter-spacing:-.03em;margin:0 0 14px}
+h3{font-size:1rem;margin:0 0 8px}
+.lead{font-size:1.08rem;color:#53606b;max-width:820px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:22px;box-shadow:0 8px 28px rgba(24,32,40,.04)}
+.card.featured{background:linear-gradient(145deg,#fff,#e8eef2);box-shadow:var(--shadow)}
+.section{margin-top:16px}
+.fixed{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.fixed .item{padding:14px;border:1px solid var(--line);border-radius:16px;background:#fafbfc}
+.item span{display:block;color:var(--muted);font-size:.76rem;font-weight:750;text-transform:uppercase;letter-spacing:.05em}
+.item strong{display:block;font-size:1.45rem;letter-spacing:-.04em;margin-top:3px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+label{font-size:.8rem;font-weight:800;color:#4d5862}
+input,select{
+  width:100%;margin-top:6px;padding:12px;border:1px solid #ccd4da;border-radius:12px;background:#fbfcfd;
+  font:inherit;font-size:1rem;color:var(--ink)
+}
+input:focus,select:focus{outline:3px solid rgba(67,101,122,.13);border-color:#809aaa}
+input[disabled]{background:#eef2f4;color:#52616c}
+.mode-row,.preset-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+button{
+  border:1px solid #ccd4da;background:#fff;color:#26323a;border-radius:999px;padding:9px 13px;font:inherit;font-weight:800;cursor:pointer
+}
+button.active{background:#26323a;color:#fff;border-color:#26323a}
+button:hover{transform:translateY(-1px)}
+.hint{font-size:.84rem;color:var(--muted)}
+.results{display:grid;grid-template-columns:1.2fr .8fr .8fr;gap:14px;margin:18px 0}
+.result{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px}
+.result.main{background:linear-gradient(145deg,#fff,#e4ecef)}
+.label{font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;font-weight:850;color:#697680}
+.big{font-size:clamp(2rem,7vw,3.35rem);font-weight:900;letter-spacing:-.055em;margin:.12em 0}
+.medium{font-size:1.55rem;font-weight:900;letter-spacing:-.04em;margin:.18em 0}
+.sub{font-size:.87rem;color:var(--muted)}
+.good{color:var(--good)}.warn{color:var(--warn)}
+.scroll{overflow:auto;border:1px solid var(--line);border-radius:16px}
+table{width:100%;border-collapse:collapse;min-width:650px}
+th,td{padding:12px 13px;border-bottom:1px solid #e8ebee;text-align:left}
+th{background:#f7f9fa;font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;color:#5d6872}
+.callout{margin-top:16px;padding:16px;border-radius:16px;background:#edf3f6;border-left:4px solid #7e9aaa}
+.callout.warm{background:var(--warnbg);border-left-color:#b0834c}
+details{margin-top:16px;border-top:1px solid var(--line);padding-top:12px}
+summary{cursor:pointer;font-weight:850;color:#315e77}
+.formula{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:#f2f4f6;border-radius:12px;padding:10px 12px;overflow:auto;font-size:.84rem}
+.badge{display:inline-flex;padding:5px 9px;border-radius:999px;background:var(--goodbg);color:var(--good);font-size:.74rem;font-weight:850;margin-bottom:8px}
+footer{padding:30px 0 50px;color:#6c7680;font-size:.82rem}
+
+.calc-actions{
+  display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:18px
+}
+.calc-btn{
+  border:0;background:#151a1f;color:#fff;border-radius:16px;
+  padding:14px 24px;font-size:1.08rem;font-weight:900;letter-spacing:-.01em;
+  box-shadow:0 8px 22px rgba(20,28,35,.15);cursor:pointer;min-width:150px
+}
+.calc-btn:active{transform:translateY(1px);box-shadow:0 4px 12px rgba(20,28,35,.12)}
+.calc-status{font-size:.85rem;color:var(--muted)}
+
+@media(max-width:800px){.grid,.results{grid-template-columns:1fr}.fixed{grid-template-columns:1fr 1fr 1fr}}
+@media(max-width:520px){.fields{grid-template-columns:1fr}.fixed{grid-template-columns:1fr}.card{padding:18px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<section class="hero">
+  <div class="kicker">XPENG G6 AWD Performance · DNB · 0,99 %</div>
+  <h1>Finansiera vår G6.</h1>
+  <p class="lead">Förvald bil: <strong>XPENG G6 AWD Performance 55 390 € + dragkrok 1 190 € = 56 580 €</strong>. Välj löptid, handpenning, månadsrat och ballong. Eftersom de hänger ihop väljer du <strong>vilken av de tre sista som kalkylatorn ska lösa åt dig</strong>.</p>
+</section>
+
+<section class="card featured">
+  <div class="fixed">
+    <div class="item"><span>Nominell ränta</span><strong>0,99 %</strong></div>
+    <div class="item"><span>Hanteringsavgift</span><strong>15 €/mån</strong></div>
+    <div class="item"><span>Uppläggningsavgift*</span><strong>349 €</strong></div>
+  </div>
+  <p class="hint">*349 € ingår i alla tre XPENG/DNB-exempel du skickade, så den är med för att kalkylen ska replikera annonserna.</p>
+</section>
+
+<section class="card section">
+  <h2>1. Grunduppgifter</h2>
+  <div class="fields">
+    <label>Bilpris €
+      <input id="price" type="number" value="56580" step="100" min="0">
+    </label>
+    <label>Finansieringstid
+      <select id="years">
+        <option value="2">2 år / 24 mån</option>
+        <option value="3">3 år / 36 mån</option>
+        <option value="4">4 år / 48 mån</option>
+        <option value="5">5 år / 60 mån</option>
+        <option value="6" selected>6 år / 72 mån</option>
+        <option value="7">7 år / 84 mån</option>
+        <option value="8">8 år / 96 mån</option>
+      </select>
+    </label>
+  </div>
+
+  <div class="preset-row">
+    <button type="button" data-preset="ourcar">Vår G6 AWD Performance + dragkrok</button>
+    <button type="button" data-preset="ourcar">Vår G6 AWD Performance + dragkrok</button>
+    <button type="button" data-preset="g6lr">G6 Long Range-exemplet</button>
+    <button type="button" data-preset="g6sr">G6 Standard Range-exemplet</button>
+    <button type="button" data-preset="g9sr">G9 Standard Range-exemplet</button>
+  </div>
+</section>
+
+<section class="card section">
+  <h2>2. Vad vill du räkna ut?</h2>
+  <div class="mode-row">
+    <button type="button" class="active" data-mode="balloon">Räkna ut ballongen</button>
+    <button type="button" data-mode="monthly">Räkna ut månadsraten</button>
+    <button type="button" data-mode="down">Räkna ut handpenningen</button>
+  </div>
+
+  <div class="fields" style="margin-top:16px">
+    <label>Handpenning €
+      <input id="down" type="number" value="7042" step="100" min="0">
+    </label>
+    <label>Månadsrat € <span class="hint">(inkl. 15 € avgift)</span>
+      <input id="monthly" type="number" value="490" step="5" min="15">
+    </label>
+    <label>Ballong / sista större rat €
+      <input id="balloon" type="number" value="12897.50" step="100" min="0" disabled>
+    </label>
+    <label>Ballong som % av bilpriset
+      <input id="balloonPct" type="number" value="25" step="0.5" min="0" max="100">
+    </label>
+  </div>
+  <p class="hint" id="modeHint">Du bestämmer handpenning och månadsrat. Kalkylatorn räknar ut vilken skuld som återstår som sista större rat.</p>
+  <div class="calc-actions">
+    <button type="button" class="calc-btn" id="calcButton">Räkna</button>
+    <span class="calc-status" id="calcStatus">Ändra siffrorna och tryck sedan på Räkna.</span>
+  </div>
+</section>
+
+<section class="results" aria-live="polite">
+  <article class="result main">
+    <div class="label" id="mainLabel">Beräknad ballong</div>
+    <div class="big" id="mainResult">–</div>
+    <div class="sub" id="mainSub">–</div>
+  </article>
+  <article class="result">
+    <div class="label">Finansierat belopp</div>
+    <div class="big" id="principalOut">–</div>
+    <div class="sub">bilpris − handpenning + 349 €</div>
+  </article>
+  <article class="result">
+    <div class="label">Total kreditkostnad</div>
+    <div class="big" id="creditCostOut">–</div>
+    <div class="sub">ränta + 349 € + alla 15 €-avgifter</div>
+  </article>
+</section>
+
+<section class="grid">
+  <article class="card">
+    <span class="badge">Det du undrade över</span>
+    <h2>Vad kostar mindre handpenning?</h2>
+    <div class="medium" id="thousandBalloon">–</div>
+    <p class="sub">Så mycket större blir ballongen av <strong>1 000 € mindre handpenning</strong> om månadsraten lämnas oförändrad.</p>
+
+    <div class="callout" id="downLogic"></div>
+  </article>
+
+  <article class="card">
+    <h2>Sista betalningen</h2>
+    <div class="medium" id="finalInvoice">–</div>
+    <p class="sub">Ballongen plus den sista hanteringsavgiften på 15 €.</p>
+
+    <div class="callout warm">
+      Ballongen är inte en avgiftsfri klumpsumma. Den är kvarvarande lånekapital och har burit <strong>0,99 % nominell ränta</strong> fram till slutdagen.
+    </div>
+  </article>
+</section>
+
+<section class="card section">
+  <h2>Hela finansieringen</h2>
+  <div class="scroll">
+    <table>
+      <tbody>
+        <tr><td><strong>Bilpris</strong></td><td id="tPrice">–</td></tr>
+        <tr><td><strong>Handpenning</strong></td><td id="tDown">–</td></tr>
+        <tr><td><strong>Uppläggningsavgift</strong></td><td>349 €</td></tr>
+        <tr><td><strong>Finansierat belopp</strong></td><td id="tPrincipal">–</td></tr>
+        <tr><td><strong>Löptid</strong></td><td id="tTerm">–</td></tr>
+        <tr><td><strong>Regelbunden månadsrat</strong></td><td id="tMonthly">–</td></tr>
+        <tr><td><strong>…varav hanteringsavgift</strong></td><td>15 €</td></tr>
+        <tr><td><strong>…som faktiskt amorterar/räntar lånet</strong></td><td id="tLoanMonthly">–</td></tr>
+        <tr><td><strong>Antal vanliga månadsrater</strong></td><td id="tRegularCount">–</td></tr>
+        <tr><td><strong>Ballong</strong></td><td id="tBalloon">–</td></tr>
+        <tr><td><strong>Sista fakturan inkl. 15 €</strong></td><td id="tFinal">–</td></tr>
+        <tr><td><strong>Ränta totalt</strong></td><td id="tInterest">–</td></tr>
+        <tr><td><strong>Hanteringsavgifter totalt</strong></td><td id="tHandling">–</td></tr>
+        <tr><td><strong>Total kreditkostnad</strong></td><td id="tCreditCost">–</td></tr>
+        <tr><td><strong>Bilens verkliga kreditpris</strong></td><td id="tRealPrice">–</td></tr>
+        <tr><td><strong>Ungefärlig effektiv årsränta</strong></td><td id="tApr">–</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <details>
+    <summary>Visa matematiken bakom ballongen</summary>
+    <p>XPENG-exemplen använder 72 månader. Det innebär 71 vanliga månadsbetalningar och sedan en sista större rat i månad 72. Den sista månadens hanteringsavgift på 15 € tillkommer också.</p>
+    <div class="formula">månadsränta r = 0,0099 / 12</div>
+    <div class="formula" style="margin-top:8px">lånebetalning A = annonserad månadsrat − 15 €</div>
+    <div class="formula" style="margin-top:8px">ballong = P(1+r)^n − A × ((1+r)^n − (1+r)) / r</div>
+    <p class="hint">P är finansierat belopp inklusive uppläggningsavgiften 349 €. n är antal månader.</p>
+  </details>
+
+  <details>
+    <summary>Varför går 1 000 € mindre handpenning till mer än 1 000 € i ballongen?</summary>
+    <p>Om månadsbetalningen inte ändras får den extra tusenlappen ligga kvar i skulden under hela perioden. Därför blir effekten:</p>
+    <div class="formula" id="growthFormula">1 000 € × (1 + 0,99 % / 12)^72</div>
+    <p class="hint">Vid 6 år är det ungefär 1 061 €. Skillnaden är räntan som den extra skulden samlar på sig under tiden.</p>
+  </details>
+</section>
+
+<footer>
+  Kalkylatorn replikerar matematiken i XPENG/DNB-exemplen du skickade. Små skillnader på cent kan uppstå eftersom annonserade månadsrater avrundas till hela euro. Ett faktiskt finansieringsavtal kan också ha andra villkor.
+</footer>
+</div>
+
+<script>
+const RATE = 0.0099;
+const MONTHLY_FEE = 15;
+const SETUP_FEE = 349;
+let mode = "balloon";
+let lastBalloonInput = "amount";
+
+const $ = id => document.getElementById(id);
+const money = x => new Intl.NumberFormat("sv-FI",{style:"currency",currency:"EUR",minimumFractionDigits:0,maximumFractionDigits:2}).format(x);
+const pct = x => new Intl.NumberFormat("sv-FI",{minimumFractionDigits:0,maximumFractionDigits:2}).format(x) + " %";
+
+function months(){ return (+$("years").value || 6) * 12; }
+function r(){ return RATE/12; }
+
+function financedPrincipal(price,down){
+  return price - down + SETUP_FEE;
+}
+
+function balloonFrom(price,down,monthly,n){
+  const P = financedPrincipal(price,down);
+  const A = monthly - MONTHLY_FEE;
+  const rr = r();
+  if(A < 0) return NaN;
+  if(Math.abs(rr) < 1e-12) return P - A*(n-1);
+  const q = Math.pow(1+rr,n);
+  return P*q - A * ((q-(1+rr))/rr);
+}
+
+function monthlyFrom(price,down,balloon,n){
+  const P = financedPrincipal(price,down);
+  const rr = r();
+  if(Math.abs(rr) < 1e-12){
+    return (P-balloon)/(n-1) + MONTHLY_FEE;
+  }
+  const q = Math.pow(1+rr,n);
+  const A = (P*q-balloon) * rr / (q-(1+rr));
+  return A + MONTHLY_FEE;
+}
+
+function downFrom(price,monthly,balloon,n){
+  const A = monthly - MONTHLY_FEE;
+  const rr = r();
+  let P;
+  if(Math.abs(rr) < 1e-12){
+    P = balloon + A*(n-1);
+  } else {
+    const q = Math.pow(1+rr,n);
+    P = (balloon + A*((q-(1+rr))/rr)) / q;
+  }
+  return price + SETUP_FEE - P;
+}
+
+function approximateAPR(price,down,monthly,balloon,n){
+  // Borrower receives the portion of the cash price not paid as down payment.
+  const netCredit = price-down;
+  if(netCredit <= 0) return 0;
+
+  function pv(monthlyRate){
+    let value = 0;
+    for(let k=1;k<n;k++){
+      value += monthly / Math.pow(1+monthlyRate,k);
+    }
+    value += (balloon+MONTHLY_FEE) / Math.pow(1+monthlyRate,n);
+    return value;
+  }
+
+  let lo = 0, hi = 0.1;
+  for(let i=0;i<120;i++){
+    const mid=(lo+hi)/2;
+    if(pv(mid) > netCredit) lo=mid; else hi=mid;
+  }
+  const mirr=(lo+hi)/2;
+  return (Math.pow(1+mirr,12)-1)*100;
+}
+
+function totalMetrics(price,down,monthly,balloon,n){
+  const P = financedPrincipal(price,down);
+  const regularCount = n-1;
+  const totalPaid = down + regularCount*monthly + balloon + MONTHLY_FEE;
+  const creditCost = totalPaid - price;
+  const handling = n*MONTHLY_FEE;
+  const interest = creditCost - SETUP_FEE - handling;
+  const realPrice = price + creditCost;
+  const apr = approximateAPR(price,down,monthly,balloon,n);
+  return {P,regularCount,totalPaid,creditCost,handling,interest,realPrice,apr};
+}
+
+function setMode(newMode){
+  mode = newMode;
+  document.querySelectorAll("[data-mode]").forEach(b=>b.classList.toggle("active",b.dataset.mode===mode));
+  $("down").disabled = mode==="down";
+  $("monthly").disabled = mode==="monthly";
+  $("balloon").disabled = mode==="balloon";
+  $("balloonPct").disabled = mode==="balloon";
+
+  const hints = {
+    balloon:"Du bestämmer handpenning och månadsrat. Kalkylatorn räknar ut vilken skuld som återstår som sista större rat.",
+    monthly:"Du bestämmer handpenning och önskad ballong. Kalkylatorn räknar ut vilken månadsrat som krävs.",
+    down:"Du bestämmer månadsrat och ballong. Kalkylatorn räknar ut vilken handpenning som krävs."
+  };
+  $("modeHint").textContent = hints[mode];
+  calculate();
+}
+
+function calculate(){
+  const price = +$("price").value || 0;
+  const n = months();
+  let down = +$("down").value || 0;
+  let monthly = +$("monthly").value || 0;
+  let balloon = +$("balloon").value || 0;
+
+  if(mode==="balloon"){
+    balloon = balloonFrom(price,down,monthly,n);
+    $("balloon").value = isFinite(balloon) ? balloon.toFixed(2) : "";
+    $("balloonPct").value = price>0 && isFinite(balloon) ? (balloon/price*100).toFixed(2) : "";
+  }else if(mode==="monthly"){
+    const pctVal = +$("balloonPct").value;
+    if(lastBalloonInput === "pct"){
+      balloon = price*pctVal/100;
+      $("balloon").value = balloon.toFixed(2);
+    }else{
+      balloon = +$("balloon").value || 0;
+      $("balloonPct").value = price>0 ? (balloon/price*100).toFixed(2) : "";
+    }
+    monthly = monthlyFrom(price,down,balloon,n);
+    $("monthly").value = isFinite(monthly) ? monthly.toFixed(2) : "";
+  }else if(mode==="down"){
+    const pctVal = +$("balloonPct").value;
+    if(lastBalloonInput === "pct"){
+      balloon = price*pctVal/100;
+      $("balloon").value = balloon.toFixed(2);
+    }else{
+      balloon = +$("balloon").value || 0;
+      $("balloonPct").value = price>0 ? (balloon/price*100).toFixed(2) : "";
+    }
+    down = downFrom(price,monthly,balloon,n);
+    $("down").value = isFinite(down) ? down.toFixed(2) : "";
+  }
+
+  const invalid = !isFinite(balloon) || !isFinite(monthly) || !isFinite(down) || monthly<MONTHLY_FEE;
+  if(invalid) return;
+
+  const m = totalMetrics(price,down,monthly,balloon,n);
+  const growth = Math.pow(1+r(),n);
+  const thousand = 1000*growth;
+
+  if(mode==="balloon"){
+    $("mainLabel").textContent="Beräknad ballong";
+    $("mainResult").textContent=money(balloon);
+    $("mainSub").textContent=pct(price?balloon/price*100:0)+" av bilpriset";
+  }else if(mode==="monthly"){
+    $("mainLabel").textContent="Beräknad månadsrat";
+    $("mainResult").textContent=money(monthly);
+    $("mainSub").textContent="inklusive 15 € hanteringsavgift";
+  }else{
+    $("mainLabel").textContent="Beräknad handpenning";
+    $("mainResult").textContent=money(down);
+    $("mainSub").textContent=pct(price?down/price*100:0)+" av bilpriset";
+  }
+
+  $("principalOut").textContent=money(m.P);
+  $("creditCostOut").textContent=money(m.creditCost);
+  $("thousandBalloon").textContent=money(thousand);
+  $("finalInvoice").textContent=money(balloon+MONTHLY_FEE);
+
+  $("downLogic").innerHTML=
+    "<strong>För "+(n/12)+" år:</strong> 1 000 € som du inte lägger i handpenning idag motsvarar cirka <strong>"+
+    money(thousand)+"</strong> extra i ballongen om månadsraten hålls exakt samma. Själva räntekostnaden på den tusenlappen blir alltså cirka <strong>"+
+    money(thousand-1000)+"</strong>.";
+
+  $("tPrice").textContent=money(price);
+  $("tDown").textContent=money(down);
+  $("tPrincipal").textContent=money(m.P);
+  $("tTerm").textContent=n+" månader ("+(n/12)+" år)";
+  $("tMonthly").textContent=money(monthly);
+  $("tLoanMonthly").textContent=money(monthly-MONTHLY_FEE);
+  $("tRegularCount").textContent=m.regularCount+" st";
+  $("tBalloon").textContent=money(balloon);
+  $("tFinal").textContent=money(balloon+MONTHLY_FEE);
+  $("tInterest").textContent=money(m.interest);
+  $("tHandling").textContent=money(m.handling);
+  $("tCreditCost").textContent=money(m.creditCost);
+  $("tRealPrice").textContent=money(m.realPrice);
+  $("tApr").textContent=pct(m.apr);
+  $("growthFormula").textContent="1 000 € × (1 + 0,99 % / 12)^"+n+" = "+money(thousand);
+
+  if(down<0){
+    $("mainSub").innerHTML='<span class="warn">Den valda kombinationen skulle kräva negativ handpenning / extra finansiering.</span>';
+  }
+  if(balloon<0){
+    $("mainSub").innerHTML='<span class="warn">Månadsraten är så hög att lånet skulle vara återbetalt före slutdagen.</span>';
+  }
+  if($("calcStatus")){
+    const now = new Date();
+    $("calcStatus").textContent = "Uträknat " + now.toLocaleTimeString("sv-FI",{hour:"2-digit",minute:"2-digit"});
+  }
+}
+
+document.querySelectorAll("[data-mode]").forEach(b=>b.addEventListener("click",()=>setMode(b.dataset.mode)));
+
+["price","years","down","monthly","balloon","balloonPct"].forEach(id=>{
+  $(id).addEventListener("input",()=>{
+    if($("calcStatus")) $("calcStatus").textContent="Ändringar finns – tryck Räkna.";
+  });
+  $(id).addEventListener("change",()=>{
+    if($("calcStatus")) $("calcStatus").textContent="Ändringar finns – tryck Räkna.";
+  });
+});
+$("balloon").addEventListener("input",()=>{ lastBalloonInput="amount"; });
+$("balloonPct").addEventListener("input",()=>{ lastBalloonInput="pct"; });
+$("calcButton").addEventListener("click",calculate);
+
+document.querySelectorAll("[data-preset]").forEach(btn=>{
+  btn.addEventListener("click",()=>{
+    $("years").value="6";
+    if(btn.dataset.preset==="ourcar"){
+      $("price").value=56580;
+    }else if(btn.dataset.preset==="g6lr"){
+      $("price").value=51590;$("down").value=7042;$("monthly").value=490;
+    }else if(btn.dataset.preset==="g6sr"){
+      $("price").value=46590;$("down").value=5000;$("monthly").value=470;
+    }else{
+      $("price").value=63500;$("down").value=7500;$("monthly").value=620;
+    }
+    setMode("balloon");
+  });
+});
+
+setMode("balloon");
+</script>
+</body>
+</html>
