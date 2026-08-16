@@ -36,13 +36,11 @@
   .summary{grid-column:span 8}
   @media(max-width:900px){.controls,.summary{grid-column:1/-1}}
   label{display:block;font-size:13px;font-weight:650;margin:14px 0 6px}
-  input[type="number"], input[type="range"]{width:100%}
-  input[type="number"]{
-    border:1px solid var(--line); border-radius:12px; padding:11px 12px; font-size:16px;
-    background:#fff; color:var(--text);
+  input[type="number"], select{
+    width:100%; border:1px solid var(--line); border-radius:12px; padding:11px 12px;
+    font-size:16px; background:#fff; color:var(--text);
   }
-  input[type="range"]{accent-color:var(--accent)}
-  .row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  input:disabled, select:disabled{background:#f0efeb;color:#999}
   .fixed{
     padding:12px 14px;border-radius:12px;background:#faf9f6;border:1px solid var(--line);
     margin-bottom:10px
@@ -54,9 +52,7 @@
   summary{cursor:pointer;font-weight:650}
   .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
   @media(max-width:720px){.kpis{grid-template-columns:repeat(2,1fr)}}
-  .kpi{
-    background:#faf9f6;border:1px solid var(--line);border-radius:14px;padding:14px
-  }
+  .kpi{background:#faf9f6;border:1px solid var(--line);border-radius:14px;padding:14px}
   .kpi .v{font-size:25px;font-weight:760;letter-spacing:-.02em}
   .kpi .l{font-size:12px;color:var(--muted);margin-top:3px}
   .status{
@@ -64,6 +60,11 @@
     color:var(--good);font-weight:650
   }
   .status.warn{background:#f5ebe2;color:var(--warn)}
+  .calc-btn{
+    width:100%; margin-top:18px; border:0; border-radius:13px; padding:13px 16px;
+    font-size:16px; font-weight:750; background:var(--accent); color:#fff; cursor:pointer;
+  }
+  .calc-btn:hover{filter:brightness(.95)}
   .table-card{margin-top:16px;overflow:hidden}
   .table-wrap{overflow:auto;max-height:640px}
   table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}
@@ -79,15 +80,22 @@
 <body>
 <div class="wrap">
   <h1>Lånekalkylator</h1>
-  <p class="lead">Start augusti 2026 • lån 96 855 € • marginal 0,9 %. Testa olika återbetalningsplaner månad för månad.</p>
+  <p class="lead">Start augusti 2026 • lån 96 855 € • marginal 0,9 %. Välj vad kalkylatorn ska räkna ut.</p>
 
   <div class="grid">
     <section class="card controls">
       <div class="fixed"><span>Startlån</span><strong>96 855 €</strong></div>
       <div class="fixed"><span>Bankens marginal</span><strong>0,90 %</strong></div>
 
-      <label for="months">Mål: lånet bortbetalt efter <span id="monthsLabel">60</span> månader</label>
-      <input id="months" type="range" min="40" max="70" value="60" step="1" />
+      <label for="solveFor">Vad vill du räkna ut?</label>
+      <select id="solveFor">
+        <option value="months">Hur många månader tills lånet är betalt</option>
+        <option value="monthly">Vilken månadsbetalning som krävs</option>
+        <option value="extra">Vilken extra amortering i juli som krävs</option>
+      </select>
+
+      <label for="months">Mål: antal månader (40–70)</label>
+      <input id="months" type="number" min="40" max="70" step="1" value="60" />
 
       <label for="extra">Extra amortering varje juli (€)</label>
       <input id="extra" type="number" min="0" step="100" value="4000" />
@@ -99,19 +107,21 @@
         <summary>Ränteinställning</summary>
         <label for="euribor">6 mån Euribor (%)</label>
         <input id="euribor" type="number" min="-2" max="15" step="0.01" value="2.67" />
-        <p class="small">Kalkylen antar samma Euribor under hela perioden. Ändra här för att testa andra räntelägen. Total årsränta = Euribor + 0,90 %.</p>
+        <p class="small">Total årsränta = Euribor + 0,90 %. Kalkylen antar samma Euribor under hela perioden.</p>
       </details>
+
+      <button id="calcBtn" class="calc-btn">Räkna</button>
     </section>
 
     <section class="card summary">
       <div class="kpis">
-        <div class="kpi"><div class="v" id="rateKpi">3,57 %</div><div class="l">Total ränta</div></div>
+        <div class="kpi"><div class="v" id="rateKpi">—</div><div class="l">Total ränta</div></div>
         <div class="kpi"><div class="v" id="paidOffKpi">—</div><div class="l">Skuldfri efter</div></div>
         <div class="kpi"><div class="v" id="interestKpi">—</div><div class="l">Total ränta tills skuldfri</div></div>
-        <div class="kpi"><div class="v" id="requiredKpi">—</div><div class="l">Månadsbetalning som krävs för målet*</div></div>
+        <div class="kpi"><div class="v" id="solvedKpi">—</div><div class="l" id="solvedLabel">Uträknat värde</div></div>
       </div>
-      <div id="status" class="status"></div>
-      <p class="footer-note">*Beräknas med vald extra amortering i juli och vald ränta. Extra amortering läggs utöver månadsbetalningen.</p>
+      <div id="status" class="status">Fyll i värden och klicka på <strong>Räkna</strong>.</div>
+      <p class="footer-note">Extra amortering i juli läggs utöver den vanliga månadsbetalningen.</p>
     </section>
   </div>
 
@@ -129,7 +139,9 @@
             <th>Skuld kvar</th>
           </tr>
         </thead>
-        <tbody id="tbody"></tbody>
+        <tbody id="tbody">
+          <tr><td colspan="7" style="text-align:center;padding:24px;color:#6f6c66">Ingen beräkning ännu.</td></tr>
+        </tbody>
       </table>
     </div>
   </section>
@@ -139,7 +151,7 @@
 const START_BALANCE = 96855;
 const MARGIN = 0.009;
 const START_YEAR = 2026;
-const START_MONTH = 7; // 0-based: August
+const START_MONTH = 7; // Augusti
 
 const $ = id => document.getElementById(id);
 const fmt = n => new Intl.NumberFormat('sv-FI', {style:'currency',currency:'EUR',maximumFractionDigits:0}).format(n);
@@ -149,75 +161,66 @@ const monthNames = ['Jan','Feb','Mar','Apr','Maj','Jun','Jul','Aug','Sep','Okt',
 function simulate(monthlyPayment, extraJuly, annualRate, maxMonths=240){
   let bal = START_BALANCE, rows=[], totalInterest=0;
   const mr = annualRate/12;
+
   for(let i=0;i<maxMonths && bal>0.005;i++){
     const d = new Date(START_YEAR, START_MONTH+i, 1);
     const interest = bal * mr;
-    const regularPayment = Math.min(monthlyPayment, bal + interest);
+
+    let regularPayment = Math.min(monthlyPayment, bal + interest);
     let amort = Math.max(0, regularPayment - interest);
+
     if(amort > bal) amort = bal;
-    let afterRegular = bal - amort;
+
+    let afterRegular = Math.max(0, bal - amort);
     let extra = (d.getMonth()===6) ? Math.min(extraJuly, afterRegular) : 0;
     let bankPayment = regularPayment + extra;
     let end = Math.max(0, afterRegular - extra);
+
     totalInterest += interest;
-    rows.push({
-      date:d, start:bal, interest, amort, extra, bankPayment, end
-    });
-    bal = end;
+    rows.push({date:d, start:bal, interest, amort, extra, bankPayment, end});
+    bal=end;
   }
   return {rows,totalInterest,balance:bal,months:rows.length};
 }
 
-function requiredMonthly(targetMonths, extraJuly, annualRate){
+function solveMonthly(targetMonths, extraJuly, annualRate){
   let lo=0, hi=10000;
-  for(let k=0;k<60;k++){
+  for(let k=0;k<70;k++){
     const mid=(lo+hi)/2;
-    const s=simulate(mid, extraJuly, annualRate, targetMonths);
-    const paid=s.balance<=0.01;
-    if(paid) hi=mid; else lo=mid;
+    const s=simulate(mid,extraJuly,annualRate,targetMonths);
+    if(s.balance<=0.01) hi=mid; else lo=mid;
   }
   return hi;
 }
 
-function render(){
-  const target=+$('months').value;
-  const extra=Math.max(0,+$('extra').value||0);
-  const monthly=Math.max(0,+$('monthly').value||0);
-  const eur=(+$('euribor').value||0)/100;
-  const annualRate=eur+MARGIN;
+function solveExtra(targetMonths, monthlyPayment, annualRate){
+  let base=simulate(monthlyPayment,0,annualRate,targetMonths);
+  if(base.balance<=0.01) return 0;
 
-  $('monthsLabel').textContent=target;
-  $('rateKpi').textContent=fmt2(annualRate*100)+' %';
-
-  const sim=simulate(monthly,extra,annualRate,240);
-  const req=requiredMonthly(target,extra,annualRate);
-  $('requiredKpi').textContent=fmt(req);
-
-  const withinTarget = sim.balance<=0.01 && sim.months<=target;
-  const monthsShown = Math.min(Math.max(target,40),70);
-  const displaySim = simulate(monthly, extra, annualRate, monthsShown);
-
-  $('paidOffKpi').textContent = sim.balance<=0.01 ? sim.months+' mån' : '> 240 mån';
-  $('interestKpi').textContent = sim.balance<=0.01 ? fmt(sim.totalInterest) : '—';
-
-  const status=$('status');
-  if(sim.balance<=0.01){
-    const diff=target-sim.months;
-    if(diff>=0){
-      status.className='status';
-      status.textContent=`Med dessa inställningar blir lånet skuldfritt efter ${sim.months} månader, alltså ${diff===0?'exakt vid ditt mål':diff+' månader tidigare än ditt mål'}.`;
-    }else{
-      status.className='status warn';
-      status.textContent=`Med dessa inställningar blir lånet skuldfritt efter ${sim.months} månader, alltså ${Math.abs(diff)} månader senare än ditt mål.`;
-    }
-  }else{
-    status.className='status warn';
-    status.textContent='Med vald månadsbetalning amorteras lånet inte fullt inom 240 månader. Höj månadsbetalningen eller extraamorteringen.';
+  let lo=0, hi=100000;
+  for(let k=0;k<70;k++){
+    const mid=(lo+hi)/2;
+    const s=simulate(monthlyPayment,mid,annualRate,targetMonths);
+    if(s.balance<=0.01) hi=mid; else lo=mid;
   }
+  return hi;
+}
 
+function updateDisabled(){
+  const mode=$('solveFor').value;
+  $('months').disabled = mode==='months';
+  $('monthly').disabled = mode==='monthly';
+  $('extra').disabled = mode==='extra';
+}
+$('solveFor').addEventListener('change', updateDisabled);
+updateDisabled();
+
+function renderTable(sim, maxRows=70){
   const tbody=$('tbody');
   tbody.innerHTML='';
-  displaySim.rows.forEach((r,idx)=>{
+  const rows=sim.rows.slice(0,maxRows);
+
+  rows.forEach(r=>{
     const tr=document.createElement('tr');
     if(r.date.getMonth()===6) tr.classList.add('july');
     if(r.end<=0.01) tr.classList.add('paid');
@@ -232,16 +235,74 @@ function render(){
     tbody.appendChild(tr);
   });
 
-  // If paid off before horizon, add explanatory row
-  if(displaySim.balance<=0.01 && displaySim.rows.length<monthsShown){
+  if(sim.balance<=0.01){
     const tr=document.createElement('tr');
-    tr.innerHTML=`<td colspan="7" style="text-align:center;padding:18px;color:#315f43;font-weight:700">Lånet är slutbetalt. Inga fler betalningar behövs.</td>`;
+    tr.innerHTML=`<td colspan="7" style="text-align:center;padding:18px;color:#315f43;font-weight:700">Lånet är slutbetalt.</td>`;
     tbody.appendChild(tr);
   }
 }
 
-['months','extra','monthly','euribor'].forEach(id=>$(id).addEventListener('input',render));
-render();
+function calculate(){
+  const mode=$('solveFor').value;
+  const eur=(+$('euribor').value||0)/100;
+  const annualRate=eur+MARGIN;
+
+  let target=Math.round(+$('months').value||60);
+  target=Math.min(70,Math.max(40,target));
+  $('months').value=target;
+
+  let monthly=Math.max(0,+$('monthly').value||0);
+  let extra=Math.max(0,+$('extra').value||0);
+  let solvedValue=0, solvedText='', sim;
+
+  if(mode==='months'){
+    sim=simulate(monthly,extra,annualRate,240);
+    solvedValue=sim.balance<=0.01 ? sim.months : null;
+    solvedText=solvedValue===null ? '> 240 mån' : solvedValue+' mån';
+    $('solvedLabel').textContent='Uträknat antal månader';
+  }
+
+  if(mode==='monthly'){
+    solvedValue=solveMonthly(target,extra,annualRate);
+    monthly=solvedValue;
+    sim=simulate(monthly,extra,annualRate,target);
+    solvedText=fmt(solvedValue);
+    $('solvedLabel').textContent='Nödvändig månadsbetalning';
+  }
+
+  if(mode==='extra'){
+    solvedValue=solveExtra(target,monthly,annualRate);
+    extra=solvedValue;
+    sim=simulate(monthly,extra,annualRate,target);
+    solvedText=fmt(solvedValue);
+    $('solvedLabel').textContent='Nödvändig extra amortering i juli';
+  }
+
+  $('rateKpi').textContent=fmt2(annualRate*100)+' %';
+  $('paidOffKpi').textContent=sim.balance<=0.01 ? sim.months+' mån' : '> '+sim.months+' mån';
+  $('interestKpi').textContent=fmt(sim.totalInterest);
+  $('solvedKpi').textContent=solvedText;
+
+  const status=$('status');
+  status.className='status';
+
+  if(mode==='months'){
+    if(sim.balance<=0.01){
+      status.textContent=`Med ${fmt(monthly)} per månad och ${fmt(extra)} extra varje juli blir lånet skuldfritt efter ${sim.months} månader.`;
+    }else{
+      status.className='status warn';
+      status.textContent='Lånet blir inte slutbetalt inom 240 månader med de valda värdena.';
+    }
+  } else if(mode==='monthly'){
+    status.textContent=`För att betala bort lånet på ${target} månader med ${fmt(extra)} extra varje juli behövs en månadsbetalning på cirka ${fmt(solvedValue)}.`;
+  } else {
+    status.textContent=`För att betala bort lånet på ${target} månader med en månadsbetalning på ${fmt(monthly)} behövs cirka ${fmt(solvedValue)} extra varje juli.`;
+  }
+
+  renderTable(sim, Math.max(70,target));
+}
+
+$('calcBtn').addEventListener('click', calculate);
 </script>
 </body>
 </html>
