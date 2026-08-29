@@ -1,1 +1,880 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f3f5f7">
+<title>XPENG G6 AWD Performance – finansiering</title>
 
+<style>
+:root{
+  --bg:#f3f5f7;
+  --card:#fff;
+  --ink:#16191d;
+  --muted:#69737d;
+  --line:#d9dfe4;
+  --good:#2e704f;
+  --warn:#95652e;
+}
+
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  background:linear-gradient(180deg,#fbfcfd,#eef1f3);
+  font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  color:var(--ink);
+  line-height:1.5;
+}
+
+.wrap{
+  width:min(900px,calc(100% - 24px));
+  margin:auto;
+  padding:28px 0 50px;
+}
+
+h1{
+  font-size:clamp(2.3rem,9vw,4.5rem);
+  line-height:1;
+  letter-spacing:-.05em;
+  margin:8px 0 14px;
+}
+
+h2{
+  font-size:1.35rem;
+  margin:0 0 14px;
+}
+
+.kicker{
+  text-transform:uppercase;
+  letter-spacing:.14em;
+  font-weight:850;
+  font-size:.73rem;
+  color:#6b7c87;
+}
+
+.lead{
+  color:#53606b;
+  font-size:1.05rem;
+}
+
+.card{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:22px;
+  padding:20px;
+  margin-top:16px;
+}
+
+.top{
+  background:linear-gradient(145deg,#fff,#e7eef1);
+}
+
+.fixed{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:10px;
+}
+
+.fixed div{
+  padding:12px;
+  border:1px solid var(--line);
+  border-radius:14px;
+  background:#fafbfc;
+}
+
+.fixed small{
+  display:block;
+  color:var(--muted);
+  font-weight:750;
+}
+
+.fixed strong{
+  display:block;
+  font-size:1.35rem;
+}
+
+.fields{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+}
+
+label{
+  font-size:.8rem;
+  font-weight:800;
+  color:#4d5862;
+}
+
+input,
+select{
+  width:100%;
+  margin-top:6px;
+  padding:12px;
+  border:1px solid #ccd4da;
+  border-radius:12px;
+  background:#fbfcfd;
+  font:inherit;
+  font-size:1rem;
+}
+
+input:disabled{
+  background:#edf1f3;
+  color:#58636c;
+}
+
+.mode{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin:12px 0 18px;
+}
+
+.mode button{
+  padding:9px 12px;
+  border:1px solid #ccd4da;
+  border-radius:999px;
+  background:#fff;
+  font:inherit;
+  font-weight:800;
+  cursor:pointer;
+}
+
+.mode button.active{
+  background:#20262c;
+  color:#fff;
+  border-color:#20262c;
+}
+
+.calculate{
+  width:100%;
+  border:0;
+  border-radius:16px;
+  padding:16px 20px;
+  margin-top:18px;
+  background:#11161a;
+  color:#fff;
+  font:inherit;
+  font-size:1.15rem;
+  font-weight:900;
+  box-shadow:0 10px 25px rgba(20,28,35,.15);
+  cursor:pointer;
+}
+
+.calculate:active{
+  transform:translateY(1px);
+}
+
+.js-status{
+  margin-top:12px;
+  padding:10px 12px;
+  border-radius:12px;
+  background:#f7efe4;
+  color:#7a5528;
+  font-size:.86rem;
+  font-weight:750;
+}
+
+.js-status.ok{
+  background:#e8f3ed;
+  color:#2e704f;
+}
+
+.results{
+  display:grid;
+  grid-template-columns:1.2fr .8fr .8fr;
+  gap:12px;
+  margin-top:16px;
+}
+
+.result{
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:17px;
+}
+
+.result.main{
+  background:linear-gradient(145deg,#fff,#e5edf1);
+}
+
+.label{
+  text-transform:uppercase;
+  letter-spacing:.07em;
+  font-size:.7rem;
+  font-weight:850;
+  color:#687680;
+}
+
+.big{
+  font-size:clamp(1.9rem,8vw,3.15rem);
+  font-weight:900;
+  letter-spacing:-.05em;
+  margin:4px 0;
+}
+
+.sub{
+  font-size:.85rem;
+  color:var(--muted);
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+}
+
+td{
+  padding:11px 8px;
+  border-bottom:1px solid #e8ebed;
+}
+
+td:last-child{
+  text-align:right;
+  font-weight:800;
+}
+
+.callout{
+  padding:14px;
+  border-radius:14px;
+  background:#edf3f6;
+  margin-top:14px;
+}
+
+.error{
+  background:#fae9e6;
+  color:#8a392d;
+  padding:12px;
+  border-radius:12px;
+  margin-top:12px;
+  display:none;
+}
+
+@media(max-width:700px){
+  .fields,
+  .results{
+    grid-template-columns:1fr;
+  }
+
+  .fixed{
+    grid-template-columns:1fr 1fr 1fr;
+  }
+}
+
+@media(max-width:480px){
+  .fixed{
+    grid-template-columns:1fr;
+  }
+
+  .card{
+    padding:17px;
+  }
+}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+
+<div class="kicker">XPENG G6 AWD Performance · DNB</div>
+
+<h1>Finansieringsräknare</h1>
+
+<p class="lead">
+  Förvald bil:
+  <strong>55 390 € + dragkrok 1 190 € = 56 580 €</strong>.
+</p>
+
+<div class="card top">
+  <div class="fixed">
+
+    <div>
+      <small>Nominell ränta</small>
+      <strong id="topRate">0,99 %</strong>
+    </div>
+
+    <div>
+      <small>Hanteringsavgift</small>
+      <strong id="topFee">15 €/mån</strong>
+    </div>
+
+    <div>
+      <small>Uppläggning</small>
+      <strong>349 €</strong>
+    </div>
+
+  </div>
+</div>
+
+<div class="card">
+  <h2>1. Grunduppgifter</h2>
+
+  <div class="fields">
+
+    <label>
+      Bilpris €
+      <input id="price" type="number" value="56580" step="100">
+    </label>
+
+    <label>
+      Finansieringstid
+      <select id="years">
+        <option value="2">2 år / 24 mån</option>
+        <option value="3">3 år / 36 mån</option>
+        <option value="4">4 år / 48 mån</option>
+        <option value="5">5 år / 60 mån</option>
+        <option value="6" selected>6 år / 72 mån</option>
+        <option value="7">7 år / 84 mån</option>
+        <option value="8">8 år / 96 mån</option>
+      </select>
+    </label>
+
+    <label>
+      Nominell ränta %
+      <input
+        id="rate"
+        type="number"
+        value="0.99"
+        min="0"
+        step="0.01">
+    </label>
+
+    <label>
+      Månadsavgift €
+      <input
+        id="monthlyFee"
+        type="number"
+        value="15"
+        min="0"
+        step="1">
+    </label>
+
+  </div>
+</div>
+
+<div class="card">
+  <h2>2. Vad ska räknas ut?</h2>
+
+  <div class="mode">
+    <button
+      id="mBalloon"
+      type="button"
+      class="active"
+      onclick="setMode('balloon')">
+      Ballong
+    </button>
+
+    <button
+      id="mMonthly"
+      type="button"
+      onclick="setMode('monthly')">
+      Månadsrat
+    </button>
+
+    <button
+      id="mDown"
+      type="button"
+      onclick="setMode('down')">
+      Handpenning
+    </button>
+  </div>
+
+  <div class="fields">
+
+    <label>
+      Handpenning €
+      <input id="down" type="number" value="5000" step="100">
+    </label>
+
+    <label>
+      Månadsrat € (inkl. månadsavgift)
+      <input id="monthly" type="number" value="500" step="5">
+    </label>
+
+    <label>
+      Ballong €
+      <input
+        id="balloon"
+        type="number"
+        value="14000"
+        step="100"
+        disabled>
+    </label>
+
+    <label>
+      Ballong % av bilpriset
+      <input
+        id="balloonPct"
+        type="number"
+        value="25"
+        step="0.5"
+        disabled>
+    </label>
+
+  </div>
+
+  <button
+    class="calculate"
+    type="button"
+    onclick="calculateNow(); return false;">
+    Räkna
+  </button>
+
+  <div id="jsStatus" class="js-status">
+    JavaScript har inte startat. Om denna text inte blir grön stöder förhandsvisningen inte kalkylatorn.
+  </div>
+
+  <div id="error" class="error"></div>
+</div>
+
+<div class="results">
+
+  <div class="result main">
+    <div class="label" id="mainLabel">Beräknad ballong</div>
+    <div class="big" id="mainValue">–</div>
+    <div class="sub" id="mainSub"></div>
+  </div>
+
+  <div class="result">
+    <div class="label">Finansierat</div>
+    <div class="big" id="principal">–</div>
+    <div class="sub">inkl. 349 € uppläggning</div>
+  </div>
+
+  <div class="result">
+    <div class="label">Kreditkostnad</div>
+    <div class="big" id="creditCost">–</div>
+    <div class="sub">ränta + avgifter</div>
+  </div>
+
+</div>
+
+<div class="card">
+  <h2>Sammanfattning</h2>
+
+  <table>
+    <tr>
+      <td>Bilpris</td>
+      <td id="oPrice">–</td>
+    </tr>
+
+    <tr>
+      <td>Handpenning</td>
+      <td id="oDown">–</td>
+    </tr>
+
+    <tr>
+      <td>Löptid</td>
+      <td id="oTerm">–</td>
+    </tr>
+
+    <tr>
+      <td>Månadsrat</td>
+      <td id="oMonthly">–</td>
+    </tr>
+
+    <tr>
+      <td>Ballong</td>
+      <td id="oBalloon">–</td>
+    </tr>
+
+    <tr>
+      <td>Sista faktura inkl. månadsavgift</td>
+      <td id="oFinal">–</td>
+    </tr>
+
+    <tr>
+      <td>Ränta totalt</td>
+      <td id="oInterest">–</td>
+    </tr>
+
+    <tr>
+      <td>Hanteringsavgifter</td>
+      <td id="oFees">–</td>
+    </tr>
+
+    <tr>
+      <td>Total kreditkostnad</td>
+      <td id="oCredit">–</td>
+    </tr>
+
+    <tr>
+      <td>Verkligt kreditpris</td>
+      <td id="oReal">–</td>
+    </tr>
+  </table>
+
+  <div class="callout" id="thousand">–</div>
+</div>
+
+</div>
+
+<script>
+var SETUP_FEE = 349;
+var mode = "balloon";
+var lastBalloon = "amount";
+
+function el(id){
+  return document.getElementById(id);
+}
+
+function num(id){
+  var value = parseFloat(el(id).value);
+  return isNaN(value) ? 0 : value;
+}
+
+function euro(value){
+  return new Intl.NumberFormat("sv-FI",{
+    style:"currency",
+    currency:"EUR",
+    maximumFractionDigits:2
+  }).format(value);
+}
+
+function monthlyRate(){
+  return num("rate") / 100 / 12;
+}
+
+function monthlyFee(){
+  return num("monthlyFee");
+}
+
+function paymentFactor(rate, months){
+  if(rate === 0){
+    return months - 1;
+  }
+
+  return (
+    Math.pow(1 + rate, months) -
+    (1 + rate)
+  ) / rate;
+}
+
+function setMode(newMode){
+  mode = newMode;
+
+  el("mBalloon").className =
+    newMode === "balloon" ? "active" : "";
+
+  el("mMonthly").className =
+    newMode === "monthly" ? "active" : "";
+
+  el("mDown").className =
+    newMode === "down" ? "active" : "";
+
+  el("down").disabled =
+    newMode === "down";
+
+  el("monthly").disabled =
+    newMode === "monthly";
+
+  el("balloon").disabled =
+    newMode === "balloon";
+
+  el("balloonPct").disabled =
+    newMode === "balloon";
+
+  calculateNow();
+}
+
+function balloonFrom(price, down, monthly, months){
+  var principal = price - down + SETUP_FEE;
+  var paymentWithoutFee = monthly - monthlyFee();
+
+  var rate = monthlyRate();
+  var growth = Math.pow(1 + rate, months);
+
+  return principal * growth -
+    paymentWithoutFee * paymentFactor(rate, months);
+}
+
+function monthlyFrom(price, down, balloon, months){
+  var principal = price - down + SETUP_FEE;
+
+  var rate = monthlyRate();
+  var growth = Math.pow(1 + rate, months);
+
+  var paymentWithoutFee =
+    (principal * growth - balloon) /
+    paymentFactor(rate, months);
+
+  return paymentWithoutFee + monthlyFee();
+}
+
+function downFrom(price, monthly, balloon, months){
+  var paymentWithoutFee =
+    monthly - monthlyFee();
+
+  var rate = monthlyRate();
+  var growth = Math.pow(1 + rate, months);
+
+  var principal =
+    (
+      balloon +
+      paymentWithoutFee * paymentFactor(rate, months)
+    ) / growth;
+
+  return price + SETUP_FEE - principal;
+}
+
+function calculateNow(){
+  try{
+    el("error").style.display = "none";
+
+    var price = num("price");
+    var months =
+      parseInt(el("years").value, 10) * 12;
+
+    var down = num("down");
+    var monthly = num("monthly");
+    var balloon = num("balloon");
+    var fee = monthlyFee();
+
+    el("topRate").textContent =
+      num("rate")
+        .toFixed(2)
+        .replace(".", ",") + " %";
+
+    el("topFee").textContent =
+      euro(fee)
+        .replace(/,00(?=\s|$)/, "") +
+      "/mån";
+
+    if(mode === "balloon"){
+      balloon = balloonFrom(
+        price,
+        down,
+        monthly,
+        months
+      );
+
+      el("balloon").value =
+        balloon.toFixed(2);
+
+      el("balloonPct").value =
+        (balloon / price * 100).toFixed(2);
+
+      el("mainLabel").textContent =
+        "Beräknad ballong";
+
+      el("mainValue").textContent =
+        euro(balloon);
+
+      el("mainSub").textContent =
+        (balloon / price * 100)
+          .toFixed(1)
+          .replace(".", ",") +
+        " % av bilpriset";
+    }else{
+      if(lastBalloon === "pct"){
+        balloon =
+          price * num("balloonPct") / 100;
+
+        el("balloon").value =
+          balloon.toFixed(2);
+      }else{
+        balloon = num("balloon");
+
+        el("balloonPct").value =
+          (balloon / price * 100)
+            .toFixed(2);
+      }
+
+      if(mode === "monthly"){
+        monthly = monthlyFrom(
+          price,
+          down,
+          balloon,
+          months
+        );
+
+        el("monthly").value =
+          monthly.toFixed(2);
+
+        el("mainLabel").textContent =
+          "Beräknad månadsrat";
+
+        el("mainValue").textContent =
+          euro(monthly);
+
+        el("mainSub").textContent =
+          "inklusive " +
+          euro(fee) +
+          " månadsavgift";
+      }else{
+        down = downFrom(
+          price,
+          monthly,
+          balloon,
+          months
+        );
+
+        el("down").value =
+          down.toFixed(2);
+
+        el("mainLabel").textContent =
+          "Beräknad handpenning";
+
+        el("mainValue").textContent =
+          euro(down);
+
+        el("mainSub").textContent =
+          (down / price * 100)
+            .toFixed(1)
+            .replace(".", ",") +
+          " % av bilpriset";
+      }
+    }
+
+    var principal =
+      price - down + SETUP_FEE;
+
+    var regularPayments =
+      months - 1;
+
+    var totalPaid =
+      down +
+      regularPayments * monthly +
+      balloon +
+      fee;
+
+    var creditCost =
+      totalPaid - price;
+
+    var fees =
+      months * fee;
+
+    var interest =
+      creditCost -
+      SETUP_FEE -
+      fees;
+
+    var thousandGrowth =
+      Math.pow(
+        1 + monthlyRate(),
+        months
+      ) * 1000;
+
+    el("principal").textContent =
+      euro(principal);
+
+    el("creditCost").textContent =
+      euro(creditCost);
+
+    el("oPrice").textContent =
+      euro(price);
+
+    el("oDown").textContent =
+      euro(down);
+
+    el("oTerm").textContent =
+      months + " månader";
+
+    el("oMonthly").textContent =
+      euro(monthly);
+
+    el("oBalloon").textContent =
+      euro(balloon);
+
+    el("oFinal").textContent =
+      euro(balloon + fee);
+
+    el("oInterest").textContent =
+      euro(interest);
+
+    el("oFees").textContent =
+      euro(fees);
+
+    el("oCredit").textContent =
+      euro(creditCost);
+
+    el("oReal").textContent =
+      euro(price + creditCost);
+
+    el("thousand").innerHTML =
+      "<strong>1 000 € mindre handpenning</strong> " +
+      "motsvarar ungefär <strong>" +
+      euro(thousandGrowth) +
+      "</strong> större ballong efter " +
+      (months / 12) +
+      " år om månadsraten hålls oförändrad.";
+
+    el("jsStatus").textContent =
+      "JavaScript fungerar ✓ · senast uträknat " +
+      new Date().toLocaleTimeString(
+        "sv-FI",
+        {
+          hour:"2-digit",
+          minute:"2-digit"
+        }
+      );
+
+    el("jsStatus").className =
+      "js-status ok";
+  }catch(error){
+    el("error").textContent =
+      "Fel i kalkylatorn: " +
+      error.message;
+
+    el("error").style.display =
+      "block";
+  }
+}
+
+el("balloon").addEventListener(
+  "input",
+  function(){
+    lastBalloon = "amount";
+  }
+);
+
+el("balloonPct").addEventListener(
+  "input",
+  function(){
+    lastBalloon = "pct";
+  }
+);
+
+[
+  "price",
+  "years",
+  "rate",
+  "monthlyFee",
+  "down",
+  "monthly",
+  "balloon",
+  "balloonPct"
+].forEach(function(id){
+  el(id).addEventListener(
+    id === "years" ? "change" : "input",
+    calculateNow
+  );
+});
+
+el("jsStatus").textContent =
+  "JavaScript fungerar ✓ · ändra siffrorna eller tryck på Räkna.";
+
+el("jsStatus").className =
+  "js-status ok";
+
+calculateNow();
+</script>
+
+<noscript>
+<div style="
+  position:fixed;
+  left:12px;
+  right:12px;
+  bottom:12px;
+  padding:16px;
+  background:#8a392d;
+  color:white;
+  border-radius:14px;
+  font-family:system-ui;
+">
+  JavaScript är avstängt i denna förhandsvisning.
+  Öppna sidan via GitHub Pages eller Safari för att använda räknaren.
+</div>
+</noscript>
+
+</body>
+</html>
